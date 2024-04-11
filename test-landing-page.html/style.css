@@ -1,0 +1,128 @@
+h1 {
+	color: #ffffff;
+}
+
+h3 {
+	color: #ffffff;
+}
+
+h4 {
+	color: #ffffff;
+	margin-left: 200px;
+	margin-right: 200px;
+}
+
+body {
+	background: linear-gradient(60deg,rgb(0, 79, 159) 40%,rgb(0, 151, 215) 100%);
+	margin: 0;
+	padding: 0;
+	background-size: auto;
+	background-repeat: no-repeat;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+	padding-left: 25px;
+	padding-right: 25px;
+	color: #ffffff;
+}
+
+.navbar {
+	overflow: hidden;
+	margin: 0;
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.navbar a {
+	float: left;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	display: block;
+	border-bottom: 3px solid transparent;
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+.sticky + .content {
+	padding-top: 60px;
+}
+
+.navbar a.split {
+	float: right;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-decoration: none;
+	display: block;
+	border-bottom: 3px solid transparent;
+}
+
+body {
+	transition: background-color 0.5s;
+}
+
+.main {
+	margin-left: 200px;
+	/* Same as the width of the sidenav */
+	font-size: 20px;
+	/* Increased text to enable scrolling */
+	padding: 0px 10px;
+}
+
+
+
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+	.sidenav {
+		padding-top: 15px;
+	}
+
+	.sidenav a {
+		font-size: 18px;
+	}
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.button{
+    background-color: rgb(0, 79, 159);
+    color: #f1f1f1;
+    border: transparent;
+    font-size: 20px;
+    padding: 2em;
+    width: 70%;
+}
+
+.upper-button{
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(255, 255, 255);
+    padding-top: 1.2em;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+  }
+  .grid-item {
+    border: transparent;
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+  }
