@@ -33,26 +33,20 @@ $(document).ready(function () {
         let decodedItem = decodeURIComponent(item);
         let jsonItem = JSON.parse(decodedItem);
 
-        $("#level2").append(`<h4 class="teste">${jsonItem.title}</h4>`);
+        $("#level2").append(`<h4 class="pageTitle">${jsonItem.title}</h4>`);
 
         $.each(jsonItem.childrens, function (idx, menuItem) {
             if (menuItem.url) {
-                let link = `<div onclick="location.href='${menuItem.url}'" class="horizontal-menu-item">
+                let link = `
                         <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col" class="tableTitle">Nome</th>
-                                    <th scope="col" class="tableTitle">Descrição</th>
-                                </tr>
-                            </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row" class="name">${menuItem.title}</td>
+                                    <td scope="row" class="name"><div onclick="location.href='${menuItem.url}'" class="horizontal-menu-item">${menuItem.title}</div></td>
                                     <td scope="row" class"description">${menuItem.description}</td>
                                 </tr>   
                             </tbody>
                         </table>
-                    </div>`;
+                    `;
                 $("#level2").append(link);
             }
 
