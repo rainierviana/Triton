@@ -8,11 +8,7 @@ body {
 
 .mainHeader {
 	text-align: left;
-	background: linear-gradient(
-		60deg,
-		rgb(0, 79, 159) 60%,
-		rgb(1, 115, 228) 100%
-	);
+	background: linear-gradient(60deg,rgb(0, 79, 159) 60%,rgb(1, 115, 228) 100%);
 	padding: 1em;
 }
 
@@ -39,8 +35,8 @@ body {
 .topNavigationText {
 	color: rgb(255, 255, 255);
 	font-size: 17px;
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 0.8em;
+	padding-right: 0.8em;
 }
 
 .pointer {
@@ -66,22 +62,19 @@ body {
 	align-items: center;
 	color: rgb(0, 0, 0);
 	width: 95%;
-	margin-left: 2em;
-	margin-right: 2em;
+	margin-left: 3em;
+	margin-right: 3em;
 	margin-bottom: 1em;
 	font-size: 15px;
 	cursor: default;
 }
+
 .name {
 	text-align: left;
 	font-size: 15px;
 	width: 50%;
 	cursor: pointer;
 	padding-top: 0.75em;
-}
-
-.tableBackground {
-	background-color: rgb(0, 255, 30);
 }
 
 .description {
@@ -103,19 +96,14 @@ body {
 
 .breadcrumb {
 	background-color: rgb(247, 148, 30);
+	font-size: 14px;
 	padding: 8px;
 	list-style: none;
 	cursor: default;
 	color: rgb(255, 255, 255);
 }
 
-.breadcrumb li {
+.breadcrumb-text{
+	color: rgb(255, 255, 255);
 	font-size: 14px;
-	color: rgb(255, 255, 255);
-}
-
-.breadcrumb li + li:before {
-	padding: 8px;
-	color: rgb(255, 255, 255);
-	content: "/";
 }

@@ -680,6 +680,28 @@
 						"title": "Mensagens_Hora",
 						"description": "Apresentar o volume horário de utilização de mensagens MQSeries no ambiente.",
 						"url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85d44e93cf25110a947bd"
+					},
+					{
+						"title": "MQ Mensagens",
+						"description": "Apresenta os dashboards de produção/não produção.",
+						"url": "",
+						"childrens":[
+							{
+								"title": "CPU",
+								"description": "Apresentar a utilização de processamento de servidores MQSeries nos ambientes memória CENTRAL no último dia.",
+								"url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85a5ae93cf25110a94785"
+							},
+							{
+								"title": "Mensagens",
+								"description": "Apresentar volume de utilização de mensagens MQSeries.",
+								"url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85bcce93cf25110a9479d"
+							},
+							{
+								"title": "Mensagens_Hora",
+								"description": "Apresentar o volume horário de utilização de mensagens MQSeries no ambiente.",
+								"url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85d44e93cf25110a947bd"
+							}
+						]
 					}
 				]
 			},

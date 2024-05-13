@@ -16,7 +16,7 @@ $(document).ready(function () {
 				console.error("Error reading JSON file:", textStatus, errorThrown);
 			},
 		});
-	}
+	};
 
 	function printLevel1(data) {
 		$.each(data, function (index, menuItem) {
@@ -25,7 +25,7 @@ $(document).ready(function () {
 			let link = `<span class="topNavigationText pointer" onclick="prePrintLevel2('${encodedItem}')" >${menuItem.title}</span>`;
 			$("#level1").append(link);
 		});
-	}
+	};
 
     this.prePrintLevel2 = function(item) {
         stackBC = [];
@@ -36,7 +36,7 @@ $(document).ready(function () {
 		let jsonItem = JSON.parse(decodedItem);
 
         this.printLevel2(item);
-    }
+    };
 
 	this.printLevel2 = function(item) {
 		$("#level2").empty();
@@ -49,7 +49,6 @@ $(document).ready(function () {
 
         bcItem = jsonItem.title;
         stackBC.push(bcItem);
-
 
         $("#breadcrumb").empty();
         $.each(stackBC, function(index, bcItem) {
