@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-menu-button slot="start" class="menuButton"></ion-menu-button>
+    <img class="leftHeaderImg" src="../../assets/Images/Logo.png" />
+    <button class="homeButton" (click)="homeButtonClicked()"><img src="../../assets/icon/Menu_Icons/Home.png" height="20em" /></button>
+    
+    <p class="homeTitle" align="center">Portal CDUC</p>
+
+    <img slot="end" class="rightHeaderImg" src="../../assets/Images/Logo_4B.png" />
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-menu contentId="main-content">
+    <ion-content>
+      <br />
+      <ng-container *ngFor="let menuItem of menuData">
+        <div>
+          <ion-button fill="clear" (click)="FillContent(menuItem)">{{ menuItem.title }}</ion-button>
+        </div>
+      </ng-container>
+      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/icon/Menu_Icons/Settings.png"
+          height="20em" />{{ 'home.settings' | translate }}</ion-button>
+    </ion-content>
+  </ion-menu>
+
+  <div class="nav-container">
+    <div class="breadcrumb" *ngIf="breadcrumbs.length > 0">
+      <ng-container *ngFor="let breadcrumb of breadcrumbs; let i = index">
+        <span (click)="navigateToBreadcrumb(i)" class="breadcrumb-item">{{ breadcrumb }}</span>
+        <ng-container *ngIf="i < breadcrumbs.length - 1">
+          <span class="breadcrumb-separator"> > </span>
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <div class="navButtons">
+      <ion-button class="backButton" *ngIf="showBackButton" fill="clear" shape="round" (click)="goBack()"><ion-icon
+          slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
+      <ion-button class="forwardButton" *ngIf="showForwardButton" fill="clear" shape="round"
+        (click)="goForward()"><ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon></ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="showSearchBar" class="search-bar-container">
+    <input class="searchBar" autocomplete="off" type="text" id="searchInput" placeholder="Pesquisar"
+      (input)="filterTable()" />
+  </div>
+
+  <div #mainContent class="homeText" id="main-content">
+    <p class="homeDescription" align="center">{{ 'home.details' | translate }}</p>
+    <br />
+  </div>
+
+  <div *ngIf="noItemsFound" class="no-items-message">
+    <p class="errorMessage">{{ 'home.noItemFound' | translate }}</p>
+  </div>
+</ion-content>
+
+<ion-menu side="end" contentId="main-content">
+  <ion-content class="ion-padding">
+    <p>{{ 'home.settings' | translate }}</p>
+    <p>{{ 'home.darkmode' | translate }}</p>
+    <ion-toggle aria-label="Dark mode toggle" [checked]="darkMode" (ionChange)="toggleDarkMode($event)"></ion-toggle>
+    <p>{{ 'home.language' | translate }}</p>
+    <ion-button fill="clear" (click)="toggleLanguage('pt')">Português</ion-button>
+    <ion-button fill="clear" (click)="toggleLanguage('en')">English</ion-button>
+
+  </ion-content>
+</ion-menu>
+
+<ion-footer>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,12 @@
+{
+  "home": {
+    "title": "Portal CDUC",
+    "description": "(Capacidade, Desempenho, Uso e Custo)",
+    "details": "Portal que visa agregar todas as visões, dashboards, relatórios e acessos aos módulos e informações desenvolvidas pela CESTI65 juntamente com as equipes de Capacidade CAIXA.",
+    "about":"Sobre",
+    "settings":"Configurações",
+    "darkmode":"Modo Escuro",
+    "noItemFound": "Nenhum Item Encontrado",
+    "language":"Idioma"
+  }
+}

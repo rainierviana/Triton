@@ -1,0 +1,162 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+:root {
+  --padding-small: 0.5em;
+  --padding-medium: 1em;
+  --padding-large: 1.5em;
+  --margin-small: 0.5em;
+  --margin-medium: 1em;
+  --margin-large: 1.5em;
+
+  --ion-color-primary: #3880ff;
+  --ion-color-primary-rgb: 56, 128, 255;
+  --ion-color-primary-contrast: #fff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #3171e0;
+  --ion-color-primary-tint: #4c8dff;
+
+  --ion-color-secondary: #3dc2ff;
+  --ion-color-secondary-rgb: 61, 194, 255;
+  --ion-color-secondary-contrast: #fff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #36a3d9;
+  --ion-color-secondary-tint: #5abff7;
+
+  --ion-color-tertiary: #7044ff;
+  --ion-color-tertiary-rgb: 112, 68, 255;
+  --ion-color-tertiary-contrast: #fff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #5a37d6;
+  --ion-color-tertiary-tint: #8c5cff;
+
+  --ion-color-success: #10dc60;
+  --ion-color-success-rgb: 16, 220, 96;
+  --ion-color-success-contrast: #fff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #0fbc56;
+  --ion-color-success-tint: #33d084;
+
+  --ion-color-warning: #ffce00;
+  --ion-color-warning-rgb: 255, 206, 0;
+  --ion-color-warning-contrast: #fff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e0b800;
+  --ion-color-warning-tint: #ffda47;
+
+  --ion-color-danger: #f04141;
+  --ion-color-danger-rgb: 240, 65, 65;
+  --ion-color-danger-contrast: #fff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #c43d3d;
+  --ion-color-danger-tint: #f55c5c;
+
+  --ion-color-dark: #222428;
+  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark-contrast: #fff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1d1f22;
+  --ion-color-dark-tint: #3c3f42;
+
+  --ion-color-medium: #92949c;
+  --ion-color-medium-rgb: 146, 148, 156;
+  --ion-color-medium-contrast: #fff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #7f8187;
+  --ion-color-medium-tint: #a6a9af;
+
+  --ion-color-light: #f4f5f8;
+  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light-contrast: #000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #e0e1e4;
+  --ion-color-light-tint: #f7f8f9;
+}
+
+.custom-alert .alert-title {
+  color: var(--text-color); 
+}
+
+.padding-small {
+  padding: var(--padding-small);
+}
+
+.padding-medium {
+  padding: var(--padding-medium);
+}
+
+.padding-large {
+  padding: var(--padding-large);
+}
+
+.margin-small {
+  margin: var(--margin-small);
+}
+
+.margin-medium {
+  margin: var(--margin-medium);
+}
+
+.margin-large {
+  margin: var(--margin-large);
+}
+
+/* global.scss */
+
+body {
+  background-color: var(--ion-background-color);
+}
+
+table {
+  background-color: var(--table-background);
+}
+
+th {
+  background-color: var(--table-header-background);
+}
+
+ion-button {
+  color: var(--ion-button-color);
+}
+
+p, span {
+  color: var(--text-color);
+}
+
+@font-face {
+  font-family: 'Futura';
+  src: url('assets/Futura/FuturaLT.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura-Bold';
+  src: url('assets/Futura/FuturaLT-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
