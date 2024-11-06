@@ -1,10 +1,10 @@
 <ion-header>
   <ion-toolbar>
     <ion-menu-button slot="start" class="menuButton"></ion-menu-button>
-    <img class="leftHeaderImg" src="../../assets/Images/Logo.png" />
+    <img src="../../assets/Images/Logo.png" />
     <button class="homeButton" (click)="homeButtonClicked()"><img src="../../assets/icon/Menu_Icons/Home.png" height="20em" /></button>
     
-    <p class="homeTitle" align="center">Portal CDUC</p>
+    <p class="homeTitle">Portal CDUC</p>
 
     <img slot="end" class="rightHeaderImg" src="../../assets/Images/Logo_4B.png" />
 
@@ -14,7 +14,6 @@
 <ion-content>
   <ion-menu contentId="main-content">
     <ion-content>
-      <br />
       <ng-container *ngFor="let menuItem of menuData">
         <div>
           <ion-button fill="clear" (click)="FillContent(menuItem)">{{ menuItem.title }}</ion-button>
@@ -61,8 +60,6 @@
 <ion-menu side="end" contentId="main-content">
   <ion-content class="ion-padding">
     <p>{{ 'home.settings' | translate }}</p>
-    <p>{{ 'home.darkmode' | translate }}</p>
-    <ion-toggle aria-label="Dark mode toggle" [checked]="darkMode" (ionChange)="toggleDarkMode($event)"></ion-toggle>
     <p>{{ 'home.language' | translate }}</p>
     <ion-button fill="clear" (click)="toggleLanguage('pt')">Português</ion-button>
     <ion-button fill="clear" (click)="toggleLanguage('en')">English</ion-button>

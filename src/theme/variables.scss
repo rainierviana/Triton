@@ -1,4 +1,3 @@
-//Light mode Settngs
 :root {
     --ion-background-color: var(--ion-color-light);
     --ion-toolbar-background: rgb(0,79,159);
@@ -8,15 +7,3 @@
     --content-table-title: var(--ion-color-primary);
     --content-table-description: var(--ion-color-medium-shade);
   }
-  
-  // Dark settings
-  .dark-mode {
-    --ion-background-color: var(--ion-color-dark-shade);
-    --ion-toolbar-background: rgb(0,79,159);
-    --ion-button-color: var(--ion-color-light);
-    --table-background: var(--ion-color-dark-tint);
-    --text-color: var(--ion-color-light);
-    --content-table-title: var(--ion-color-light); 
-    --content-table-description: var(--ion-color-medium-tint);
-  }
-  

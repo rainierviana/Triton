@@ -4,6 +4,7 @@
   padding: 0;
   font-size: 30px;
   font-family: 'Futura-Bold', sans-serif;
+  text-align: center;
 }
 
 .homeDescription{
@@ -20,18 +21,23 @@
   color: rgb(255, 255, 255);
 }
 
+.reveal {
+  transition: transform 0.3s ease;
+  transform: translateX(250px); 
+}
+
+.main-content {
+  transition: transform 0.3s ease;
+}
+
+
 .homeButton{
-  background-color: rgb(0,79,159);
+  background-color: transparent;
   margin: 1em;
 }
 
 .rightHeaderImg{
-  height: 1.5em;
   margin-right: 1em;
-}
-
-.leftHeaderImg{
-  height: 1.5em;
 }
 
 ion-button {
