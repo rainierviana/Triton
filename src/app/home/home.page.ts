@@ -17,13 +17,14 @@ export class HomePage {
   public sisenseDashboards: any[] = [];
   public filteredSisenseDashboards: any[] = [];
   public headerColor: string = ''; 
+  public date: string = '';
+  private currentSearchScope: any[] = []; // Holds the current scope of items to search
+  private allItems: any[] = []; // Holds all items from the JSON (second level and beyond)
 
   // State Variables
-  searchTerm: string = '';
   noItemsFound: boolean = false;
   showBackButton: boolean = false;
   showForwardButton: boolean = false;
-  showSearchBar: boolean = false;
 
   // Data Management
   public menuData: any[] = [];
@@ -88,9 +89,7 @@ export class HomePage {
     } 
 
     setTimeout(() => {
-      this.initialMainContentElements = Array.from(
-        this.mainContent.nativeElement.children
-      );
+      this.initialMainContentElements = Array.from(this.mainContent.nativeElement.children);
     }, 0);
   }
 
@@ -107,7 +106,7 @@ export class HomePage {
     document.title = this.appConfig.appTitle || 'Default App Title';
 
     // Set the header image
-    const headerImageElement = document.querySelector('ion-toolbar img');
+    const headerImageElement = document.querySelector('ion-toolbar img.headerLogo');
     if (headerImageElement && this.appConfig.headerImage) {
       headerImageElement.setAttribute('src', this.appConfig.headerImage);
     } 
@@ -195,35 +194,9 @@ export class HomePage {
     this.forwardStack = [];
   }
   // Search Bar
-  filterTable() {
-    const searchInput = (
-      document.getElementById('searchInput') as HTMLInputElement
-    ).value.toLowerCase();
-    const table = document.querySelector('table')!;
-    const tr = table.getElementsByTagName('tr');
-    let anyVisible = false;
-
-    for (let i = 0; i < tr.length; i++) {
-      const td = tr[i].getElementsByTagName('td')[0];
-      if (td) {
-        const txtValue = td.textContent || td.innerText;
-        const hasUrl = tr[i].querySelector('a') !== null;
-        if (txtValue.toLowerCase().indexOf(searchInput) > -1 && hasUrl) {
-          tr[i].style.display = '';
-          anyVisible = true;
-        } else {
-          tr[i].style.display = 'none';
-        }
-      }
-    }
-
-    // If no rows are visible, show the error message
-    this.noItemsFound = !anyVisible;
-  }
 
   // Content Management
   FillContent(item: any) {
-    this.showSearchBar = !item.url;
     this.navigationStack.push(item);
     this.forwardStack = [];
     this.mainContent.nativeElement.innerHTML = '';
@@ -247,74 +220,83 @@ export class HomePage {
 
   renderItem(item: any, parentElement: HTMLElement) {
     const newContent = document.createElement('div');
-
+  
     const title = document.createElement('p');
-    title.classList.add('table-title');
-
+    title.classList.add('levelTitle');
     title.textContent = item.title;
-
     newContent.appendChild(title);
+  
     parentElement.appendChild(newContent);
 
     if (item.childrens && item.childrens.length > 0) {
-      const childTable = document.createElement('table');
-      childTable.classList.add('child-table');
+        const tableWrapper = document.createElement('div');
+        tableWrapper.classList.add('contentWrapper');
+        
+        tableWrapper.style.height = '60vh'; 
+        tableWrapper.style.overflowY = 'auto';
 
-      //Table´s height set according to the user's screen height
-      const tableHeight = window.innerHeight * 0.5;
-      childTable.style.maxHeight = `${tableHeight}px`;
+        const gridContainer = document.createElement('div');
+        gridContainer.classList.add('grid-container');
+        tableWrapper.appendChild(gridContainer);
 
-      const tableWrapper = document.createElement('div');
-      tableWrapper.classList.add('table-wrapper');
-      tableWrapper.style.maxHeight = `${tableHeight}px`;
+        item.childrens.forEach((subItem: any) => {
+            if (subItem.url) {
+                const childCard = document.createElement('ion-card');
 
-      tableWrapper.appendChild(childTable);
+                if (subItem.icon) {
+                    const childCardImage = document.createElement('img');
+                    childCardImage.src = subItem.icon; 
+                    childCardImage.alt = subItem.title;
+                    childCardImage.classList.add('cardImage');
+                    childCard.appendChild(childCardImage);
+                }
 
-      item.childrens.forEach((subItem: any) => {
-        const childRow = document.createElement('tr');
+                const childCardHeader = document.createElement('ion-card-header');
+                const childCardTitle = document.createElement('ion-card-title');
+                childCardTitle.classList.add('cardTitle');
+                childCardTitle.textContent = subItem.title;
 
-        const childCol1 = document.createElement('td');
-        childCol1.classList.add('child-col-1');
+                const childCardSubtitle = document.createElement('ion-card-subtitle');
+                childCardSubtitle.classList.add('cardSubtitle');
+                childCardSubtitle.textContent = subItem.description;
 
-        const childUrl = document.createElement('a');
-        childUrl.href = subItem.url;
-        childUrl.textContent = subItem.title;
-        childUrl.classList.add('child-url');
+                childCardHeader.appendChild(childCardTitle);
+                childCardHeader.appendChild(childCardSubtitle);
+                childCard.appendChild(childCardHeader);
 
-        if (subItem.url) {
-          // Set the target attribute to "_blank" to open in a new tab
-          childUrl.target = '_blank';
+                const childCardContent = document.createElement('ion-card-content');
+                childCardContent.classList.add('cardContent');
+                childCardContent.textContent = subItem.update;
+                childCard.appendChild(childCardContent);
 
-          childUrl.addEventListener('click', (event) => {
-            event.preventDefault();
-            console.log(subItem.title, subItem.url);
-            this.handleItemClick(subItem);
-          });
-        } else {
-          childUrl.addEventListener('click', (event) => {
-            event.preventDefault();
-            console.log(subItem.title, subItem.description);
-            this.FillContent(subItem);
-          });
-          childCol1.style.paddingBottom = '1em';
-          childCol1.style.paddingTop = '1em';
-        }
+                childCard.addEventListener('click', () => {
+                    window.open(subItem.url, '_blank');
+                });
 
-        childCol1.appendChild(childUrl);
+                gridContainer.appendChild(childCard); 
+            } else {
+                const ionItem = document.createElement('ion-item');
+                const ionLabel = document.createElement('ion-label');
 
-        const childCol2 = document.createElement('td');
-        childCol2.textContent = subItem.description;
-        childCol2.classList.add('child-col-2');
+                const h1 = document.createElement('h1');
+                h1.classList.add('listTitle');
+                h1.textContent = subItem.title;
 
-        childRow.appendChild(childCol1);
-        childRow.appendChild(childCol2);
+                ionLabel.appendChild(h1);
+                ionItem.appendChild(ionLabel);
 
-        childTable.appendChild(childRow);
-      });
+                ionItem.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    this.FillContent(subItem);
+                });
 
-      parentElement.appendChild(tableWrapper);
+                tableWrapper.appendChild(ionItem); 
+            }
+        });
+
+        parentElement.appendChild(tableWrapper);
     }
-  }
+}
 
   // Navigation Controls
 
@@ -341,7 +323,6 @@ export class HomePage {
       this.forwardStack = []; // Clear the forward stack
       this.breadcrumbs = [];
       this.showBackButton = false;
-      this.showSearchBar = false;
       this.showForwardButton = false;
     }
   }
@@ -372,7 +353,6 @@ export class HomePage {
     this.showBackButton = false;
     this.showForwardButton = false;
     this.breadcrumbs = [];
-    this.showSearchBar = false;
     this.noItemsFound = false;
     this.filteredData = [];
   }

@@ -2,24 +2,31 @@
   {
     "title": "Arquitetura e Topologia",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Arquitetura.svg",
     "url": "",
-    "icon": "",
     "childrens": [
       {
         "title": "Arquitetura",
         "description": "Apresenta a documentação de arquitetura.",
+        "update": "",
+        "icon": "../../assets/Images/Item_Images/example2.png",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Manuais%20e%20Treinamentos/Forms/AllItems.aspx?viewid=96fb4b1b%2D108a%2D41ca%2Dbf92%2Dd00491273460",
         "childrens": []
       },
       {
         "title": "Topologia",
         "description": "Apresenta a documentação de topologia.",
+        "update": "",
+        "icon": "../../assets/Images/Item_Images/example2.png",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Manuais%20e%20Treinamentos/Forms/AllItems.aspx?viewid=96fb4b1b%2D108a%2D41ca%2Dbf92%2Dd00491273460",
         "childrens": []
       },
       {
         "title": "Infraestrutura dos servidores",
         "description": "Apresenta a documentação da infraestrutura dos servidores.",
+        "update": "",
+        "icon": "../../assets/Images/Item_Images/example2.png",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Topologia%20ZETALY/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2FCETAD10%2FTopologia%20ZETALY&viewpath=%2Fsites%2FCETAD10%2FTopologia%20ZETALY%2FForms%2FAllItems%2Easpx&id=%2Fsites%2FCETAD10%2FTopologia%20ZETALY%2FInfraestrutura%20Servidores&viewid=b8550003%2D4b4a%2D4ef7%2Db303%2De57b643eeaed&OR=Teams%2DHL&CT=1693507365833&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzA3MDMwNzM0NiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ",
         "childrens": []
       }
@@ -28,43 +35,60 @@
   {
     "title": "Dashboards",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Dashboards.svg",
     "url": "",
     "childrens": [
       {
         "title": "CICS",
         "description": "",
+        "update": "",
+        "time": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Activity_TDS",
             "description": "Apresenta o perfil de atividade de CPU dos servidores CICS do ambiente CAIXA.",
+            "update": "(Time example) 15",
+            "icon": "../../assets/Images/Item_Images/example.jpg",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bea595f5d03803154ef07",
             "childrens": []
           },
           {
             "title": "CPU_Bancario",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário.",
+            "update": "",
+            "icon": "../../assets/Images/Item_Images/zetaly.jpeg",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6569cd2ba94f390f803e9682",
             "childrens": []
           },
           {
             "title": "CPU_Negocial",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente NEGOCIAL.",
+            "update": "",
+            "icon": "../../assets/Images/Item_Images/example2.png",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64679fe7fba25c28f02bf4b4"
           },
           {
             "title": "CPU_SOCIAL",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Social.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6467a38dfba25c28f02bf4d8"
           },
           {
             "title": "CICS_Activity",
             "description": "Apresenta as atividades das Regiões CICS na CAIXA.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/61f13d08a54ca90ef0331957"
           },
           {
             "title": "Report_Eficiencia",
             "description": "Apresenta a atividade e os índices de eficiência das transações dos últimos 7 dias.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6ce6fe93cf25110a940ca"
           }
         ]
@@ -72,21 +96,29 @@
       {
         "title": "CPU",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CP_Ziip_Capacity",
             "description": "Apresenta os indicadores de uso de processadores CP e Ziip.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d190e93cf25110a94160"
           },
           {
             "title": "CP_Ziip_Capacity_30dias",
             "description": "Apresenta o consumo de processadores CP e ZIIP nos últimos 30 dias.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d7173a8acf511c7e9350"
           },
           {
             "title": "Negócio",
             "description": "Apresenta a evolução de consumo de processamento por Negócio.",
+            "update": "",
+            "icon": "",
             "url": "dash: CPUusage _Evento_opt"
           }
         ]
@@ -94,31 +126,43 @@
       {
         "title": "DB2",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CPU",
             "description": "Apresenta o perfil de consumo de CPU das instancias DB2 do ambiente Bancário.",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CPU PRODUÇÃO",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "CPU_BANCARIO_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65525503c54fd12e70ba6bc7?folder=635be8fe5f5d03803154ee9d"
                   },
                   {
                     "title": "CPU_NEGOCIAL_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6552550fc54fd12e70ba6bfb?folder=635be8fe5f5d03803154ee9d"
                   },
                   {
                     "title": "CPU_SOCIAL_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65525524c54fd12e70ba6c2f?folder=635be8fe5f5d03803154ee9d"
                   }
                 ]
@@ -126,21 +170,29 @@
               {
                 "title": "CPU NÃO PRODUÇÃO",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "CPU_BANCARIO_NAO_PRODUÇÃO",
                     "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/655254fdc54fd12e70ba6bac?folder=635be8fe5f5d03803154ee9d"
                   },
                   {
                     "title": "CPU_NEGOCIAL_NAO_PRODUÇÃO",
                     "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65525509c54fd12e70ba6be1?folder=635be8fe5f5d03803154ee9d"
                   },
                   {
                     "title": "CPU_SOCIAL_NAO_PRODUÇÃO",
                     "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6552551ec54fd12e70ba6c15?folder=635be8fe5f5d03803154ee9d"
                   }
                 ]
@@ -150,26 +202,36 @@
           {
             "title": "DDF",
             "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "DDF PRODUÇÃO",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "DDF_BANCARIO_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522da2863e7f0110edee3b?folder=635be8fe5f5d03803154ee9d"
                   },
                   {
                     "title": "DDF_NEGOCIAL_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d72863e7f0110ededc4?folder=635be8fe5f5d03803154ee9d"
                   },
                   {
                     "title": "DDF_SOCIAL_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d8e863e7f0110ededff?folder=635be8fe5f5d03803154ee9d"
                   }
                 ]
@@ -177,16 +239,22 @@
               {
                 "title": "DDF NÃO PRODUÇÃO",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "DDF_BANCARIO_NAO_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d96863e7f0110edee1d?folder=635be8fe5f5d03803154ee9d"
                   },
                   {
                     "title": "DDF_NEGOCIAL_NAO_PROD",
                     "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65522d6a863e7f0110ededa6?folder=635be8fe5f5d03803154ee9d"
                   }
                 ]
@@ -196,31 +264,43 @@
           {
             "title": "Commits_View",
             "description": "Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam COMMITS com frequência.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d8b23a8acf511c7e9374"
           },
           {
             "title": "DB2_Commits_View_CEPTI240",
             "description": "Este relatório traz programas/rotinas sem COMMIT por sistemas do ambiente negocial.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9ad3a8acf511c7e9399"
           },
           {
             "title": "DB2_Connection_Client",
             "description": "O objetivo deste relatório é trazer as versões instaladas dos produtos junto a mais algumas outras informações relevantes.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9e5e93cf25110a941ca"
           },
           {
             "title": "DB2_Tamanho_LOG",
             "description": "Apresenta os tempos de carga dos arquivos de LOG DB2. Tempos muito curtos podem prejudicar a performance do banco.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d8b23a8acf511c7e9374"
           },
           {
             "title": "DB2_Lock_Scalation",
             "description": "Este dashboard ajuda a visualizar aplicativos que possam está impactando o ambiente, provocando timeouts de outros e deadlocks. Identifica também os recursos tipo tablespace que receberam a escalada de lock.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6de143a8acf511c7e93aa"
           },
           {
             "title": "DB2_Activity_V4",
             "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/650d7d9078d49728c48ea2de"
           }
         ]
@@ -228,16 +308,22 @@
       {
         "title": "Desempenho",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "DESEMPENHO_Cockpit",
             "description": "Este dashboard demonstra o Consumo em MIPS. Visualização pela SUART - Tendência de consumo das partições de Produção.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6eaba3a8acf511c7e942f"
           },
           {
             "title": "DESEMPENHO_WLM_Neogocio",
             "description": "Apresenta os indicadores de desempenho das classes do WLM.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6ec883a8acf511c7e9464"
           }
         ]
@@ -245,36 +331,50 @@
       {
         "title": "Memória",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Memoria_Central",
             "description": "Apresenta a utilização da memória CENTRAL dos ambientes.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85737e93cf25110a94733"
           },
           {
             "title": "Central_Producao_Diario",
             "description": "Apresenta a utilização de memória CENTRAL no último dia.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85883e93cf25110a94754"
           },
           {
             "title": "Memoria_Virtual",
             "description": "Apresenta a utilização de memória VIRTUAL na última semana.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85955e93cf25110a94774"
           },
           {
             "title": "Memoria_Central_Producao_Diario",
             "description": "Apresenta os indicadores de uso de Memória Central do dia anterior.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8208ee93cf25110a944ce"
           },
           {
             "title": "Memoria_Central_Semanal",
             "description": "Apresenta os indicadores de utilização de memória Central na última semana.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8223ce93cf25110a944ec"
           },
           {
             "title": "Memoria_Virtual",
             "description": "Apresenta a evolução do uso de memória Virtual no último trimestre.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b82bd93a8acf511c7e96ce"
           }
         ]
@@ -282,11 +382,15 @@
       {
         "title": "CESTI23",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CESTI23CP_ZIIP_USO_7dias_",
             "description": "Apresenta a distribuição de Processadores Ziip e CP no ambiente nos últimos 7 dias.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69a653a8acf511c7e92b7"
           }
         ]
@@ -294,56 +398,78 @@
       {
         "title": "Storage",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Array_Capacity(Back-End)",
             "description": "Apresenta o consumo dos indicadores do storage (visão Subsistema).",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02f6169cc0c5130732c3d"
           },
           {
             "title": "Array_Capacity(Front-End)",
             "description": "Apresenta o consumo dos indicadores do storage (visão Sistema operacional).",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e7b69cc0c5130732c11"
           },
           {
             "title": "Catalogo_Pelican",
             "description": "Apresenta o consumo dos CATALOGOS DE ARQUIVOS transferidos pelo PELICAN.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0320869cc0c5130732cd7"
           },
           {
             "title": "HisDataset",
             "description": "Este dashboard mostra a Visualização de Dataset alocaldo em Storage Groups.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02fd169cc0c5130732c6c"
           },
           {
             "title": " STORAGE_VTUnitUsage",
             "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de BACKUP.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0306769cc0c5130732c8b"
           },
           {
             "title": " STORAGE_MegadaVirada_Storage",
             "description": "Apresenta o consumo dos ARMAZENAMENTO no evento de mega da virada.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0332869cc0c5130732d05"
           },
           {
             "title": "STORAGE_Black_friday_storage",
             "description": "Apresenta o consumo dos ARMAZENAMENTO no evento Black Friday.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c032ae69cc0c5130732cea"
           },
           {
             "title": "DESEMPENHO_Performance",
             "description": "Apresenta o indicadores de desempenho dos recursos de armazenamento.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0318a69cc0c5130732cb4"
           },
           {
             "title": "STORAGE_DSNCAT",
             "description": "Apresenta os arquivos não classificados.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e1169cc0c5130732bf2"
           },
           {
             "title": " DESEMPENHO_Sistemas",
             "description": "Apresenta o CUSTO de armazenamento por sistema.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02d7d69cc0c5130732bc5"
           }
         ]
@@ -351,36 +477,50 @@
       {
         "title": "SUART",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "MIPS_NPRD_novo",
             "description": "Apresenta o tendência de consumo de MIPS das partições de não produção.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c033d769cc0c5130732d39"
           },
           {
             "title": "MIPS_PRD_novo",
             "description": "Apresenta o tendência de consumo de MIPS das partições de produção.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c034ce69cc0c5130732d6c"
           },
           {
             "title": "PlanCap_Channel_novo",
             "description": "Apresenta o utilização de canais para avaliação de capacidade.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c035af69cc0c5130732dbc"
           },
           {
             "title": "PlanejamentoCapacidade_CF",
             "description": "Apresenta utilização de processadores ICF para avaliação de capacidade.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0366c69cc0c5130732de2"
           },
           {
             "title": "PlanejamentoCapacidade_Channel",
             "description": "Apresenta os indicadores de consumo mensal de Canais.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c037d269cc0c5130732df8"
           },
           {
             "title": "PlanejamentoCapacidade_Memoria",
             "description": "Apresenta o tendência de consumo de MEMORIA real e virtual.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c039d469cc0c5130732e47"
           }
         ]
@@ -388,41 +528,57 @@
       {
         "title": "SHOWBACKGEGAT",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Baseline_Custos_Visão_Governança_VP",
             "description": "Apresenta o BASELINE de custos.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0261769cc0c5130732b32"
           },
           {
             "title": "RateioShowbackINFRA_visao_ano_mes [REVER]",
             "description": "Apresenta o SHOWBACK da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c024ab69cc0c5130732ade"
           },
           {
             "title": "RateioShowbackINFRA_visao_ref",
             "description": "Apresenta o SHOWBACK da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0253f69cc0c5130732b09"
           },
           {
             "title": "Showback_Contrato",
             "description": "Apresenta o SHOWBACK da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
           },
           {
             "title": "Showback_ContratosRealizado",
             "description": "Apresenta o SHOWBACK da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
           },
           {
             "title": "Showback_VisaoGeralContratos",
             "description": "Apresenta o SHOWBACK da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
           },
           {
             "title": "ShowbackCentroCustoParticao",
             "description": "Apresenta o SHOWBACK da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02cf369cc0c5130732ba8"
           }
         ]
@@ -430,21 +586,29 @@
       {
         "title": "SHOWBACKGESTI",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "SHOWBACKGESTI_Showback_Contrato",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
           },
           {
             "title": "SHOWBACKGESTI_Showback_ContratosRealizado",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
           },
           {
             "title": "SHOWBACKGESTI_Showback_VisaoGeralContratos",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
           }
         ]
@@ -452,26 +616,36 @@
       {
         "title": "Desempenho Aplicação",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CICS_Health",
             "description": "Apresenta os indicadores de saúde das transações e regiões CICS.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"
           },
           {
             "title": "CICS_Health_SUDEA_SUDEB",
             "description": "Apresenta os indicadores de saúde das transações e regiões CICS do ambiente de Não-Produção.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"
           },
           {
             "title": "CICS_Report_Desempenho",
             "description": "Apresenta os indicadores de desempenho e saúde das transações e regiões CICS dos ambientes de Negócio.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6268293d23e8370414b736a0"
           },
           {
             "title": "DB2_Commits_View_Desempenho",
             "description": "Apresenta a incidência de Commits para indicar aplicações a serem melhoradas.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bece65f5d03803154f04f"
           }
         ]
@@ -479,61 +653,85 @@
       {
         "title": "Performance",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CP_Ziip_CEC",
             "description": "Apresenta a utilização de processadores CP e Ziip por CEC.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae38c3a8acf511c7e98fa"
           },
           {
             "title": "Health_CPU_ZIIP",
             "description": "Apresenta a avaliação da saúde dos processadores CP e Ziiip.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae7d2e93cf25110a949f7"
           },
           {
             "title": "MSU_LPAR_DIASEMANA",
             "description": "Apresenta o consumo de MSU por LPAR nos dias da semana.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad254e93cf25110a94980"
           },
           {
             "title": "MSU_SYSPLEX_DIASEMANA",
             "description": "Apresenta o consumo de MSU máximo por LPAR nos dias da semana.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad2afe93cf25110a94997"
           },
           {
             "title": "RMF_Consolidado",
             "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por dia.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae9dde93cf25110a94a26"
           },
           {
             "title": "RMF_Consolidado_Mensal",
             "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por MÊS.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baeb21e93cf25110a94a47"
           },
           {
             "title": "RMF_Consolidado_Semanal",
             "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por SEMANA.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baebfce93cf25110a94a5e"
           },
           {
             "title": "Storage_Performance",
             "description": "Apresenta as informações de DESEMPENHO do armazenamento MAINFRAME.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baec8fe93cf25110a94a75"
           },
           {
             "title": "WLM_CPU_ZIIP",
             "description": "Apresenta o consumo de MSU por WORKLOAD para CP e Ziip.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad84ee93cf25110a949b7"
           },
           {
             "title": "Workload_IOs",
             "description": "Apresenta o consumo de IOs por WORKLOAD.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae0a23a8acf511c7e98c2"
           },
           {
             "title": "Workload_Memória",
             "description": "Apresenta o consumo de MEMORIA  por WORKLOAD.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae2603a8acf511c7e98e2"
           }
         ]
@@ -541,21 +739,29 @@
       {
         "title": "Eventos Comerciais",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Black_Friday_View",
             "description": "Apresenta a evolução de consumo de processamento para a semana do Black Friday.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b801d5e93cf25110a942aa"
           },
           {
             "title": "CP_Ziip_Capacity_Namorados",
             "description": "Apresenta o uso de processadores CP e ZIIP para o dia dos Namorados.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d4ee3a8acf511c7e9328"
           },
           {
             "title": "Black_Friday_Perf_Track",
             "description": "Apresenta a evolução de consumo de processamento CP e Ziip de Black Friday.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b7ffe3e93cf25110a94280"
           }
         ]
@@ -563,21 +769,29 @@
       {
         "title": "Indicadores",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Disponibilidade_MF (syslog)",
             "description": "Apresenta o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do SYSLOG.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81dfee93cf25110a944a3"
           },
           {
             "title": "Disponibilidade_Mainframe_Jes2",
             "description": "Apresenta o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do JES2.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81ce9e93cf25110a9447f"
           },
           {
             "title": "EficienciaMF_Transacoes_MSU",
             "description": "Este relatório tem por objetivo apresenta o Indicador de Eficiência Plataforma Mainframe (EP_MF) a ser utilizado pela CESTI351 para acompanhar e avaliar o desempenho do ambiente através da relação entre o total de transações CICS executadas x o total de Unidades de Serviço (SU) por dia.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64dce388e93cf25110a99a02"
           }
         ]
@@ -585,31 +799,43 @@
       {
         "title": "Broker",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CPU PRODUÇÃO/NÃO PRODUÇÃO",
             "description": "Apresenta os dashboards de produção/não produção.",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Broker Produção",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "BROKER_BANCARIO_PROD",
                     "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574a7e803d5da24ecc1d66d"
                   },
                   {
                     "title": "BROKER_NEGOCIAL_PROD",
                     "description": "Apresentar o consumo dos servidores Broker nos ambientes",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b231eb61ec26ec53b6af"
                   },
                   {
                     "title": "BROKER_SOCIAL_PROD",
                     "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b30deb61ec26ec53b6db"
                   }
                 ]
@@ -617,21 +843,29 @@
               {
                 "title": "Broker Não Produção",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "BROKER_BANCARIO_NAO_PROD",
                     "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b1dbeb61ec26ec53b698"
                   },
                   {
                     "title": "BROKER_NEGOCIAL_NAO_PROD",
                     "description": "Apresentar o consumo dos servidores Broker nos ambientes",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b2aeeb61ec26ec53b6c5"
                   },
                   {
                     "title": "BROKER_SOCIAL_NAO_PROD",
                     "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b4eceb61ec26ec53b70b"
                   }
                 ]
@@ -641,6 +875,8 @@
           {
             "title": "CPU",
             "description": "Apresenta o consumo dos servidores Broker nos ambientes.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b82fcce93cf25110a9450f"
           }
         ]
@@ -648,16 +884,22 @@
       {
         "title": "IDMS",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CPU",
             "description": "Apresenta o perfil de consumo de CPU dos servidores IDMS por Núcleo.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b848d3e93cf25110a946ab"
           },
           {
             "title": "Serviços",
             "description": "Apresenta o uso dos servidores IDMS.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b846cde93cf25110a9468b"
           }
         ]
@@ -665,31 +907,43 @@
       {
         "title": "Inventário",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CEC_Canais",
             "description": "Apresenta o inventário das placas de IO dos CECS instalados e disponíveis para uso.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84d3ee93cf25110a946d0"
           },
           {
             "title": "CEC_LPAR",
             "description": "Apresenta o inventário dos processadores e componentes dos CECS instalados e disponíveis para uso.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84f65e93cf25110a946e1"
           },
           {
             "title": "CEC_Totais",
             "description": "Apresenta o inventário dos CECS instalados e sua capacidade por Negócio e disponíveis para uso.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b850cde93cf25110a946fa"
           },
           {
             "title": "Software",
             "description": "Apresenta o inventário dos produtos e estruturas CF ativos e em uso nos ambientes.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85213e93cf25110a94709"
           },
           {
             "title": "VTUnitUsage",
             "description": "Apresenta o inventário da utilização de unidades de Virtual Tapes.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bedfe5f5d03803154f0cc"
           }
         ]
@@ -697,36 +951,50 @@
       {
         "title": "MQ",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CPU",
             "description": "Apresenta a utilização de processamento de servidores MQSeries nos ambientes memória CENTRAL no último dia.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85a5ae93cf25110a94785"
           },
           {
             "title": "MQ Mensagens",
             "description": "Apresenta volume de utilização de mensagens MQSeries.",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "MQ Mensagens Produção",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "MENSAGENS_BANCARIO_PROD",
                     "description": "Apresentar o consumo dos servidores MQ nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b794eb61ec26ec53b744"
                   },
                   {
                     "title": "MENSAGENS_NEGOCIAL_PROD",
                     "description": "Apresentar o consumo dos servidores MQ nos ambientes",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981a187c0ad2422c942589"
                   },
                   {
                     "title": "MENSAGENS_SOCIAL_PROD",
                     "description": "Apresentar o consumo dos servidores MQ nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981b88e65a714de833cbad"
                   }
                 ]
@@ -734,21 +1002,29 @@
               {
                 "title": "MQ Mensagens Não Produção",
                 "description": "",
+                "update": "",
+                "icon": "",
                 "url": "",
                 "childrens": [
                   {
                     "title": "MENSAGENS_BANCARIO_NÃO_PROD",
                     "description": "Apresentar o consumo dos servidores MQ nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6598188c7c0ad2422c942561"
                   },
                   {
                     "title": "MENSAGENS_NEGOCIAL_NÃO_PROD",
                     "description": "Apresentar o consumo dos servidores MQ nos ambientes",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981ae27c0ad2422c9425d9"
                   },
                   {
                     "title": "MENSAGENS_SOCIAL_NÃO_PROD",
                     "description": "Apresentar o consumo dos servidores MQ nos ambientes.",
+                    "update": "",
+                    "icon": "",
                     "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65981c4ee65a714de833cbd4"
                   }
                 ]
@@ -760,16 +1036,22 @@
       {
         "title": "Produção",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "USO_PRODUCAO_Batch_Producao_Sistemas",
             "description": "Apresenta as informações de SERVIÇOS BATCH de produção por Sistema.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baf00fe93cf25110a94a9b"
           },
           {
             "title": "Maiores_Consumidores",
             "description": "Apresenta o USO dos maiores consumidores por CEC.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0163e3a8acf511c7e9de1"
           }
         ]
@@ -777,11 +1059,15 @@
       {
         "title": "TCPIP",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CPU",
             "description": "Apresenta o consumo dos serviços TCPIP por SYSPLEX.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"
           }
         ]
@@ -789,11 +1075,15 @@
       {
         "title": "WAS",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "CPU",
             "description": "Apresenta o consumo dos serviços WAS por SYSPLEX.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"
           }
         ]
@@ -801,31 +1091,43 @@
       {
         "title": "Catálogos",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "NaoCategGegat",
             "description": "Apresenta os serviços não categorizados para a GEGAT e seus valores.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69465e93cf25110a93b5e"
           },
           {
             "title": "RecursosPrincipal",
             "description": "Este catálogo é referente aos recursos físicos do mainframe: Processadores, Memória, Canais e Armazenamento.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694b4e93cf25110a93b6c"
           },
           {
             "title": "RecursosProcessadores",
             "description": "Apresenta a visão do consumo dos tempos de CPU dos últimos 6 meses.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694f2e93cf25110a93b97"
           },
           {
             "title": "Serviços_Online",
             "description": "Apresenta os critérios e classificação dos serviços ONLINE nos últimos 6 meses.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64908e9ffba25c28f02ca7dd"
           },
           {
             "title": "Catálgo rotinas batch",
             "description": "Apresenta os critérios de classificação das Rotinas Batchs.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/60dccd93c03b104fb05e59a4"
           }
         ]
@@ -833,11 +1135,15 @@
       {
         "title": "CESTI351",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Consumo_Geral_RJP1eRJP2",
             "description": "Apresenta a evolução do consumo de processador da RJP1 e RJP2.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6c5b9e93cf25110a93c07"
           }
         ]
@@ -845,21 +1151,29 @@
       {
         "title": "Relatório",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Relatorio_Diario",
             "description": "Apresenta os pontos de alertas, saturações e críticos que ocorreram no dia ANTERIOR, dos quais necessitam de atenção.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6144943318844b39646300d1"
           },
           {
             "title": "Relatorio_Mensal",
             "description": "Apresenta de uma forma sistêmica a saúde do ambiente de produção Alta Plataforma e os pontos de alertas e críticos que ocorreram durante o MÊS ANTERIOR dos quais necessitam de atenção. Utiliza o mês de Julho/2021 como baseline. Por fim, o relatório traz sempre os últimos 3 meses com o intuito de um pequeno histórico para comparações.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/614b38446c783551bca318da"
           },
           {
             "title": "Relatorio_Semanal",
             "description": "Apresenta os pontos de alertas, saturações e críticos que ocorreram durante a semana ANTERIOR, dos quais necessitam de atenção.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6176edd009be97484cfd1617"
           }
         ]
@@ -867,111 +1181,155 @@
       {
         "title": "Custos",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "4B_Uso_Custos_AcompanhamentoContratoSoftware",
             "description": "Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento orçamentário",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/646d1caa8cb17c0700750afb"
           },
           {
             "title": "4B_Uso_Custos_Consumo_Excessivo",
             "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o % de contribuição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/651d6e3c4e691405883e16e5"
           },
           {
             "title": "4B_Uso_Custos_Consumo-Control-M",
             "description": "Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base licenciada no período selecionado.  ",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64a979b13d458300ecf7a88b"
           },
           {
             "title": "4B_Uso_Custos_ControlM-TOP-10",
             "description": "Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência final, e os 10 maiores consumos de cada período.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/652027b94e691405883e185e"
           },
           {
             "title": " 4B_Uso_Custos_ExtracaoSCRT",
             "description": " Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por Serial/Produto e detalhado por partição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
           },
           {
             "title": "4B_Uso_Custos_GestaoOrcamentoContratot",
             "description": "Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo em meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado e o saldo orçamentário detalhado.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
           },
           {
             "title": "4B_Uso_Custos_IBM",
             "description": "Apresenta o uso e o custo total dos softwares IBM no período selecionado, com visões por produto, e por licença, subset e produto.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/642332b3ca6751574c9d4a4b"
           },
           {
             "title": "4B_Uso_Custos_IBM_Detalhado",
             "description": "Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site (CEPTI) e SID, além de um detalhamento por partição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/6423410cca6751574c9d4a81"
           },
           {
             "title": "4B_Uso_Custos_Inventario_IBM",
             "description": "Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período selecionado.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64c7f0faa7dd13609814b255"
           },
           {
             "title": "4B_Uso_Custos_InventarioUso",
             "description": "Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um gráfico de tendências.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/646b8ef0baa1290674a6ed81"
           },
           {
             "title": "4B_Uso_Custos_InventarioSoftwareTerceiros",
             "description": "Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período selecionado.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64e2b82678d49728c48e9d62"
           },
           {
             "title": "4B_Uso_Custos_Inventário_CBA",
             "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/649442fe3d458300ecf7a6dc"
           },
           {
             "title": "4B_Uso_Custos_Rubricas",
             "description": "Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o status de pagamento das faturas.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64b6fb240af1e6e964eae1fc"
           },
           {
             "title": "4B_Uso_Custos_Terceiros",
             "description": " Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/6418829bca6751574c9d47ca"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_CA",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e créditos contratuais, e a distribuição percentual dos produtos por consumo e por valor.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64307ee7fe23165750e5089a"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Control-M",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por produto.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/651c616d023fb35ac49e6684"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Detalhes",
             "description": "Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição de consumo e de valor por site (CEPTI).",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/641b128eca6751574c9d48da"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Detalhes_Control-M",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/651c6a7b023fb35ac49e6878"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_FaixasAcumuladas",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor e um quadro demonstrativo do cálculo do valor.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/65006d8678d49728c48ea06f"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Simulacao_Aquisicao",
             "description": "Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média da diferença entre consumo e base licenciada (MsuBase).",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/6479ff9dbaa1290674a6ef35"
           },
           {
             "title": "4B_Uso_Custos_Valores_Particoes",
             "description": "Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site e Total por Serial, e de forma analítica - detalhando cada um dos totais por partição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64c81e65a7dd13609814b270"
           }
         ]
@@ -981,46 +1339,64 @@
   {
     "title": "Processos",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Processos.svg",
     "url": "",
     "childrens": [
       {
         "title": "Capacidade",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "SUART",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "MIPS_NPRD_novo",
                 "description": "Apresenta o tendência de consumo de MIPS das partições de não produção. ",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c033d769cc0c5130732d39"
               },
               {
                 "title": "MIPS_PRD_novo ",
                 "description": "Apresenta o tendência de consumo de MIPS das partições de produção.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c034ce69cc0c5130732d6c"
               },
               {
                 "title": "PlanCap_Channel_novo",
                 "description": "Apresenta o utilização de canais para avaliação de capacidade.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c035af69cc0c5130732dbc"
               },
               {
                 "title": "PlanejamentoCapacidade_CF",
                 "description": "Apresenta utilização de processadores ICF para avaliação de capacidade.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0366c69cc0c5130732de2"
               },
               {
                 "title": "PlanejamentoCapacidade_Channel",
                 "description": "Apresenta os indicadores de consumo mensal de Canais.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c037d269cc0c5130732df8"
               },
               {
                 "title": "PlanejamentoCapacidade_Memoria",
                 "description": "Apresenta o tendência de consumo de MEMORIA real e virtual.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c039d469cc0c5130732e47"
               }
             ]
@@ -1028,11 +1404,15 @@
           {
             "title": "CESTI23",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CP_ZIIP_USO_7dias",
                 "description": "Apresenta a distribuição de Processadores Ziip e CP no ambiente nos últimos 7 dias.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69a653a8acf511c7e92b7"
               }
             ]
@@ -1042,46 +1422,64 @@
       {
         "title": "Custos",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "SHOWBACKGEGAT",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Baseline_Custos_Visão_Governança_VP",
                 "description": "Apresenta o BASELINE de custos",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0261769cc0c5130732b32"
               },
               {
                 "title": "RateioShowbackINFRA_visao_ano_mes [REVER]",
                 "description": "Apresenta o showback da GEGAT.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c024ab69cc0c5130732ade"
               },
               {
                 "title": "RateioShowbackINFRA_visao_ref ",
                 "description": "Apresenta o SHOWBACK da GEGAT.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0253f69cc0c5130732b09"
               },
               {
                 "title": "Showback_Contrato ",
                 "description": "Apresenta o SHOWBACK da GESTI.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
               },
               {
                 "title": "Showback_ContratosRealizado",
                 "description": "Apresenta o SHOWBACK da GESTI.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
               },
               {
                 "title": "Showback_VisaoGeralContratos ",
                 "description": "Apresenta o SHOWBACK da GESTI.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
               },
               {
                 "title": "ShowbackCentroCustoParticao",
                 "description": "Apresenta o SHOWBACK da GESTI.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02cf369cc0c5130732ba8"
               }
             ]
@@ -1089,26 +1487,36 @@
           {
             "title": "SHOWBACKGESTI",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Showback_Contrato",
                 "description": "Apresenta o SHOWBACK da GESTI.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
               },
               {
                 "title": "Showback_ContratosRealizado",
                 "description": "Apresenta o SHOWBACK da GESTI.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
               },
               {
                 "title": "Showback_VisaoGeralContratos",
                 "description": "Apresenta o SHOWBACK da GESTI.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
               },
               {
                 "title": "Performance_FE_Vols",
                 "description": "Apresenta o dashboard de Storage Performance - Volumes",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65293de329845c52a01140fd"
               }
             ]
@@ -1116,16 +1524,22 @@
           {
             "title": "Storage",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "DSNCAT",
                 "description": "Apresenta os arquivos não classificados.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e1169cc0c5130732bf2"
               },
               {
                 "title": "Sistemas",
                 "description": "Apresenta o CUSTO de armazenamento por sistema.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02d7d69cc0c5130732bc5"
               }
             ]
@@ -1133,21 +1547,29 @@
           {
             "title": "Relatório",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Relatorio_Diario",
                 "description": "Apresenta os pontos de alertas, saturações e críticos que ocorreram no dia ANTERIOR, dos quais necessitam de atenção.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6144943318844b39646300d1"
               },
               {
                 "title": "Relatorio_Mensal",
                 "description": "Apresenta de uma forma sistêmica a saúde do ambiente de produção Alta Plataforma e os pontos de alertas e críticos que ocorreram durante o MÊS ANTERIOR dos quais necessitam de atenção. Utiliza o mês de Julho/2021 como baseline. Por fim, o relatório traz sempre os últimos 3 meses com o intuito de um pequeno histórico para comparações.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/614b38446c783551bca318da"
               },
               {
                 "title": "Relatorio_Semanal",
                 "description": "Apresenta os pontos de alertas, saturações e críticos que ocorreram durante a semana ANTERIOR, dos quais necessitam de atenção.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6176edd009be97484cfd1617"
               }
             ]
@@ -1155,111 +1577,155 @@
           {
             "title": "Custos",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "4B_Uso_Custos_AcompanhamentoContratoSoftware",
                 "description": "Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento orçamentário.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/646d1caa8cb17c0700750afb"
               },
               {
                 "title": "4B_Uso_Custos_Consumo-Control-M",
                 "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o % de contribuição.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/651d6e3c4e691405883e16e5"
               },
               {
                 "title": "4B_Uso_Custos_Consumo_Excessivo",
                 "description": "Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base licenciada no período selecionado.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/64a979b13d458300ecf7a88b"
               },
               {
                 "title": "4B_Uso_Custos_ControlM-TOP-10",
                 "description": "Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência final, e os 10 maiores consumos de cada período.",
+                "update": "",
+                "icon": "",
                 "url": " https://10.221.70.14:9091/app/main#/dashboards/652027b94e691405883e185e"
               },
               {
                 "title": "4B_Uso_Custos_ExtracaoSCRT",
                 "description": "Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por Serial/Produto e detalhado por partição.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
               },
               {
                 "title": "4B_Uso_Custos_GestaoOrcamentoContrato",
                 "description": "Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo em meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado e o saldo orçamentário detalhado.",
+                "update": "",
+                "icon": "",
                 "url": " https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
               },
               {
                 "title": "4B_Uso_Custos_IBM",
                 "description": "Apresenta o uso e o custo total dos softwares IBM no período selecionado, com visões por produto, e por licença, subset e produto.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/642332b3ca6751574c9d4a4b"
               },
               {
                 "title": "4B_Uso_Custos_IBM_Detalhado",
                 "description": "Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site (CEPTI) e SID, além de um detalhamento por partição.",
+                "update": "",
+                "icon": "",
                 "url": " https://10.221.70.14:9091/app/main#/dashboards/6423410cca6751574c9d4a81"
               },
               {
                 "title": "4B_Uso_Custos_Inventario_IBM",
                 "description": "Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período selecionado.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/64c7f0faa7dd13609814b255"
               },
               {
                 "title": "4B_Uso_Custos_InventarioUso",
                 "description": "Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um gráfico de tendências.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/646b8ef0baa1290674a6ed81"
               },
               {
                 "title": "4B_Uso_Custos_InventarioSoftwareTerceiros",
                 "description": "Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período selecionado.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/64e2b82678d49728c48e9d62"
               },
               {
                 "title": "4B_Uso_Custos_Inventário_CBA",
                 "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/649442fe3d458300ecf7a6dc"
               },
               {
                 "title": "4B_Uso_Custos_Rubricas",
                 "description": "Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o status de pagamento das faturas.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/64b6fb240af1e6e964eae1fc"
               },
               {
                 "title": "4B_Uso_Custos_Terceiros ",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/6418829bca6751574c9d47ca"
               },
               {
                 "title": "4B_Uso_Custos_Terceiros_CA",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e créditos contratuais, e a distribuição percentual dos produtos por consumo e por valor.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/64307ee7fe23165750e5089a"
               },
               {
                 "title": "4B_Uso_Custos_Terceiros_Control-M",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por produto.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/651c616d023fb35ac49e6684"
               },
               {
                 "title": "4B_Uso_Custos_Terceiros_Detalhes",
                 "description": "Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição de consumo e de valor por site (CEPTI).",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/641b128eca6751574c9d48da"
               },
               {
                 "title": "4B_Uso_Custos_Terceiros_Detalhes_Control-M",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/651c6a7b023fb35ac49e6878"
               },
               {
                 "title": "4B_Uso_Custos_Terceiros_FaixasAcumuladas",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor e um quadro demonstrativo do cálculo do valor.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/65006d8678d49728c48ea06f"
               },
               {
                 "title": "4B_Uso_Custos_Terceiros_Simulacao_Aquisicao",
                 "description": "Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média da diferença entre consumo e base licenciada (MsuBase).",
+                "update": "",
+                "icon": "",
                 "url": " https://10.221.70.14:9091/app/main#/dashboards/6479ff9dbaa1290674a6ef35"
               },
               {
                 "title": "4B_Uso_Custos_Valores_Particoes",
                 "description": "Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site e Total por Serial, e de forma analítica - detalhando cada um dos totais por partição.",
+                "update": "",
+                "icon": "",
                 "url": "https://10.221.70.14:9091/app/main#/dashboards/64c81e65a7dd13609814b270"
               }
             ]
@@ -1269,41 +1735,57 @@
       {
         "title": "Desempenho",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "DB2",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Commits_View",
                 "description": "Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam COMMITS com frequência.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d8b23a8acf511c7e9374"
               },
               {
                 "title": "Commits_View_CEPTI240",
                 "description": "Este relatório traz  programas/rotinas sem COMMIT por sistemas do ambiente negocial",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9ad3a8acf511c7e9399"
               },
               {
                 "title": "Connection_Client",
                 "description": "O objetivo deste relatório é trazer as versões instaladas dos produtos junto a mais algumas outras informações relevantes.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d9e5e93cf25110a941ca"
               },
               {
                 "title": "Lock_Scalation",
                 "description": "Este dashboard ajuda a visualizar aplicativos que possam está impactando o ambiente, provocando timeouts de outros e deadlocks. Identifica também os recursos tipo tablespace que receberam a escalada de lock",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6de143a8acf511c7e93aa"
               },
               {
                 "title": "Tamanho_LOG",
                 "description": "Apresenta os tempos de  carga dos arquivos de LOG DB2. Tempos muito curtos podem prejudicar a performance do banco.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6de803a8acf511c7e93cd"
               },
               {
                 "title": "DB2_Activity_V4",
                 "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/650d7d9078d49728c48ea2de"
               }
             ]
@@ -1311,11 +1793,15 @@
           {
             "title": "Desempenho",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Cockpit",
                 "description": "Este dashboard demonstra o Consumo em MIPS.  Visualização pela SUART - Tendência de consumo das partições de Produção.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64f75ffd856646266c18b32c"
               }
             ]
@@ -1323,26 +1809,36 @@
           {
             "title": "Desempenho Aplicação",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CICS_Health",
                 "description": " Apresenta os indicadores de saúde das transações e regiões CICS.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"
               },
               {
                 "title": "CICS_Health_SUDEA_SUDEB",
                 "description": " Apresenta  os indicadores de saúde das transações e regiões CICS do ambiente de Não-Produção.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635becc95f5d03803154efed"
               },
               {
                 "title": "CICS_Report_Desempenho",
                 "description": "Apresenta  os indicadores de desempenho e saúde das transações e regiões CICS dos ambientes de Negócio.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6268293d23e8370414b736a0"
               },
               {
                 "title": "DB2_Commits_View_Desempenho",
                 "description": "Apresenta a incidência de Commits para indicar aplicações a serem melhoradas.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bece65f5d03803154f04f"
               }
             ]
@@ -1350,61 +1846,85 @@
           {
             "title": "Performance",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CP_Ziip_CEC",
                 "description": "Apresenta a utilização de processadores CP e Ziip por CEC.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae38c3a8acf511c7e98fa"
               },
               {
                 "title": "Health_CPU_ZIIP",
                 "description": "Apresenta a avaliação da saúde dos processadores CP e Ziiip.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae7d2e93cf25110a949f7"
               },
               {
                 "title": "MSU_LPAR_DIASEMANA",
                 "description": "Apresenta o consumo de MSU por LPAR nos dias da semana.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad254e93cf25110a94980"
               },
               {
                 "title": "MSU_SYSPLEX_DIASEMANA",
                 "description": "Apresenta o consumo de MSU máximo por LPAR nos dias da semana.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad2afe93cf25110a94997"
               },
               {
                 "title": "RMF_Consolidado",
                 "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por dia.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae9dde93cf25110a94a26"
               },
               {
                 "title": "RMF_Consolidado_Mensal",
                 "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por MÊS.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baeb21e93cf25110a94a47"
               },
               {
                 "title": "RMF_Consolidado_Semanal",
                 "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por SEMANA.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baebfce93cf25110a94a5e"
               },
               {
                 "title": "Storage_Performance",
                 "description": "Apresenta as informações de DESEMPENHO do armazenamento MAINFRAME.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baec8fe93cf25110a94a75"
               },
               {
                 "title": "WLM_CPU_ZIIP",
                 "description": "Apresenta o consumo de MSU por WORKLOAD para CP e Ziip.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bad84ee93cf25110a949b7"
               },
               {
                 "title": "Workload_IOs",
                 "description": "Apresenta o consumo de IOs por WORKLOAD.    ",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae0a23a8acf511c7e98c2"
               },
               {
                 "title": "Workload_Memória",
                 "description": "Apresenta o consumo de MEMORIA por WORKLOAD.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64bae2603a8acf511c7e98e2"
               }
             ]
@@ -1412,11 +1932,15 @@
           {
             "title": "Storage",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Performance",
                 "description": "Apresenta o indicadores de desempenho dos recursos de armazenamento.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0318a69cc0c5130732cb4"
               }
             ]
@@ -1426,26 +1950,36 @@
       {
         "title": "Uso",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Eventos Comerciais",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Black_Friday_View.",
                 "description": "Apresenta a evolução de consumo de processamento para a semana do Black Friday",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b801d5e93cf25110a942aa"
               },
               {
                 "title": "CP_Ziip_Capacity_Namorados",
                 "description": "Apresenta o uso de processadores CP e ZIIP para o dia dos Namorados.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d4ee3a8acf511c7e9328"
               },
               {
                 "title": "Black_Friday_Perf_Track",
                 "description": "Apresenta a evolução de consumo de processamento CP e Ziip de Black Friday",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b7ffe3e93cf25110a94280"
               }
             ]
@@ -1453,21 +1987,29 @@
           {
             "title": "Indicadores",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Disponibilidade_MF (syslog)",
                 "description": "Apresenta o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do SYSLOG.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81dfee93cf25110a944a3"
               },
               {
                 "title": "Disponibilidade_Mainframe_Jes2",
                 "description": "Apresenta o indicador de disponibilidade do ambiente mainframe baseado no registro de atividade do JES2.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b81ce9e93cf25110a9447f"
               },
               {
                 "title": "EficienciaMF_Transacoes_MSU",
                 "description": "Este relatório tem por objetivo apresenta o Indicador de Eficiência Plataforma Mainframe (EP_MF) a ser utilizado pela CESTI351 para acompanhar e avaliar o desempenho do ambiente através da relação entre o total de transações CICS executadas x o total de Unidades de Serviço (SU) por dia. ",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8199be93cf25110a943fb"
               }
             ]
@@ -1475,21 +2017,29 @@
           {
             "title": "Memória",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Central_Producao_Diario_MB",
                 "description": "Apresenta os indicadores de uso de Memória Central do dia anterior.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8208ee93cf25110a944ce"
               },
               {
                 "title": "Central_Semanal",
                 "description": "Apresenta os indicadores de utilização de memória Central na última semana.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8223ce93cf25110a944ec"
               },
               {
                 "title": "Virtual",
                 "description": "Apresenta a evolução do uso de memória Virtual no último trimestre.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b82bd93a8acf511c7e96ce"
               }
             ]
@@ -1497,31 +2047,43 @@
           {
             "title": "Broker",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CPU PRODUÇÃO/NÃO PRODUÇÃO",
                 "description": "Apresenta os dashboards de produção/não produção.",
+                "update": "",
+                "icon": "",
                 "url": "",
-                "childrens":[
+                "childrens": [
                   {
                     "title": "Broker Produção",
                     "description": "",
+                    "update": "",
+                    "icon": "",
                     "url": "",
                     "childrens": [
                       {
                         "title": "BROKER_BANCARIO_PROD",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                        "update": "",
+                        "icon": "",
                         "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574a7e803d5da24ecc1d66d"
                       },
                       {
                         "title": "BROKER_NEGOCIAL_PROD",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes",
+                        "update": "",
+                        "icon": "",
                         "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b231eb61ec26ec53b6af"
                       },
                       {
                         "title": "BROKER_SOCIAL_PROD",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                        "update": "",
+                        "icon": "",
                         "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b30deb61ec26ec53b6db"
                       }
                     ]
@@ -1529,21 +2091,29 @@
                   {
                     "title": "Broker Não Produção",
                     "description": "",
+                    "update": "",
+                    "icon": "",
                     "url": "",
                     "childrens": [
                       {
                         "title": "BROKER_BANCARIO_NAO_PROD",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                        "update": "",
+                        "icon": "",
                         "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b1dbeb61ec26ec53b698"
                       },
                       {
                         "title": "BROKER_NEGOCIAL_NAO_PROD",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes",
+                        "update": "",
+                        "icon": "",
                         "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b2aeeb61ec26ec53b6c5"
                       },
                       {
                         "title": "BROKER_SOCIAL_NAO_PROD",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
+                        "update": "",
+                        "icon": "",
                         "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6574b4eceb61ec26ec53b70b"
                       }
                     ]
@@ -1553,6 +2123,8 @@
               {
                 "title": "CPU",
                 "description": "Apresenta o consumo dos servidores Broker nos ambientes.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b82fcce93cf25110a9450f"
               }
             ]
@@ -1560,41 +2132,57 @@
           {
             "title": "CICS",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Activity_TDS",
                 "description": "Apresenta o perfil de atividade de CPU dos servidores CICS do ambiente CAIXA.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b83cdce93cf25110a9460d"
               },
               {
                 "title": "CPU_Bancario",
                 "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8318de93cf25110a94528"
               },
               {
                 "title": "CPU_Negocial",
                 "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente NEGOCIAL.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8326de93cf25110a94545"
               },
               {
                 "title": "CPU_Social",
                 "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Social.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b83affe93cf25110a945f2"
               },
               {
                 "title": "Activity",
                 "description": "Apresenta as atividades das Regiões CICS na CAIXA.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6cf5de93cf25110a940f9"
               },
               {
                 "title": "Report_Eficiencia",
                 "description": "Apresenta a atividade e os índices de eficiência das transações dos últimos 7 dias.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6ce6fe93cf25110a940ca"
               },
               {
                 "title": "TRN_Negocial_CEPTI240",
                 "description": "Acompanhamento de transações Negocial para CEPTI240.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6c98ce93cf25110a940b3"
               }
             ]
@@ -1602,16 +2190,22 @@
           {
             "title": "DB2",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CPU",
                 "description": "Apresenta o perfil de consumo de CPU das instancias DB2 do ambiente Bancário.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b83f47e93cf25110a94651"
               },
               {
                 "title": "DDF",
                 "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b840d1e93cf25110a9466d"
               }
             ]
@@ -1619,16 +2213,22 @@
           {
             "title": "IDMS",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CPU",
                 "description": "Apresenta o perfil de consumo de CPU dos servidores IDMS por Núcleo.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b848d3e93cf25110a946ab"
               },
               {
                 "title": "Serviços",
                 "description": "Apresenta o uso dos servidores IDMS.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b846cde93cf25110a9468b"
               }
             ]
@@ -1636,31 +2236,43 @@
           {
             "title": "Inventário",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CEC_Canais",
                 "description": "Apresenta o inventário das placas de IO dos CECS instalados e disponíveis para uso.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84d3ee93cf25110a946d0"
               },
               {
                 "title": "CEC_LPAR",
                 "description": "Apresenta o inventário dos processadores e componentes dos CECS instalados e disponíveis para uso.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b84f65e93cf25110a946e1"
               },
               {
                 "title": "CEC_Totais",
                 "description": "Apresenta o inventário dos CECS instalados e sua capacidade por Negócio e disponíveis para uso.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b850cde93cf25110a946fa"
               },
               {
                 "title": "Software",
                 "description": "Apresenta o inventário dos produtos e estruturas CF ativos e em uso nos ambientes.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85213e93cf25110a94709"
               },
               {
                 "title": "VTUnitUsage",
                 "description": "Apresenta o inventário da utilização de unidades de Virtual Tapes.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/635bedfe5f5d03803154f0cc"
               }
             ]
@@ -1668,21 +2280,29 @@
           {
             "title": "Memória",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Central_Producao_Diario_MB",
                 "description": "Apresenta os indicadores de uso de Memória Central do dia anterior.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8208ee93cf25110a944ce"
               },
               {
                 "title": "Central_Semanal",
                 "description": "Apresenta os indicadores de utilização de memória Central na última semana.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b8223ce93cf25110a944ec"
               },
               {
                 "title": "Virtual",
                 "description": "Apresenta a evolução do uso de memória Virtual no último trimestre.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b82bd93a8acf511c7e96ce"
               }
             ]
@@ -1690,21 +2310,29 @@
           {
             "title": "MQ",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CPU",
                 "description": "Apresenta a utilização de processamento de servidores MQSeries nos ambientes memória CENTRAL no último dia.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85a5ae93cf25110a94785"
               },
               {
                 "title": "Mensagens",
                 "description": "Apresenta volume de utilização de mensagens MQSeries.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85bcce93cf25110a9479d"
               },
               {
                 "title": "Mensagens_Hora",
                 "description": "Apresenta o volume horário de utilização de mensagens MQSeries no ambiente.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b85d44e93cf25110a947bd"
               }
             ]
@@ -1712,16 +2340,22 @@
           {
             "title": "Produção",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "PRODUCAO_Batch_Producao_Sistemas",
                 "description": "Apresenta as informações de SERVIÇOS BATCH de produção por Sistema.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64baf00fe93cf25110a94a9b"
               },
               {
                 "title": "Maiores_Consumidores",
                 "description": "Apresenta o USO dos maiores consumidores por CEC.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0163e3a8acf511c7e9de1"
               }
             ]
@@ -1729,11 +2363,15 @@
           {
             "title": "TCPIP",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CPU",
                 "description": "Apresenta o consumo dos serviços TCPIP por SYSPLEX.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"
               }
             ]
@@ -1741,11 +2379,15 @@
           {
             "title": "WAS",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CPU",
                 "description": "Apresenta o consumo dos serviços WAS por SYSPLEX.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c018803a8acf511c7e9e35"
               }
             ]
@@ -1753,41 +2395,57 @@
           {
             "title": "Storage",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Array_Capacity (Back-End)",
                 "description": "Apresenta o consumo dos indicadores do storage (visão Subsistema).",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02f6169cc0c5130732c3d"
               },
               {
                 "title": "Array_Capacity (Front-End)",
                 "description": "Apresenta o consumo dos indicadores do storage (visão Sistema Operacional).",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02e7b69cc0c5130732c11"
               },
               {
                 "title": "Catalogo_Pelican",
                 "description": "Apresenta o consumo dos CATALOGOS DE ARQUIVOS transferidos pelo PELICAN.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0320869cc0c5130732cd7"
               },
               {
                 "title": "HisDataset",
                 "description": "Apresenta a utilização de Arquivos e STORAGE GROUPS.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02fd169cc0c5130732c6c"
               },
               {
                 "title": "VTUnitUsage",
                 "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de BACKUP.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0306769cc0c5130732c8b"
               },
               {
                 "title": "Black_Friday_Storage",
                 "description": "Apresenta o consumo dos ARMAZENAMENTO no evento Black Friday.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c032ae69cc0c5130732cea"
               },
               {
                 "title": "MegadaVirada_Storage",
                 "description": "Apresenta o consumo dos ARMAZENAMENTO no evento de mega da virada.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0332869cc0c5130732d05"
               }
             ]
@@ -1795,31 +2453,43 @@
           {
             "title": "Catálogos",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "NaoCategGegat",
                 "description": "Apresenta os serviços não categorizados para a GEGAT e seus valores.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b69465e93cf25110a93b5e "
               },
               {
                 "title": "RecursosPrincipal",
                 "description": "Este catálogo é referente aos recursos físicos do mainframe: Processadores, Memória, Canais e Armazenamento.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694b4e93cf25110a93b6c"
               },
               {
                 "title": "RecursosProcessadores",
                 "description": "Apresenta a visão do consumo dos tempos de CPU dos últimos 6 meses.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b694f2e93cf25110a93b97"
               },
               {
                 "title": "Serviços_Online",
                 "description": "Apresenta os critérios e classificação dos serviços ONLINE nos últimos 6 meses.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6935ce93cf25110a93b1e"
               },
               {
                 "title": "Serviços_Batch",
                 "description": "Apresenta os critérios de classificação das Rotinas Batch.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/60dccd93c03b104fb05e59a4"
               }
             ]
@@ -1827,11 +2497,15 @@
           {
             "title": "CESTI351",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "Consumo_Geral_RJP1eRJP2",
                 "description": "Apresenta a evolução do consumo de processador da RJP1 e RJP2.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6c5b9e93cf25110a93c07"
               }
             ]
@@ -1839,21 +2513,29 @@
           {
             "title": "CPU",
             "description": "",
+            "update": "",
+            "icon": "",
             "url": "",
             "childrens": [
               {
                 "title": "CP_Ziip_Capacity",
                 "description": "Apresenta os indicadores de uso de processadores CP e Ziip.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d190e93cf25110a94160"
               },
               {
                 "title": "CP_Ziip_Capacity_30dias",
                 "description": "Apresenta o consumo de processadores CP e ZIIP nos últimos 30 dias.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64b6d7173a8acf511c7e9350"
               },
               {
                 "title": "Negócio",
                 "description": "Apresenta a evolução de consumo de processamento por Negócio.",
+                "update": "",
+                "icon": "",
                 "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/6197ade73db4255714fb5dbd"
               }
             ]
@@ -1865,26 +2547,36 @@
   {
     "title": "Documentação",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Documentacao.svg",
     "url": "",
     "childrens": [
       {
         "title": "Manuais e treinamentos",
         "description": "Apresenta toda a documentação de dashboards, manuais e treinamentos.",
+        "update": "",
+        "icon": "",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Manuais%20e%20Treinamentos/Forms/AllItems.aspx?viewid=96fb4b1b%2D108a%2D41ca%2Dbf92%2Dd00491273460"
       },
       {
         "title": "Boletins",
         "description": "Lista de documentação de Boletins",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Boletim Diário",
             "description": "Apresenta toda a documentação de Boletim Diário.",
+            "update": "",
+            "icon": "",
             "url": "https://caixa.sharepoint.com/sites/CETAD10/Boletim%20dirio/Forms/AllItems.aspx"
           },
           {
             "title": "Boletim Mensal",
             "description": "Apresenta toda a documentação de Boletim Mensal.",
+            "update": "",
+            "icon": "",
             "url": "https://caixa.sharepoint.com/sites/CETAD10/Boletim%20Mensal/Forms/AllItems.aspx"
           }
         ]
@@ -1892,21 +2584,29 @@
       {
         "title": "Relatórios",
         "description": "Lista de documentação dos Relatórios",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Relatório Diário",
             "description": "Apresenta toda a documentação de Relatório Diário.",
+            "update": "",
+            "icon": "",
             "url": "https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20Dirio/Forms/AllItems.aspx"
           },
           {
             "title": "Relatório Semanal",
             "description": "Apresenta toda a documentação de Relatório Semanal.",
+            "update": "",
+            "icon": "",
             "url": "https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20semanal/Forms/AllItems.aspx"
           },
           {
             "title": "Relatório Mensal",
             "description": "Apresenta toda a documentação de Relatório Mensal.",
+            "update": "",
+            "icon": "",
             "url": "https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20mensal/Forms/AllItems.aspx"
           }
         ]
@@ -1914,6 +2614,8 @@
       {
         "title": "Eventos Relevantes",
         "description": "Apresenta toda a documentação de Eventos Relevantes.",
+        "update": "",
+        "icon": "",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Relatrios%20capacidade/Forms/AllItems.aspx?id=%2Fsites%2FCETAD10%2FRelatrios%20capacidade%2FRel%20Armazenamento%20Mainframe%2FEventos%20Relevantes&viewid=a404d207%2D11af%2D47a9%2D9751%2D3b6c8a3d5ac5"
       }
     ]
@@ -1921,16 +2623,22 @@
   {
     "title": "Balanceador dinâmico",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Balanceador.svg",
     "url": "",
     "childrens": [
       {
         "title": "ZAC (máquina principal RJP6)",
         "description": "Apresenta o balanceamento dinâmico das partições na máquina principal.",
+        "update": "",
+        "icon": "",
         "url": "http://zac1.zetaly.caixa/"
       },
       {
         "title": "ZAC secundário (máquina RJP7)",
         "description": "Apresenta o balanceamento dinâmico das partições na máquina secundária.",
+        "update": "",
+        "icon": "",
         "url": "http://zac2.zetaly.caixa/"
       }
     ]
@@ -1938,121 +2646,169 @@
   {
     "title": "Custos",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Custos.svg",
     "url": "",
     "childrens": [
       {
         "title": "Dashboards de Custos/Uso",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "4B_Uso_Custos_IBM-ModelMLC",
             "description": "Apresenta o dashboard de custos no modelo MLC",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/642332b3ca6751574c9d4a4b"
           },
           {
             "title": "4B_Uso_Custos_IBM-ModelTFP",
             "description": "Apresenta o dashboard de custos no modelo TFP",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/66a159f15d08f45eac6393b6"
           },
           {
             "title": "4B_Uso_Custos_AcompanhamentoContratoSoftware",
             "description": "Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento orçamentário.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/646d1caa8cb17c0700750afb"
           },
           {
             "title": "4B_Uso_Custos_Consumo-Control-M",
             "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o % de contribuição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/651d6e3c4e691405883e16e5"
           },
           {
             "title": "4B_Uso_Custos_Consumo_Excessivo",
             "description": "Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base licenciada no período selecionado.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64a979b13d458300ecf7a88b"
           },
           {
             "title": "4B_Uso_Custos_ControlM-TOP-10",
             "description": "Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência final, e os 10 maiores consumos de cada período.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/652027b94e691405883e185e"
           },
           {
             "title": "4B_Uso_Custos_ExtracaoSCRT",
             "description": "Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por Serial/Produto e detalhado por partição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
           },
           {
             "title": "4B_Uso_Custos_GestaoOrcamentoContrato",
             "description": "Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo em meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado e o saldo orçamentário detalhado.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/641b380bfe23165750e50644"
           },
           {
             "title": "4B_Uso_Custos_IBM_Detalhado",
             "description": "Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site (CEPTI) e SID, além de um detalhamento por partição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/6423410cca6751574c9d4a81"
           },
           {
             "title": "4B_Uso_Custos_Inventario_IBM",
             "description": "Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período selecionado.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64c7f0faa7dd13609814b255"
           },
           {
             "title": "4B_Uso_Custos_InventarioUso",
             "description": "Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um gráfico de tendências.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/646b8ef0baa1290674a6ed81"
           },
           {
             "title": "4B_Uso_Custos_InventarioSoftwareTerceiros",
             "description": "Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período selecionado.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64e2b82678d49728c48e9d62"
           },
           {
             "title": "4B_Uso_Custos_Inventário_CBA",
             "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/649442fe3d458300ecf7a6dc"
           },
           {
             "title": "4B_Uso_Custos_Rubricas",
             "description": "Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o status de pagamento das faturas.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64b6fb240af1e6e964eae1fc"
           },
           {
             "title": "4B_Uso_Custos_Terceiros",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/6418829bca6751574c9d47ca"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_CA",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e créditos contratuais, e a distribuição percentual dos produtos por consumo e por valor.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64307ee7fe23165750e5089a"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Control-M",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por produto.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/651c616d023fb35ac49e6684"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Detalhes",
             "description": "Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição de consumo e de valor por site (CEPTI).",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/641b128eca6751574c9d48da"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Detalhes_Control-M",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/651c6a7b023fb35ac49e6878"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_FaixasAcumuladas",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor e um quadro demonstrativo do cálculo do valor.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/65006d8678d49728c48ea06f"
           },
           {
             "title": "4B_Uso_Custos_Terceiros_Simulacao_Aquisicao",
             "description": "Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média da diferença entre consumo e base licenciada (MsuBase).",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/6479ff9dbaa1290674a6ef35"
           },
           {
             "title": "4B_Uso_Custos_Valores_Particoes",
             "description": "Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site e Total por Serial, e de forma analítica - detalhando cada um dos totais por partição.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/64c81e65a7dd13609814b270"
           }
         ]
@@ -2060,11 +2816,15 @@
       {
         "title": "Portal de Contratos",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "ECCOM",
             "description": "Apresenta o portal de contratos.",
+            "update": "",
+            "icon": "",
             "url": "http://10.221.70.14:7116/saturn/index.html"
           }
         ]
@@ -2072,36 +2832,50 @@
       {
         "title": "CEGTI",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": " Download dos SCRTs",
             "description": "Apresenta as pastas dos SCRTs com a seguinte estrutura: AAAA-MM (Ano-Mês) e, dentro destas pastas, as subpastas Container e NoContainer, nas quais estão as planilhas.",
+            "update": "",
+            "icon": "",
             "url": "http://10.221.70.14:7116/saturn/scrt/index.html"
           },
           {
             "title": "Consumo Mensal: Control-M  (CEGTI)",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por dia, site e ambiente, e a distribuição das tasks por site (CEPTI) com o % de participação. Aplica-se somente aos fornecedores",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/655e4d8f16f60a0e50890962"
           },
           {
             "title": "Consumo Mensal: Softwares Não-IBM  (CEGTI)",
             "description": "Apresenta, para o período e fornecedor selecionados, o consumo por produto, distribuído por serial, site (CEPTI) e SID. ",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/655cbac30f29d94700af4cb3"
           },
           {
             "title": "Custo Mensal: Control-M  (CEGTI)",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks e o detalhamento dos cálculos por produto. Aplica-se somente aos fornecedores do Control-M.",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/655e4cae16f60a0e5089094e"
           },
           {
             "title": "Custo Mensal: Softwares CA/Broadcom  (CEGTI)",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais e a distribuição do consumo por site (CEPTI), com o percentual de participação. Aplica-se somente ao fornecedor Broadcom CA;",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/65577876ca29b434303e519b"
           },
           {
             "title": "Custo Mensal: Softwares Não-IBM  (CEGT )",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto e a distribuição do consumo por site (CEPTI), com o percentual de participação. Não se aplica a Broadcom CA e fornecedores Control-M. ",
+            "update": "",
+            "icon": "",
             "url": "https://10.221.70.14:9091/app/main#/dashboards/655cb5e70f29d94700af4c91"
           }
         ]
@@ -2111,11 +2885,15 @@
   {
     "title": "Performance",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Performance.svg",
     "url": "",
     "childrens": [
       {
         "title": "ECAPP",
         "description": "Acesso ao Portal ECAPP",
+        "update": "",
+        "icon": "",
         "url": "http://10.221.70.14:7117/aurora/index.html",
         "childrens": []
       }
@@ -2124,46 +2902,64 @@
   {
     "title": "Showback",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Showback.svg",
     "url": "",
     "childrens": [
       {
         "title": "SHOWBACKGEGAT",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Baseline_Custos_Visão_Governança_VPd",
             "description": "Apresenta o BASELINE de custos.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0261769cc0c5130732b32"
           },
           {
             "title": "RateioShowbackINFRA_visao_ano_mes [REVER]",
             "description": "Apresenta o SHOWBACK da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c024ab69cc0c5130732ade"
           },
           {
             "title": "RateioShowbackINFRA_visao_ref",
             "description": "Apresenta o showback da GEGAT.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c0253f69cc0c5130732b09"
           },
           {
             "title": "Showback_Contrato",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
           },
           {
             "title": "Showback_ContratosRealizado",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
           },
           {
             "title": "Showback_VisaoGeralContratos",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
           },
           {
             "title": "ShowbackCentroCustoParticao",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c02cf369cc0c5130732ba8"
           }
         ]
@@ -2171,21 +2967,29 @@
       {
         "title": "SHOWBACKGESTI",
         "description": "",
+        "update": "",
+        "icon": "",
         "url": "",
         "childrens": [
           {
             "title": "Showback_Contrato",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026c569cc0c5130732b60"
           },
           {
             "title": "Showback_ContratosRealizado",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c026b869cc0c5130732b4f"
           },
           {
             "title": "Showback_VisaoGeralContratos",
             "description": "Apresenta o SHOWBACK da GESTI.",
+            "update": "",
+            "icon": "",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/64c027f169cc0c5130732b88"
           }
         ]
@@ -2195,16 +2999,22 @@
   {
     "title": "Simulações e Tendências",
     "description": "",
+    "update": "",
+    "icon": "../../assets/Images/Menu_Icons/Simulacao.svg",
     "url": "",
     "childrens": [
       {
         "title": "ZRP-Zetaly Resource Planning",
         "description": "Apresenta um software com a finalidade de efetuar o planejamento de capacidade das necessidades de processadores (CPU).",
+        "update": "",
+        "icon": "",
         "url": "https://dadnpaplnt006.intra.caixa.gov.br/zetaly/"
       },
       {
         "title": "CCP Tool",
         "description": "Apresenta um software com a finalidade de efetuar o planejamento de capacidade conectando diretamente no mainframe.",
+        "update": "",
+        "icon": "",
         "url": "http://10.195.97.27:2100/"
       }
     ]

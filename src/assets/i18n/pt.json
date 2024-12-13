@@ -7,6 +7,17 @@
     "settings":"Configurações",
     "darkmode":"Modo Escuro",
     "noItemFound": "Nenhum Item Encontrado",
-    "language":"Idioma"
+    "language":"Idioma",
+    "search": "Pesquisar",
+    "update": "Frequência de atualização: "
+  },
+  "time":{
+    "years": "Ano(s)",
+    "months": "Mês(es)",
+    "weeks": "Semana(s)",
+    "days": "Dia(s)",
+    "hours": "Hora(s)",
+    "minutes": "Minuto(s)",
+    "seconds": "Segundo(s)"
   }
 }

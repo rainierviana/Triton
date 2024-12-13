@@ -1,13 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <ion-menu-button slot="start" class="menuButton"></ion-menu-button>
-    <img src="../../assets/Images/Logo.png" />
-    <button class="homeButton" (click)="homeButtonClicked()"><img src="../../assets/icon/Menu_Icons/Home.png" height="20em" /></button>
-    
-    <p class="homeTitle">Portal CDUC</p>
+    <ion-buttons slot="start">
+      <ion-menu-button class="menuButton"></ion-menu-button>
+      <button class="homeButton" (click)="homeButtonClicked()"> <img src="../../assets/Images/Menu_Icons/Home.svg" height="20em" /></button>
+      <img class="headerLogo" />
+    </ion-buttons>
 
-    <img slot="end" class="rightHeaderImg" src="../../assets/Images/Logo_4B.png" />
+    <ion-title class="homeTitle">{{ 'home.title' | translate }}</ion-title>
 
+    <ion-buttons slot="end">
+      <ion-searchbar id="searchbar" class="custom" placeholder="{{ 'home.search' | translate }}" autocomplete="off"></ion-searchbar>
+      <img class="rightHeaderImg" src="../../assets/Images/Logo_4B.png" />
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -16,11 +20,14 @@
     <ion-content>
       <ng-container *ngFor="let menuItem of menuData">
         <div>
-          <ion-button fill="clear" (click)="FillContent(menuItem)">{{ menuItem.title }}</ion-button>
+          <ion-button fill="clear" (click)="FillContent(menuItem)"><img src="{{menuItem.icon}}" class="itemIcon">{{
+            menuItem.title }}</ion-button>
         </div>
       </ng-container>
-      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/icon/Menu_Icons/Settings.png"
-          height="20em" />{{ 'home.settings' | translate }}</ion-button>
+      <ion-button fill="cleat" href="https://caixa.sharepoint.com/sites/CETAD10"><img
+          src="../../assets/Images/Menu_Icons/X_Caixa.svg" class="itemIcon" />CESTI35</ion-button>
+      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/Images/Menu_Icons/Settings.svg"
+          class="itemIcon" />{{ 'home.settings' | translate }}</ion-button>
     </ion-content>
   </ion-menu>
 
@@ -35,20 +42,13 @@
     </div>
 
     <div class="navButtons">
-      <ion-button class="backButton" *ngIf="showBackButton" fill="clear" shape="round" (click)="goBack()"><ion-icon
-          slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
-      <ion-button class="forwardButton" *ngIf="showForwardButton" fill="clear" shape="round"
-        (click)="goForward()"><ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon></ion-button>
+      <ion-button class="backButton" *ngIf="showBackButton" fill="clear" shape="round" (click)="goBack()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
+      <ion-button class="forwardButton" *ngIf="showForwardButton" fill="clear" shape="round" (click)="goForward()"><ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon></ion-button>
     </div>
   </div>
 
-  <div *ngIf="showSearchBar" class="search-bar-container">
-    <input class="searchBar" autocomplete="off" type="text" id="searchInput" placeholder="Pesquisar"
-      (input)="filterTable()" />
-  </div>
-
   <div #mainContent class="homeText" id="main-content">
-    <p class="homeDescription" align="center">{{ 'home.details' | translate }}</p>
+    <p class="homeDescription">{{ 'home.details' | translate }}</p>
     <br />
   </div>
 
@@ -63,7 +63,6 @@
     <p>{{ 'home.language' | translate }}</p>
     <ion-button fill="clear" (click)="toggleLanguage('pt')">Português</ion-button>
     <ion-button fill="clear" (click)="toggleLanguage('en')">English</ion-button>
-
   </ion-content>
 </ion-menu>
 
