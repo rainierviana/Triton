@@ -16,10 +16,8 @@ export class HomePage {
   public appConfig: any = {};
   public sisenseDashboards: any[] = [];
   public filteredSisenseDashboards: any[] = [];
-  public headerColor: string = ''; 
+  public headerColor: string = '';
   public date: string = '';
-  private currentSearchScope: any[] = []; // Holds the current scope of items to search
-  private allItems: any[] = []; // Holds all items from the JSON (second level and beyond)
 
   // State Variables
   noItemsFound: boolean = false;
@@ -35,6 +33,7 @@ export class HomePage {
   private navigationStack: any[] = [];
   private forwardStack: any[] = [];
   public breadcrumbs: string[] = [];
+  searchQuery: any;
 
   constructor(
     public http: HttpClient,
@@ -45,11 +44,12 @@ export class HomePage {
     translate.setDefaultLang('pt');
   }
 
+
   Initialize() {
     this.http.get('assets/data/menumodel.json').subscribe(
       (data: any) => {
         this.menuData = data;
-        this.filteredMenuData = data; 
+        this.filteredMenuData = data;
       },
       (err) => {
         console.error(
@@ -86,7 +86,7 @@ export class HomePage {
       this.navigationStack = JSON.parse(savedNavigationStack);
 
       this.FillContent(item); // Restore the last content
-    } 
+    }
 
     setTimeout(() => {
       this.initialMainContentElements = Array.from(this.mainContent.nativeElement.children);
@@ -109,7 +109,7 @@ export class HomePage {
     const headerImageElement = document.querySelector('ion-toolbar img.headerLogo');
     if (headerImageElement && this.appConfig.headerImage) {
       headerImageElement.setAttribute('src', this.appConfig.headerImage);
-    } 
+    }
 
     // Set header background color
     if (this.appConfig.headerColor) {
@@ -137,7 +137,7 @@ export class HomePage {
 
   handleItemClick(item: any) {
     let sItem = item.url.split(':');
-     
+
     if (item.url) {
       // Convert a dash:title entry in a dashboard url
       if (sItem[0] == 'dash') {
@@ -193,9 +193,7 @@ export class HomePage {
     this.showForwardButton = false; // Clear the forward stack
     this.forwardStack = [];
   }
-  // Search Bar
-
-  // Content Management
+  
   FillContent(item: any) {
     this.navigationStack.push(item);
     this.forwardStack = [];
@@ -220,83 +218,209 @@ export class HomePage {
 
   renderItem(item: any, parentElement: HTMLElement) {
     const newContent = document.createElement('div');
-  
+
     const title = document.createElement('p');
     title.classList.add('levelTitle');
     title.textContent = item.title;
     newContent.appendChild(title);
-  
+
     parentElement.appendChild(newContent);
 
     if (item.childrens && item.childrens.length > 0) {
-        const tableWrapper = document.createElement('div');
-        tableWrapper.classList.add('contentWrapper');
-        
-        tableWrapper.style.height = '60vh'; 
-        tableWrapper.style.overflowY = 'auto';
+      const contentWrapper = document.createElement('div');
+      contentWrapper.classList.add('contentWrapper');
 
-        const gridContainer = document.createElement('div');
-        gridContainer.classList.add('grid-container');
-        tableWrapper.appendChild(gridContainer);
+      contentWrapper.style.height = '60vh';
+      contentWrapper.style.overflowY = 'auto';
 
-        item.childrens.forEach((subItem: any) => {
-            if (subItem.url) {
-                const childCard = document.createElement('ion-card');
+      const gridContainer = document.createElement('div');
+      gridContainer.classList.add('gridContainer');
+      contentWrapper.appendChild(gridContainer);
+      item.childrens.forEach((subItem: any) => {
+        const imageUrl = subItem.icon || this.appConfig.defaultImage;
 
-                if (subItem.icon) {
-                    const childCardImage = document.createElement('img');
-                    childCardImage.src = subItem.icon; 
-                    childCardImage.alt = subItem.title;
-                    childCardImage.classList.add('cardImage');
-                    childCard.appendChild(childCardImage);
-                }
+        if (subItem.url) {
+          const childCard = document.createElement('ion-card');
 
-                const childCardHeader = document.createElement('ion-card-header');
-                const childCardTitle = document.createElement('ion-card-title');
-                childCardTitle.classList.add('cardTitle');
-                childCardTitle.textContent = subItem.title;
+          // Add image with fallback
+          const popupImage = document.createElement('div');
+          popupImage.classList.add('cardImage');
+          const img = document.createElement('img');
+          img.src = imageUrl;
+          img.alt = subItem.title;
+          popupImage.appendChild(img);
+          document.body.appendChild(popupImage);
 
-                const childCardSubtitle = document.createElement('ion-card-subtitle');
-                childCardSubtitle.classList.add('cardSubtitle');
-                childCardSubtitle.textContent = subItem.description;
+          // Show/Hide image on hover
+          childCard.addEventListener('mouseenter', () => {
+            const cardRect = childCard.getBoundingClientRect();
+            popupImage.style.display = 'block';
+            popupImage.style.top = `${cardRect.top + window.scrollY}px`;
+            popupImage.style.left = `${cardRect.left + cardRect.width - 300}px`;
+          });
 
-                childCardHeader.appendChild(childCardTitle);
-                childCardHeader.appendChild(childCardSubtitle);
-                childCard.appendChild(childCardHeader);
+          childCard.addEventListener('mouseleave', () => {
+            popupImage.style.display = 'none';
+          });
 
-                const childCardContent = document.createElement('ion-card-content');
-                childCardContent.classList.add('cardContent');
-                childCardContent.textContent = subItem.update;
-                childCard.appendChild(childCardContent);
+          const childCardHeader = document.createElement('ion-card-header');
+          const childCardTitle = document.createElement('ion-card-title');
+          childCardTitle.classList.add('cardTitle');
+          childCardTitle.textContent = subItem.title;
 
-                childCard.addEventListener('click', () => {
-                    window.open(subItem.url, '_blank');
-                });
+          const childCardSubtitle = document.createElement('ion-card-subtitle');
+          childCardSubtitle.classList.add('cardSubtitle');
+          childCardSubtitle.textContent = subItem.description;
 
-                gridContainer.appendChild(childCard); 
-            } else {
-                const ionItem = document.createElement('ion-item');
-                const ionLabel = document.createElement('ion-label');
+          childCardHeader.appendChild(childCardTitle);
+          childCardHeader.appendChild(childCardSubtitle);
+          childCard.appendChild(childCardHeader);
 
-                const h1 = document.createElement('h1');
-                h1.classList.add('listTitle');
-                h1.textContent = subItem.title;
+          const childCardContent = document.createElement('ion-card-content');
+          childCardContent.classList.add('cardContent');
+          childCardContent.textContent = subItem.update;
+          childCard.appendChild(childCardContent);
 
-                ionLabel.appendChild(h1);
-                ionItem.appendChild(ionLabel);
+          childCard.addEventListener('click', () => {
+            window.open(subItem.url, '_blank');
+          });
 
-                ionItem.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    this.FillContent(subItem);
-                });
+          gridContainer.appendChild(childCard);
+        } else {
+          const ionItem = document.createElement('ion-item');
+          const ionLabel = document.createElement('ion-label');
 
-                tableWrapper.appendChild(ionItem); 
-            }
+          const h1 = document.createElement('h1');
+          h1.classList.add('listTitle');
+          h1.textContent = subItem.title;
+
+          ionLabel.appendChild(h1);
+          ionItem.appendChild(ionLabel);
+
+          ionItem.addEventListener('click', (event) => {
+            event.preventDefault();
+            this.FillContent(subItem);
+          });
+
+          contentWrapper.appendChild(ionItem);
+        }
+      });
+
+      parentElement.appendChild(contentWrapper);
+    }
+  }
+
+  search() {
+    const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
+
+    const searchValue = searchInputElement.value.toLowerCase();
+
+
+    const searchRecursive = (items: any[], matchingItems: any[]) => {
+      items.forEach((item) => {
+        if (item.url && item.title.toLowerCase().includes(searchValue)) {
+          matchingItems.push(item);
+        }
+        if (item.childrens && item.childrens.length > 0) {
+          searchRecursive(item.childrens, matchingItems);
+        }
+      });
+    };
+
+    const matchingItems: any[] = [];
+    this.menuData.forEach((topLevelItem) => {
+      if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {
+        searchRecursive(topLevelItem.childrens, matchingItems);
+      }
+    });
+
+    this.mainContent.nativeElement.innerHTML = '';
+
+    const searchResultsContainer = document.createElement('div');
+    searchResultsContainer.classList.add('generalGridContanier');
+
+    if (searchValue.trim() === '') {
+      this.mainContent.nativeElement.innerHTML = '';
+
+      this.initialMainContentElements.forEach((element) => {
+        this.renderer.appendChild(this.mainContent.nativeElement, element);
+      });
+      return;
+    }
+
+    if (this.navigationStack.length > 0) {
+      const contentWrappers = document.querySelectorAll('.contentWrapper');
+
+      let anyVisible = false;
+      let secondLevelTriggered = false;
+
+      contentWrappers.forEach((wrapper) => {
+        let wrapperVisible = false;
+
+        const childElements = wrapper.querySelectorAll('.cardTitle, .listTitle');
+        childElements.forEach((element) => {
+          secondLevelTriggered = true;
+
+          const txtValue = (element as HTMLElement).textContent || '';
+          if (txtValue.toLowerCase().includes(searchValue)) {
+            (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = '';
+            wrapperVisible = true;
+            anyVisible = true;
+          } else {
+            (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = 'none';
+          }
         });
 
-        parentElement.appendChild(tableWrapper);
+        (wrapper as HTMLElement).style.display = wrapperVisible ? '' : 'none';
+      });
+
+      this.noItemsFound = secondLevelTriggered && !anyVisible;
+      return;
     }
-}
+
+    if (matchingItems.length > 0) {
+      matchingItems.forEach((item) => {
+        const childCard = document.createElement('ion-card');
+        childCard.style.marginRight = "2em";
+
+        const childCardHeader = document.createElement('ion-card-header');
+        const childCardTitle = document.createElement('ion-card-title');
+        childCardTitle.classList.add('cardTitle');
+        childCardTitle.textContent = item.title;
+
+        const childCardSubtitle = document.createElement('ion-card-subtitle');
+        childCardSubtitle.classList.add('cardSubtitle');
+        childCardSubtitle.textContent = item.description || '';
+
+        childCardHeader.appendChild(childCardTitle);
+        childCardHeader.appendChild(childCardSubtitle);
+        childCard.appendChild(childCardHeader);
+
+        const childCardContent = document.createElement('ion-card-content');
+        childCardContent.classList.add('cardContent');
+        childCardContent.textContent = item.update || '';
+        childCard.appendChild(childCardContent);
+
+        childCard.addEventListener('click', () => {
+          window.open(item.url, '_blank');
+        });
+
+        searchResultsContainer.appendChild(childCard);
+      });
+    } else {
+      searchResultsContainer.style.display = 'none';
+
+      const noResultsMessage = document.createElement('p');
+      noResultsMessage.classList.add('generalErrorMessage');
+      this.translate.get('home.noItemFound').subscribe((translatedText: string) => {
+        noResultsMessage.textContent = translatedText;
+      });
+
+      this.mainContent.nativeElement.innerHTML = ''; 
+      this.mainContent.nativeElement.appendChild(noResultsMessage);
+    }
+    this.mainContent.nativeElement.appendChild(searchResultsContainer);
+  }
 
   // Navigation Controls
 
@@ -304,11 +428,10 @@ export class HomePage {
     if (this.navigationStack.length > 1) {
       this.forwardStack.push(this.navigationStack.pop()!); // Move the current item to the forward stack
       this.breadcrumbs.pop();
-      const previousItem =
-        this.navigationStack[this.navigationStack.length - 1];
+      const previousItem = this.navigationStack[this.navigationStack.length - 1];
       this.mainContent.nativeElement.innerHTML = '';
       this.renderItem(previousItem, this.mainContent.nativeElement);
-      this.showBackButton = this.navigationStack.length > 1; 
+      this.showBackButton = this.navigationStack.length > 1;
       this.showBackButton = true;
       this.showForwardButton = true;
     } else {
@@ -319,11 +442,12 @@ export class HomePage {
       this.initialMainContentElements.forEach((element) => {
         this.renderer.appendChild(this.mainContent.nativeElement, element);
       });
-      this.navigationStack = []; // Reset the navigation stack
-      this.forwardStack = []; // Clear the forward stack
+      this.navigationStack = []; // reset navigation stack
+      this.forwardStack = []; // reset forward stack
       this.breadcrumbs = [];
       this.showBackButton = false;
       this.showForwardButton = false;
+      this.noItemsFound = false;
     }
   }
 
@@ -336,6 +460,7 @@ export class HomePage {
       this.showBackButton = true;
       this.showForwardButton = this.forwardStack.length > 0;
       this.breadcrumbs.push(nextItem.title);
+      this.noItemsFound = false;
     }
   }
 
