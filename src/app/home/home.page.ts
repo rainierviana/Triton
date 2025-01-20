@@ -135,6 +135,12 @@ export class HomePage {
     }
   }
 
+  // Retrieve the saved language from localStorage
+  setInitialLanguage() {
+    const savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
+    this.translate.use(savedLanguage);
+  }
+
   handleItemClick(item: any) {
     let sItem = item.url.split(':');
 
@@ -164,34 +170,10 @@ export class HomePage {
     localStorage.setItem('selectedLanguage', language); // Save the selected language to localStorage
   }
 
-  // Retrieve the saved language from localStorage
-  setInitialLanguage() {
-    const savedLanguage = localStorage.getItem('selectedLanguage') || 'pt';
-    this.translate.use(savedLanguage);
-  }
-
   // Save language preference
   handleLanguageChange(language: string) {
     localStorage.setItem('selectedLanguage', language);
     this.translate.use(language);
-  }
-
-  navigateToBreadcrumb(index: number) {
-    // Update the navigation stack and breadcrumbs to the selected index
-    this.navigationStack = this.navigationStack.slice(0, index + 1);
-    this.breadcrumbs = this.breadcrumbs.slice(0, index + 1);
-
-    // Clear the main content area
-    this.mainContent.nativeElement.innerHTML = '';
-
-    // Render the selected breadcrumb's content
-    const selectedItem = this.navigationStack[this.navigationStack.length - 1];
-    this.renderItem(selectedItem, this.mainContent.nativeElement);
-
-    // Update navigation buttons visibility
-    this.showBackButton = true;
-    this.showForwardButton = false; // Clear the forward stack
-    this.forwardStack = [];
   }
   
   FillContent(item: any) {
@@ -312,10 +294,47 @@ export class HomePage {
 
   search() {
     const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
-
+  
+    if (!searchInputElement) {
+      console.error('Search input element not found.');
+      return;
+    }
+  
     const searchValue = searchInputElement.value.toLowerCase();
-
-
+    console.log('Search Value:', searchValue);
+  
+    if (this.navigationStack.length > 0) {
+      const contentWrappers = document.querySelectorAll('.contentWrapper');
+      console.log('Content Wrappers Found:', contentWrappers.length);
+  
+      let anyVisible = false;
+      let secondLevelTriggered = false;
+  
+      contentWrappers.forEach((wrapper) => {
+        let wrapperVisible = false;
+  
+        const childElements = wrapper.querySelectorAll('.cardTitle, .listTitle');
+        childElements.forEach((element) => {
+          secondLevelTriggered = true;
+  
+          const txtValue = (element as HTMLElement).textContent || '';
+          if (txtValue.toLowerCase().includes(searchValue)) {
+            (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = '';
+            wrapperVisible = true;
+            anyVisible = true;
+          } else {
+            (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = 'none';
+          }
+        });
+  
+        (wrapper as HTMLElement).style.display = wrapperVisible ? '' : 'none';
+      });
+  
+      this.noItemsFound = secondLevelTriggered && !anyVisible;
+      return;
+    }
+  
+    // Function to recursively search for items with URLs
     const searchRecursive = (items: any[], matchingItems: any[]) => {
       items.forEach((item) => {
         if (item.url && item.title.toLowerCase().includes(searchValue)) {
@@ -326,19 +345,20 @@ export class HomePage {
         }
       });
     };
-
+  
+    // Collect matching items
     const matchingItems: any[] = [];
     this.menuData.forEach((topLevelItem) => {
       if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {
         searchRecursive(topLevelItem.childrens, matchingItems);
       }
+      
     });
-
+  
     this.mainContent.nativeElement.innerHTML = '';
-
     const searchResultsContainer = document.createElement('div');
-    searchResultsContainer.classList.add('generalGridContanier');
-
+    searchResultsContainer.classList.add('searchResultsContainer');
+  
     if (searchValue.trim() === '') {
       this.mainContent.nativeElement.innerHTML = '';
 
@@ -347,82 +367,66 @@ export class HomePage {
       });
       return;
     }
-
-    if (this.navigationStack.length > 0) {
-      const contentWrappers = document.querySelectorAll('.contentWrapper');
-
-      let anyVisible = false;
-      let secondLevelTriggered = false;
-
-      contentWrappers.forEach((wrapper) => {
-        let wrapperVisible = false;
-
-        const childElements = wrapper.querySelectorAll('.cardTitle, .listTitle');
-        childElements.forEach((element) => {
-          secondLevelTriggered = true;
-
-          const txtValue = (element as HTMLElement).textContent || '';
-          if (txtValue.toLowerCase().includes(searchValue)) {
-            (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = '';
-            wrapperVisible = true;
-            anyVisible = true;
-          } else {
-            (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = 'none';
-          }
-        });
-
-        (wrapper as HTMLElement).style.display = wrapperVisible ? '' : 'none';
-      });
-
-      this.noItemsFound = secondLevelTriggered && !anyVisible;
-      return;
-    }
-
+    
     if (matchingItems.length > 0) {
       matchingItems.forEach((item) => {
         const childCard = document.createElement('ion-card');
-        childCard.style.marginRight = "2em";
-
+  
         const childCardHeader = document.createElement('ion-card-header');
         const childCardTitle = document.createElement('ion-card-title');
         childCardTitle.classList.add('cardTitle');
         childCardTitle.textContent = item.title;
-
+  
         const childCardSubtitle = document.createElement('ion-card-subtitle');
         childCardSubtitle.classList.add('cardSubtitle');
         childCardSubtitle.textContent = item.description || '';
-
+  
         childCardHeader.appendChild(childCardTitle);
         childCardHeader.appendChild(childCardSubtitle);
         childCard.appendChild(childCardHeader);
-
+  
         const childCardContent = document.createElement('ion-card-content');
         childCardContent.classList.add('cardContent');
         childCardContent.textContent = item.update || '';
         childCard.appendChild(childCardContent);
-
+  
         childCard.addEventListener('click', () => {
           window.open(item.url, '_blank');
         });
-
+  
         searchResultsContainer.appendChild(childCard);
       });
     } else {
-      searchResultsContainer.style.display = 'none';
-
       const noResultsMessage = document.createElement('p');
-      noResultsMessage.classList.add('generalErrorMessage');
+      noResultsMessage.classList.add('errorMessage');
       this.translate.get('home.noItemFound').subscribe((translatedText: string) => {
         noResultsMessage.textContent = translatedText;
       });
-
-      this.mainContent.nativeElement.innerHTML = ''; 
-      this.mainContent.nativeElement.appendChild(noResultsMessage);
+      searchResultsContainer.appendChild(noResultsMessage);
     }
+  
     this.mainContent.nativeElement.appendChild(searchResultsContainer);
   }
 
   // Navigation Controls
+
+  homeButtonClicked() {
+    this.menuCtrl.close();
+    this.mainContent.nativeElement.innerHTML = '';
+
+    // Restore the initial content elements
+    this.initialMainContentElements.forEach((element) => {
+      this.renderer.appendChild(this.mainContent.nativeElement, element);
+    });
+
+    this.navigationStack = [];
+    this.forwardStack = [];
+    this.showBackButton = false;
+    this.showForwardButton = false;
+    this.breadcrumbs = [];
+    this.noItemsFound = false;
+    this.filteredData = [];
+  }
 
   goBack() {
     if (this.navigationStack.length > 1) {
@@ -464,22 +468,22 @@ export class HomePage {
     }
   }
 
-  homeButtonClicked() {
-    this.menuCtrl.close();
+  navigateToBreadcrumb(index: number) {
+    // Update the navigation stack and breadcrumbs to the selected index
+    this.navigationStack = this.navigationStack.slice(0, index + 1);
+    this.breadcrumbs = this.breadcrumbs.slice(0, index + 1);
+
+    // Clear the main content area
     this.mainContent.nativeElement.innerHTML = '';
 
-    // Restore the initial content elements
-    this.initialMainContentElements.forEach((element) => {
-      this.renderer.appendChild(this.mainContent.nativeElement, element);
-    });
+    // Render the selected breadcrumb's content
+    const selectedItem = this.navigationStack[this.navigationStack.length - 1];
+    this.renderItem(selectedItem, this.mainContent.nativeElement);
 
-    this.navigationStack = [];
+    // Update navigation buttons visibility
+    this.showBackButton = true;
+    this.showForwardButton = false; // Clear the forward stack
     this.forwardStack = [];
-    this.showBackButton = false;
-    this.showForwardButton = false;
-    this.breadcrumbs = [];
-    this.noItemsFound = false;
-    this.filteredData = [];
   }
 
 }
