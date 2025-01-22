@@ -12,9 +12,10 @@
     "update": "Update Frequency: "
   },
   "time":{
-    "years": "Year(s)",
-    "months": "Month(s)",
-    "weeks": "Week(s)",
-    "days": "Day(s)"
+    "years": "Yearly",
+    "months": "Monthly",
+    "weeks": "Weekly",
+    "semester": "Semestral",
+    "days": "Daily"
   }
 }

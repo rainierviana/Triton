@@ -12,9 +12,10 @@
     "update": "Frequência de atualização: "
   },
   "time":{
-    "years": "Ano(s)",
-    "months": "Mês(es)",
-    "weeks": "Semana(s)",
-    "days": "Dia(s)"
+    "years": "Anual",
+    "months": "Mensal",
+    "weeks": "Semanal",
+    "semester": "Semi-Annual",
+    "days": "Diaária"
   }
 }

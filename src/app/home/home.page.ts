@@ -16,7 +16,6 @@ export class HomePage {
   public appConfig: any = {};
   public sisenseDashboards: any[] = [];
   public filteredSisenseDashboards: any[] = [];
-  public headerColor: string = '';
   public date: string = '';
 
   // State Variables
@@ -111,12 +110,6 @@ export class HomePage {
       headerImageElement.setAttribute('src', this.appConfig.headerImage);
     }
 
-    // Set header background color
-    if (this.appConfig.headerColor) {
-      this.headerColor = this.appConfig.headerColor;
-      this.applyHeaderBackgroundColor();
-    }
-
     // Set the default language
     const language = this.appConfig.defaultLanguage || 'en';
     this.translate.use(language);
@@ -125,13 +118,6 @@ export class HomePage {
     const footerElement = document.querySelector('ion-footer p');
     if (footerElement && this.appConfig.footerText) {
       footerElement.textContent = this.appConfig.footerText;
-    }
-  }
-
-  applyHeaderBackgroundColor() {
-    const headerElement = document.querySelector('ion-header');
-    if (headerElement) {
-      this.renderer.setStyle(headerElement, 'background-color', this.headerColor);
     }
   }
 
@@ -175,7 +161,7 @@ export class HomePage {
     localStorage.setItem('selectedLanguage', language);
     this.translate.use(language);
   }
-  
+
   FillContent(item: any) {
     this.navigationStack.push(item);
     this.forwardStack = [];
@@ -200,75 +186,83 @@ export class HomePage {
 
   renderItem(item: any, parentElement: HTMLElement) {
     const newContent = document.createElement('div');
-  
+
     const title = document.createElement('p');
     title.classList.add('levelTitle');
     title.textContent = item.title;
     newContent.appendChild(title);
-  
+
     parentElement.appendChild(newContent);
-  
+
     if (item.childrens && item.childrens.length > 0) {
       const contentWrapper = document.createElement('div');
       contentWrapper.classList.add('contentWrapper');
       contentWrapper.style.height = '60vh';
       contentWrapper.style.overflowY = 'auto';
-  
+
       const gridContainer = document.createElement('div');
       gridContainer.classList.add('gridContainer');
       contentWrapper.appendChild(gridContainer);
-  
+
       item.childrens.forEach((subItem: any) => {
         const imageUrl = subItem.icon;
-  
+
         if (subItem.url) {
           const childCard = document.createElement('ion-card');
 
           if (imageUrl) {
-            const popupImage = document.createElement('div');
-            popupImage.classList.add('cardImage');
-  
-            const img = document.createElement('img');
-            img.src = imageUrl;
-            img.alt = subItem.title;
-            popupImage.appendChild(img);
-  
-            document.body.appendChild(popupImage);
-  
-            childCard.addEventListener('mouseenter', () => {
-              const cardRect = childCard.getBoundingClientRect();
-              popupImage.style.display = 'block';
-              popupImage.style.position = 'absolute';
-              popupImage.style.top = `${cardRect.top + window.scrollY}px`;
-              popupImage.style.left = `${cardRect.left + cardRect.width - 300}px`;
+            const popoverButton = document.createElement('ion-button');
+            popoverButton.classList.add('popoverButton');
+            popoverButton.fill = 'clear'; 
+            popoverButton.innerHTML = '<ion-icon name="image-outline"></ion-icon>'; 
+            
+            const popover = document.createElement('ion-popover');
+          
+            const popoverContent = document.createElement('div');
+            popoverContent.classList.add('popoverContent');
+          
+            const popoverImage = document.createElement('img');
+            popoverImage.src = imageUrl;
+            popoverImage.alt = subItem.title;
+          
+            const popoverTitle = document.createElement('p');
+            popoverTitle.textContent = subItem.title;
+          
+            popoverContent.appendChild(popoverImage);
+            popoverContent.appendChild(popoverTitle);
+            popover.appendChild(popoverContent);
+        
+            document.body.appendChild(popover);
+          
+            popoverButton.addEventListener('click', async (event) => {
+              event.stopPropagation();
+              await popover.present();
             });
-  
-            childCard.addEventListener('mouseleave', () => {
-              popupImage.style.display = 'none';
-            });
+          
+            childCard.appendChild(popoverButton);
           }
-  
+
           const childCardHeader = document.createElement('ion-card-header');
           const childCardTitle = document.createElement('ion-card-title');
           childCardTitle.classList.add('cardTitle');
           childCardTitle.textContent = subItem.title;
-  
+
           const childCardSubtitle = document.createElement('ion-card-subtitle');
           childCardSubtitle.classList.add('cardSubtitle');
           childCardSubtitle.textContent = subItem.description;
-  
+
           childCardHeader.appendChild(childCardTitle);
           childCardHeader.appendChild(childCardSubtitle);
           childCard.appendChild(childCardHeader);
-  
+
           const childCardContent = document.createElement('ion-card-content');
           childCardContent.classList.add('cardContent');
-          
+
           if (subItem.time) {
             const updateFrequencyText = this.translate.instant('home.update');
             const timePeriodText = this.translate.instant(`time.${subItem.time}`);
-            const updateText = `${updateFrequencyText} ${subItem.update} ${timePeriodText}`;
-    
+            const updateText = `${updateFrequencyText} ${timePeriodText}`;
+
             const updateTextElement = document.createElement('p');
             updateTextElement.classList.add('updateText');
             updateTextElement.textContent = updateText;
@@ -276,54 +270,54 @@ export class HomePage {
           }
 
           childCard.appendChild(childCardContent);
-  
+
           childCard.addEventListener('click', () => {
             window.open(subItem.url, '_blank');
           });
-  
+
           gridContainer.appendChild(childCard);
         } else {
           const ionItem = document.createElement('ion-item');
           const ionLabel = document.createElement('ion-label');
-  
+
           const h1 = document.createElement('h1');
           h1.classList.add('listTitle');
           h1.textContent = subItem.title;
-  
+
           ionLabel.appendChild(h1);
           ionItem.appendChild(ionLabel);
-  
+
           ionItem.addEventListener('click', (event) => {
             event.preventDefault();
             this.FillContent(subItem);
           });
-  
+
           contentWrapper.appendChild(ionItem);
         }
       });
-  
+
       parentElement.appendChild(contentWrapper);
     }
   }
-   
+
   search() {
     const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
-  
+
     const searchValue = searchInputElement.value.toLowerCase();
-  
+
     if (this.navigationStack.length > 0) {
       const contentWrappers = document.querySelectorAll('.contentWrapper');
-  
+
       let anyVisible = false;
       let secondLevelTriggered = false;
-  
+
       contentWrappers.forEach((wrapper) => {
         let wrapperVisible = false;
-  
+
         const childElements = wrapper.querySelectorAll('.cardTitle, .listTitle');
         childElements.forEach((element) => {
           secondLevelTriggered = true;
-  
+
           const txtValue = (element as HTMLElement).textContent || '';
           if (txtValue.toLowerCase().includes(searchValue)) {
             (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = '';
@@ -333,14 +327,14 @@ export class HomePage {
             (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = 'none';
           }
         });
-  
+
         (wrapper as HTMLElement).style.display = wrapperVisible ? '' : 'none';
       });
-  
+
       this.noItemsFound = secondLevelTriggered && !anyVisible;
       return;
     }
-  
+
     // Function to recursively search for items with URLs
     const searchRecursive = (items: any[], matchingItems: any[]) => {
       items.forEach((item) => {
@@ -352,19 +346,19 @@ export class HomePage {
         }
       });
     };
-  
+
     const matchingItems: any[] = [];
     this.menuData.forEach((topLevelItem) => {
       if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {
         searchRecursive(topLevelItem.childrens, matchingItems);
       }
-      
+
     });
-  
+
     this.mainContent.nativeElement.innerHTML = '';
     const searchResultsContainer = document.createElement('div');
     searchResultsContainer.classList.add('generalGridContanier');
-  
+
     if (searchValue.trim() === '') {
       this.mainContent.nativeElement.innerHTML = '';
 
@@ -373,64 +367,87 @@ export class HomePage {
       });
       return;
     }
-    
+
     if (matchingItems.length > 0) {
-      matchingItems.forEach((item) => {     
+      matchingItems.forEach((item) => {
         const title = document.createElement('p');
         title.classList.add('levelTitle');
         title.textContent = item.title;
-        
+
         const childCard = document.createElement('ion-card');
-    
+
         // Check for icon existence
         const imageUrl = item.icon;
         if (imageUrl) {
-          const popupImage = document.createElement('div');
-          popupImage.classList.add('cardImage');
-    
-          const img = document.createElement('img');
-          img.src = imageUrl;
-          img.alt = item.title;
-          popupImage.appendChild(img);
-    
-          document.body.appendChild(popupImage);
-    
-          // Show/Hide image on hover
-          childCard.addEventListener('mouseenter', () => {
-            const cardRect = childCard.getBoundingClientRect();
-            popupImage.style.display = 'block';
-            popupImage.style.position = 'absolute';
-            popupImage.style.top = `${cardRect.top + window.scrollY}px`;
-            popupImage.style.left = `${cardRect.left + cardRect.width - 300}px`;
+          const popoverButton = document.createElement('ion-button');
+          popoverButton.classList.add('popoverButton');
+          popoverButton.textContent = 'View Image';
+          popoverButton.fill = 'clear'; 
+          popoverButton.innerHTML = '<ion-icon name="image-outline"></ion-icon>'; 
+        
+          const popover = document.createElement('ion-popover');
+        
+          const popoverContent = document.createElement('div');
+          popoverContent.classList.add('popoverContent');
+        
+          const popoverImage = document.createElement('img');
+          popoverImage.src = imageUrl;
+          popoverImage.alt = item.title;
+        
+          const popoverTitle = document.createElement('p');
+          popoverTitle.textContent = item.title;
+
+          popoverButton.addEventListener('click', async (event) => {
+            event.stopPropagation(); 
+            await popover.present();
           });
-    
-          childCard.addEventListener('mouseleave', () => {
-            popupImage.style.display = 'none';
+        
+          popoverContent.appendChild(popoverImage);
+          popoverContent.appendChild(popoverTitle);
+          popover.appendChild(popoverContent);
+        
+          document.body.appendChild(popover);
+        
+          popoverButton.addEventListener('click', async () => {
+            await popover.present();
           });
+        
+          childCard.appendChild(popoverButton);
         }
-    
+        
+
         const childCardHeader = document.createElement('ion-card-header');
         const childCardTitle = document.createElement('ion-card-title');
         childCardTitle.classList.add('cardTitle');
         childCardTitle.textContent = item.title;
-    
+
         const childCardSubtitle = document.createElement('ion-card-subtitle');
         childCardSubtitle.classList.add('cardSubtitle');
         childCardSubtitle.textContent = item.description || '';
-    
+
         childCardHeader.appendChild(childCardTitle);
         childCardHeader.appendChild(childCardSubtitle);
         childCard.appendChild(childCardHeader);
-    
+
         const childCardContent = document.createElement('ion-card-content');
         childCardContent.classList.add('cardContent');
-        childCardContent.textContent = item.update || '';
+
+        if (item.time) {
+          const updateFrequencyText = this.translate.instant('home.update');
+          const timePeriodText = this.translate.instant(`time.${item.time}`);
+          const updateText = `${updateFrequencyText} ${timePeriodText}`;
+
+          const updateTextElement = document.createElement('p');
+          updateTextElement.classList.add('updateText');
+          updateTextElement.textContent = updateText;
+          childCardContent.appendChild(updateTextElement);
+        }
         childCard.appendChild(childCardContent);
-    
+
         childCard.addEventListener('click', () => {
           window.open(item.url, '_blank');
         });
-    
+
         searchResultsContainer.appendChild(childCard);
       });
     } else {
@@ -442,7 +459,7 @@ export class HomePage {
         noResultsMessage.textContent = translatedText;
       });
 
-      this.mainContent.nativeElement.innerHTML = ''; 
+      this.mainContent.nativeElement.innerHTML = '';
       this.mainContent.nativeElement.appendChild(noResultsMessage);
     }
     this.mainContent.nativeElement.appendChild(searchResultsContainer);

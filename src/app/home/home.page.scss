@@ -151,11 +151,7 @@
   border-radius: 5px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  max-width: 300px;
-  max-height: 300px;
   transition: transform 0.2s ease;
-
-  /* Smooth movement */
   img {
     display: block;
     width: 100%;
@@ -225,6 +221,29 @@
   font-size: 14px;
   font-family: 'Futura', sans-serif;
   color: rgb(255, 255, 255);
+}
+
+.popoverButton {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  color: var(--ion-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.popoverContent {
+  margin: 5px;
+  p {
+    font-size: 20px;
+    font-family: 'Futura', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 10px;
+  }
 }
 
 /*Ionic component's styling*/
