@@ -24,8 +24,8 @@
         </div>
       </ng-container>
       <ion-button fill="cleat" href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank"><img src="../../assets/Images/Menu_Icons/X_Caixa.svg" class="itemIcon" />CESTI35</ion-button>
-      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/Images/Menu_Icons/Settings.svg"
-          class="itemIcon" />{{ 'home.settings' | translate }}</ion-button>
+      <br/> 
+      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/Images/Menu_Icons/Settings.svg"class="itemIcon" />{{ 'home.settings' | translate }}</ion-button>
     </ion-content>
   </ion-menu>
 
@@ -47,7 +47,6 @@
 
   <div #mainContent class="homeText" id="main-content">
     <p class="homeDescription">{{ 'home.details' | translate }}</p>
-    <br />
   </div>
 
   <div *ngIf="noItemsFound" class="no-items-message">

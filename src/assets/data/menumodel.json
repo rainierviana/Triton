@@ -50,7 +50,8 @@
           {
             "title": "Activity TDS",
             "description": "Apresenta o perfil de atividade de CPU dos servidores CICS do ambiente CAIXA.",
-            "update": "(Time example) 15",
+            "update": "1",
+            "time":"months",
             "icon": "../../assets/Images/Item_Images/example.jpg",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65652061eab2560fdc951744?embed=true",
             "childrens": []

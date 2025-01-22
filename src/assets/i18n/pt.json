@@ -15,9 +15,6 @@
     "years": "Ano(s)",
     "months": "Mês(es)",
     "weeks": "Semana(s)",
-    "days": "Dia(s)",
-    "hours": "Hora(s)",
-    "minutes": "Minuto(s)",
-    "seconds": "Segundo(s)"
+    "days": "Dia(s)"
   }
 }

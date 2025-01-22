@@ -15,9 +15,6 @@
     "years": "Year(s)",
     "months": "Month(s)",
     "weeks": "Week(s)",
-    "days": "Day(s)",
-    "hours": "Hour(s)",
-    "minutes": "Minute(s)",
-    "seconds": "Second(s)"
+    "days": "Day(s)"
   }
 }

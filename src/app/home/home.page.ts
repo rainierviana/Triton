@@ -200,112 +200,119 @@ export class HomePage {
 
   renderItem(item: any, parentElement: HTMLElement) {
     const newContent = document.createElement('div');
-
+  
     const title = document.createElement('p');
     title.classList.add('levelTitle');
     title.textContent = item.title;
     newContent.appendChild(title);
-
+  
     parentElement.appendChild(newContent);
-
+  
     if (item.childrens && item.childrens.length > 0) {
       const contentWrapper = document.createElement('div');
       contentWrapper.classList.add('contentWrapper');
-
       contentWrapper.style.height = '60vh';
       contentWrapper.style.overflowY = 'auto';
-
+  
       const gridContainer = document.createElement('div');
       gridContainer.classList.add('gridContainer');
       contentWrapper.appendChild(gridContainer);
+  
       item.childrens.forEach((subItem: any) => {
-        const imageUrl = subItem.icon || this.appConfig.defaultImage;
-
+        const imageUrl = subItem.icon;
+  
         if (subItem.url) {
           const childCard = document.createElement('ion-card');
 
-          // Add image with fallback
-          const popupImage = document.createElement('div');
-          popupImage.classList.add('cardImage');
-          const img = document.createElement('img');
-          img.src = imageUrl;
-          img.alt = subItem.title;
-          popupImage.appendChild(img);
-          document.body.appendChild(popupImage);
-
-          // Show/Hide image on hover
-          childCard.addEventListener('mouseenter', () => {
-            const cardRect = childCard.getBoundingClientRect();
-            popupImage.style.display = 'block';
-            popupImage.style.top = `${cardRect.top + window.scrollY}px`;
-            popupImage.style.left = `${cardRect.left + cardRect.width - 300}px`;
-          });
-
-          childCard.addEventListener('mouseleave', () => {
-            popupImage.style.display = 'none';
-          });
-
+          if (imageUrl) {
+            const popupImage = document.createElement('div');
+            popupImage.classList.add('cardImage');
+  
+            const img = document.createElement('img');
+            img.src = imageUrl;
+            img.alt = subItem.title;
+            popupImage.appendChild(img);
+  
+            document.body.appendChild(popupImage);
+  
+            childCard.addEventListener('mouseenter', () => {
+              const cardRect = childCard.getBoundingClientRect();
+              popupImage.style.display = 'block';
+              popupImage.style.position = 'absolute';
+              popupImage.style.top = `${cardRect.top + window.scrollY}px`;
+              popupImage.style.left = `${cardRect.left + cardRect.width - 300}px`;
+            });
+  
+            childCard.addEventListener('mouseleave', () => {
+              popupImage.style.display = 'none';
+            });
+          }
+  
           const childCardHeader = document.createElement('ion-card-header');
           const childCardTitle = document.createElement('ion-card-title');
           childCardTitle.classList.add('cardTitle');
           childCardTitle.textContent = subItem.title;
-
+  
           const childCardSubtitle = document.createElement('ion-card-subtitle');
           childCardSubtitle.classList.add('cardSubtitle');
           childCardSubtitle.textContent = subItem.description;
-
+  
           childCardHeader.appendChild(childCardTitle);
           childCardHeader.appendChild(childCardSubtitle);
           childCard.appendChild(childCardHeader);
-
+  
           const childCardContent = document.createElement('ion-card-content');
           childCardContent.classList.add('cardContent');
-          childCardContent.textContent = subItem.update;
-          childCard.appendChild(childCardContent);
+          
+          if (subItem.time) {
+            const updateFrequencyText = this.translate.instant('home.update');
+            const timePeriodText = this.translate.instant(`time.${subItem.time}`);
+            const updateText = `${updateFrequencyText} ${subItem.update} ${timePeriodText}`;
+    
+            const updateTextElement = document.createElement('p');
+            updateTextElement.classList.add('updateText');
+            updateTextElement.textContent = updateText;
+            childCardContent.appendChild(updateTextElement);
+          }
 
+          childCard.appendChild(childCardContent);
+  
           childCard.addEventListener('click', () => {
             window.open(subItem.url, '_blank');
           });
-
+  
           gridContainer.appendChild(childCard);
         } else {
           const ionItem = document.createElement('ion-item');
           const ionLabel = document.createElement('ion-label');
-
+  
           const h1 = document.createElement('h1');
           h1.classList.add('listTitle');
           h1.textContent = subItem.title;
-
+  
           ionLabel.appendChild(h1);
           ionItem.appendChild(ionLabel);
-
+  
           ionItem.addEventListener('click', (event) => {
             event.preventDefault();
             this.FillContent(subItem);
           });
-
+  
           contentWrapper.appendChild(ionItem);
         }
       });
-
+  
       parentElement.appendChild(contentWrapper);
     }
   }
-
+   
   search() {
     const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
   
-    if (!searchInputElement) {
-      console.error('Search input element not found.');
-      return;
-    }
-  
     const searchValue = searchInputElement.value.toLowerCase();
-    console.log('Search Value:', searchValue);
   
     if (this.navigationStack.length > 0) {
       const contentWrappers = document.querySelectorAll('.contentWrapper');
-      console.log('Content Wrappers Found:', contentWrappers.length);
   
       let anyVisible = false;
       let secondLevelTriggered = false;
@@ -346,7 +353,6 @@ export class HomePage {
       });
     };
   
-    // Collect matching items
     const matchingItems: any[] = [];
     this.menuData.forEach((topLevelItem) => {
       if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {
@@ -357,7 +363,7 @@ export class HomePage {
   
     this.mainContent.nativeElement.innerHTML = '';
     const searchResultsContainer = document.createElement('div');
-    searchResultsContainer.classList.add('searchResultsContainer');
+    searchResultsContainer.classList.add('generalGridContanier');
   
     if (searchValue.trim() === '') {
       this.mainContent.nativeElement.innerHTML = '';
@@ -369,42 +375,76 @@ export class HomePage {
     }
     
     if (matchingItems.length > 0) {
-      matchingItems.forEach((item) => {
+      matchingItems.forEach((item) => {     
+        const title = document.createElement('p');
+        title.classList.add('levelTitle');
+        title.textContent = item.title;
+        
         const childCard = document.createElement('ion-card');
-  
+    
+        // Check for icon existence
+        const imageUrl = item.icon;
+        if (imageUrl) {
+          const popupImage = document.createElement('div');
+          popupImage.classList.add('cardImage');
+    
+          const img = document.createElement('img');
+          img.src = imageUrl;
+          img.alt = item.title;
+          popupImage.appendChild(img);
+    
+          document.body.appendChild(popupImage);
+    
+          // Show/Hide image on hover
+          childCard.addEventListener('mouseenter', () => {
+            const cardRect = childCard.getBoundingClientRect();
+            popupImage.style.display = 'block';
+            popupImage.style.position = 'absolute';
+            popupImage.style.top = `${cardRect.top + window.scrollY}px`;
+            popupImage.style.left = `${cardRect.left + cardRect.width - 300}px`;
+          });
+    
+          childCard.addEventListener('mouseleave', () => {
+            popupImage.style.display = 'none';
+          });
+        }
+    
         const childCardHeader = document.createElement('ion-card-header');
         const childCardTitle = document.createElement('ion-card-title');
         childCardTitle.classList.add('cardTitle');
         childCardTitle.textContent = item.title;
-  
+    
         const childCardSubtitle = document.createElement('ion-card-subtitle');
         childCardSubtitle.classList.add('cardSubtitle');
         childCardSubtitle.textContent = item.description || '';
-  
+    
         childCardHeader.appendChild(childCardTitle);
         childCardHeader.appendChild(childCardSubtitle);
         childCard.appendChild(childCardHeader);
-  
+    
         const childCardContent = document.createElement('ion-card-content');
         childCardContent.classList.add('cardContent');
         childCardContent.textContent = item.update || '';
         childCard.appendChild(childCardContent);
-  
+    
         childCard.addEventListener('click', () => {
           window.open(item.url, '_blank');
         });
-  
+    
         searchResultsContainer.appendChild(childCard);
       });
     } else {
+      searchResultsContainer.style.display = 'none';
+
       const noResultsMessage = document.createElement('p');
-      noResultsMessage.classList.add('errorMessage');
+      noResultsMessage.classList.add('generalErrorMessage');
       this.translate.get('home.noItemFound').subscribe((translatedText: string) => {
         noResultsMessage.textContent = translatedText;
       });
-      searchResultsContainer.appendChild(noResultsMessage);
+
+      this.mainContent.nativeElement.innerHTML = ''; 
+      this.mainContent.nativeElement.appendChild(noResultsMessage);
     }
-  
     this.mainContent.nativeElement.appendChild(searchResultsContainer);
   }
 
