@@ -46,13 +46,13 @@
             "description": "Apresenta o perfil de atividade de CPU dos servidores CICS do ambiente CAIXA.",
             "time": "months",
             "icon": "../../assets/Images/Item_Images/example.jpg",
-            "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/65652061eab2560fdc951744?embed=true",
+            "url": "sisense:005:CPUusage_Evento_opt",
             "childrens": []
           },
           {
             "title": "CPU Bancário Não Prod.",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Homologação e Desenvolvimento.",
-            "icon": "../../assets/Images/Item_Images/zetaly.jpeg",
+            "icon": "../../assets/Images/Item_Images/example3.jpg",
             "url": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/654bb760576a3f54789f3761?embed=true",
             "childrens": []
           },

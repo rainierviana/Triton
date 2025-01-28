@@ -130,7 +130,7 @@
 .levelTitle {
   text-align: left;
   font-family: 'Futura-Bold', sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   margin-left: 2em;
 }
 
@@ -161,6 +161,7 @@
 .cardTitle {
   color: var(--ion-color-secondary-shade);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .cardSubtitle {
@@ -194,7 +195,6 @@
 
 .listTitle {
   font-family: 'Futura-Bold', sans-serif;
-  color: var(--ion-color-secondary-shade);
   cursor: pointer;
 }
 

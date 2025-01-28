@@ -52,6 +52,30 @@
   <div *ngIf="noItemsFound" class="no-items-message">
     <p class="errorMessage">{{ 'home.noItemFound' | translate }}</p>
   </div>
+
+  <div class="content-area">
+    <ng-container *ngFor="let item of currentContent">
+      <ion-card *ngIf="item.url" (click)="navigateToItem(item)">
+        <ion-card-header>
+          <ion-card-title>
+            <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a>
+          </ion-card-title>
+          <ion-card-subtitle class="cardSubtitle">{{ item.description }}</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+      
+  
+      <div *ngIf="!item.url"></div>
+      <ion-list *ngIf="!item.url">
+        <ion-item (click)="navigateToItem(item)">
+          <ion-label>
+            <h1>{{ item.title }}</h1>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+  </div>
+  
 </ion-content>
 
 <ion-menu side="end" contentId="main-content">

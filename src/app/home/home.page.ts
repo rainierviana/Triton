@@ -13,10 +13,16 @@ export class HomePage {
   @ViewChild('mainContent') mainContent!: ElementRef<HTMLDivElement>;
 
   private initialMainContentElements: any[] = [];
-  public appConfig: any = {};
   public sisenseDashboards: any[] = [];
   public filteredSisenseDashboards: any[] = [];
   public date: string = '';
+
+  public appConfig : any = {
+    "appTitle": "",
+    "headerImage": "",
+    "defaultLanguage": "",
+    "sisenseBasePath": []
+  }
 
   // State Variables
   noItemsFound: boolean = false;
@@ -27,6 +33,7 @@ export class HomePage {
   public menuData: any[] = [];
   public filteredData: any[] = [];
   public filteredMenuData: any[] = [];
+  public currentContent: any[] = [];
 
   // Navigation Management
   private navigationStack: any[] = [];
@@ -57,9 +64,9 @@ export class HomePage {
       }
     );
     this.http.get('assets/data/sisensedashboards.json').subscribe(
-      (dash: any) => {
-        this.sisenseDashboards = dash;
-        this.filteredSisenseDashboards = dash;
+      (sisense: any) => {
+        this.sisenseDashboards = sisense;
+        this.filteredSisenseDashboards = sisense;
       },
       (err) => {
         console.error(
@@ -101,7 +108,6 @@ export class HomePage {
   }
 
   applyAppConfig() {
-    // Set the app title
     document.title = this.appConfig.appTitle || 'Default App Title';
 
     // Set the header image
@@ -113,12 +119,6 @@ export class HomePage {
     // Set the default language
     const language = this.appConfig.defaultLanguage || 'en';
     this.translate.use(language);
-
-    // Set the footer text
-    const footerElement = document.querySelector('ion-footer p');
-    if (footerElement && this.appConfig.footerText) {
-      footerElement.textContent = this.appConfig.footerText;
-    }
   }
 
   // Retrieve the saved language from localStorage
@@ -127,21 +127,24 @@ export class HomePage {
     this.translate.use(savedLanguage);
   }
 
-  handleItemClick(item: any) {
-    let sItem = item.url.split(':');
+  handleItemClick(subItem: any) {
+    console.log(subItem);
+    let sItem = subItem.url.split(':');
 
-    if (item.url) {
-      // Convert a dash:title entry in a dashboard url
-      if (sItem[0] == 'dash') {
-        let dash = this.sisenseDashboards.find(db => db.title == sItem[1]);
-        item.url = this.appConfig.sisenseBasePath + dash._id;
+    if (subItem.url) {
+      if (sItem[0] == 'sisense') {
+        let conf = this.appConfig.sisenseBasePath.find((config: any) => config.base == sItem[1]);
+        let base = conf.base;
+        let path = conf.path;
+        let dash = this.sisenseDashboards.find(db => db.title == sItem[2]);
+        
+        subItem.url = `${base}/${path}/${dash.base._id}`;
+        console.log(subItem.url);
       }
 
-      // Open the external link in a new browser tab
-      window.open(item.url, '_blank');
-    } else if (item.childrens && item.childrens.length > 0) {
-      // If there is no URL, load the child content
-      this.FillContent(item);
+      window.open(subItem.url, '_blank');
+    } else if (subItem.childrens && subItem.childrens.length > 0) {
+      this.FillContent(subItem);
     }
   }
 
@@ -185,121 +188,36 @@ export class HomePage {
   }
 
   renderItem(item: any, parentElement: HTMLElement) {
-    const newContent = document.createElement('div');
+    this.currentContent = item.childrens || [];
 
-    const title = document.createElement('p');
-    title.classList.add('levelTitle');
-    title.textContent = item.title;
-    newContent.appendChild(title);
-
-    parentElement.appendChild(newContent);
-
-    if (item.childrens && item.childrens.length > 0) {
-      const contentWrapper = document.createElement('div');
-      contentWrapper.classList.add('contentWrapper');
-      contentWrapper.style.height = '60vh';
-      contentWrapper.style.overflowY = 'auto';
-
-      const gridContainer = document.createElement('div');
-      gridContainer.classList.add('gridContainer');
-      contentWrapper.appendChild(gridContainer);
-
-      item.childrens.forEach((subItem: any) => {
-        const imageUrl = subItem.icon;
-
-        if (subItem.url) {
-          const childCard = document.createElement('ion-card');
-
-          if (imageUrl) {
-            const popoverButton = document.createElement('ion-button');
-            popoverButton.classList.add('popoverButton');
-            popoverButton.fill = 'clear'; 
-            popoverButton.innerHTML = '<ion-icon name="image-outline"></ion-icon>'; 
-            
-            const popover = document.createElement('ion-popover');
-          
-            const popoverContent = document.createElement('div');
-            popoverContent.classList.add('popoverContent');
-          
-            const popoverImage = document.createElement('img');
-            popoverImage.src = imageUrl;
-            popoverImage.alt = subItem.title;
-          
-            const popoverTitle = document.createElement('p');
-            popoverTitle.textContent = subItem.title;
-          
-            popoverContent.appendChild(popoverImage);
-            popoverContent.appendChild(popoverTitle);
-            popover.appendChild(popoverContent);
-        
-            document.body.appendChild(popover);
-          
-            popoverButton.addEventListener('click', async (event) => {
-              event.stopPropagation();
-              await popover.present();
-            });
-          
-            childCard.appendChild(popoverButton);
-          }
-
-          const childCardHeader = document.createElement('ion-card-header');
-          const childCardTitle = document.createElement('ion-card-title');
-          childCardTitle.classList.add('cardTitle');
-          childCardTitle.textContent = subItem.title;
-
-          const childCardSubtitle = document.createElement('ion-card-subtitle');
-          childCardSubtitle.classList.add('cardSubtitle');
-          childCardSubtitle.textContent = subItem.description;
-
-          childCardHeader.appendChild(childCardTitle);
-          childCardHeader.appendChild(childCardSubtitle);
-          childCard.appendChild(childCardHeader);
-
-          const childCardContent = document.createElement('ion-card-content');
-          childCardContent.classList.add('cardContent');
-
-          if (subItem.time) {
-            const updateFrequencyText = this.translate.instant('home.update');
-            const timePeriodText = this.translate.instant(`time.${subItem.time}`);
-            const updateText = `${updateFrequencyText} ${timePeriodText}`;
-
-            const updateTextElement = document.createElement('p');
-            updateTextElement.classList.add('updateText');
-            updateTextElement.textContent = updateText;
-            childCardContent.appendChild(updateTextElement);
-          }
-
-          childCard.appendChild(childCardContent);
-
-          childCard.addEventListener('click', () => {
-            window.open(subItem.url, '_blank');
-          });
-
-          gridContainer.appendChild(childCard);
-        } else {
-          const ionItem = document.createElement('ion-item');
-          const ionLabel = document.createElement('ion-label');
-
-          const h1 = document.createElement('h1');
-          h1.classList.add('listTitle');
-          h1.textContent = subItem.title;
-
-          ionLabel.appendChild(h1);
-          ionItem.appendChild(ionLabel);
-
-          ionItem.addEventListener('click', (event) => {
-            event.preventDefault();
-            this.FillContent(subItem);
-          });
-
-          contentWrapper.appendChild(ionItem);
-        }
-      });
-
-      parentElement.appendChild(contentWrapper);
+    if (!this.breadcrumbs.includes(item.title)) {
+      this.navigationStack.push(item);
+      this.breadcrumbs.push(item.title);
     }
+
+    parentElement.innerHTML = '';
+  
+    this.showBackButton = true;
+    this.showForwardButton = true; 
+    this.forwardStack = [];
   }
 
+  navigateToItem(item: any) {
+    if (item.isHome) {
+      this.breadcrumbs = [];
+      this.navigationStack = [];
+      
+      this.mainContent.nativeElement.innerHTML = '';
+      return;
+    }
+  
+    if (item.url) {
+      window.open(item.url, '_blank');
+    } else {
+      this.FillContent(item);
+    }
+  }
+  
   search() {
     const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
 
@@ -387,7 +305,7 @@ export class HomePage {
         
           const popover = document.createElement('ion-popover');
         
-          const popoverContent = document.createElement('div');
+          let popoverContent = document.createElement('div');
           popoverContent.classList.add('popoverContent');
         
           const popoverImage = document.createElement('img');

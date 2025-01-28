@@ -2,7 +2,14 @@
   "appTitle": "Triton | 4Bears",
   "headerImage": "../../assets/Images/Logo.png",
   "defaultLanguage": "pt",
-  "footerText": "CAIXA ECONÔMICA FEDERAL - CNPJ 00.360.305/0001-04. SBS QUADRA 4 LT 3/4, ASA SUL - CEP 70.070-140 BRASILIA - DF",
-  "sisenseBasePath": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/",
-  "headerColor": "#004F9F"
+  "sisenseBasePath": [
+    {
+      "base": "005",
+      "path": "http://dadnpaplnt005.intra.caixa.gov.br:9091/app/main#/dashboards/"
+    },
+    {
+      "base": "006",
+      "path": "https://10.221.70.14:9091/app/main#/dashboards/"
+    }
+  ]
 }
