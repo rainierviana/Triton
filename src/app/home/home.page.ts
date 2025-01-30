@@ -50,6 +50,7 @@ export class HomePage {
     translate.setDefaultLang('pt');
   }
 
+  // Data Initialization
 
   Initialize() {
     this.http.get('assets/data/menumodel.json').subscribe(
@@ -74,10 +75,13 @@ export class HomePage {
         );
       }
     );
+    this.http.get('assets/data/appconfig.json').subscribe((config: any) => {
+      this.appConfig = config;
+      this.applyAppConfig();
+    });
   }
 
   ngOnInit() {
-    this.loadAppConfig();
     this.Initialize();
     this.setInitialLanguage();
 
@@ -99,14 +103,6 @@ export class HomePage {
     }, 0);
   }
 
-  // Data Initialization
-  loadAppConfig() {
-    this.http.get('assets/data/appconfig.json').subscribe((config: any) => {
-      this.appConfig = config;
-      this.applyAppConfig();
-    });
-  }
-
   applyAppConfig() {
     document.title = this.appConfig.appTitle || 'Default App Title';
 
@@ -115,10 +111,6 @@ export class HomePage {
     if (headerImageElement && this.appConfig.headerImage) {
       headerImageElement.setAttribute('src', this.appConfig.headerImage);
     }
-
-    // Set the default language
-    const language = this.appConfig.defaultLanguage || 'en';
-    this.translate.use(language);
   }
 
   // Retrieve the saved language from localStorage
@@ -156,7 +148,7 @@ export class HomePage {
   // Language Management
   toggleLanguage(language: string) {
     this.translate.use(language);
-    localStorage.setItem('selectedLanguage', language); // Save the selected language to localStorage
+    localStorage.setItem('selectedLanguage', language); 
   }
 
   // Save language preference
@@ -169,7 +161,7 @@ export class HomePage {
     this.navigationStack.push(item);
     this.forwardStack = [];
     this.mainContent.nativeElement.innerHTML = '';
-    this.renderItem(item, this.mainContent.nativeElement);
+    this.renderItem(item);
     this.showBackButton = true;
     this.showForwardButton = false;
     this.breadcrumbs.push(item.title);
@@ -187,36 +179,46 @@ export class HomePage {
     this.menuCtrl.close();
   }
 
-  renderItem(item: any, parentElement: HTMLElement) {
+  renderItem(item: any) {
+    if (this.navigationStack.length === 0 && this.breadcrumbs.length === 0) {
+  
+    }
+  
     this.currentContent = item.childrens || [];
-
+  
     if (!this.breadcrumbs.includes(item.title)) {
       this.navigationStack.push(item);
       this.breadcrumbs.push(item.title);
     }
-
-    parentElement.innerHTML = '';
   
-    this.showBackButton = true;
-    this.showForwardButton = true; 
-    this.forwardStack = [];
+    this.showBackButton = this.navigationStack.length > 1;
+    this.showForwardButton = this.forwardStack.length > 0;
   }
-
+  
   navigateToItem(item: any) {
     if (item.isHome) {
-      this.breadcrumbs = [];
-      this.navigationStack = [];
-      
-      this.mainContent.nativeElement.innerHTML = '';
+      this.resetToHome();
       return;
     }
   
+
     if (item.url) {
       window.open(item.url, '_blank');
     } else {
-      this.FillContent(item);
+      this.renderItem(item);
     }
   }
+  
+  resetToHome() {
+    this.currentContent = [];
+    this.navigationStack = [];
+    this.breadcrumbs = [];
+    this.forwardStack = [];
+    this.showBackButton = false;
+    this.showForwardButton = false;
+    this.mainContent.nativeElement.innerHTML = '';
+  }
+  
   
   search() {
     const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
@@ -398,6 +400,7 @@ export class HomePage {
     this.forwardStack = [];
     this.showBackButton = false;
     this.showForwardButton = false;
+    this.currentContent = [];
     this.breadcrumbs = [];
     this.noItemsFound = false;
     this.filteredData = [];
@@ -409,22 +412,21 @@ export class HomePage {
       this.breadcrumbs.pop();
       const previousItem = this.navigationStack[this.navigationStack.length - 1];
       this.mainContent.nativeElement.innerHTML = '';
-      this.renderItem(previousItem, this.mainContent.nativeElement);
+      this.renderItem(previousItem);
       this.showBackButton = this.navigationStack.length > 1;
       this.showBackButton = true;
       this.showForwardButton = true;
     } else {
-      // If the navigation stack is empty or has only one item, show the initial content
       this.mainContent.nativeElement.innerHTML = '';
 
-      // Restore the initial content elements
       this.initialMainContentElements.forEach((element) => {
         this.renderer.appendChild(this.mainContent.nativeElement, element);
       });
-      this.navigationStack = []; // reset navigation stack
-      this.forwardStack = []; // reset forward stack
+      this.navigationStack = []; 
+      this.forwardStack = [];
       this.breadcrumbs = [];
       this.showBackButton = false;
+      this.currentContent = [];
       this.showForwardButton = false;
       this.noItemsFound = false;
     }
@@ -435,7 +437,7 @@ export class HomePage {
       const nextItem = this.forwardStack.pop()!;
       this.navigationStack.push(nextItem);
       this.mainContent.nativeElement.innerHTML = '';
-      this.renderItem(nextItem, this.mainContent.nativeElement);
+      this.renderItem(nextItem);
       this.showBackButton = true;
       this.showForwardButton = this.forwardStack.length > 0;
       this.breadcrumbs.push(nextItem.title);
@@ -444,20 +446,17 @@ export class HomePage {
   }
 
   navigateToBreadcrumb(index: number) {
-    // Update the navigation stack and breadcrumbs to the selected index
     this.navigationStack = this.navigationStack.slice(0, index + 1);
     this.breadcrumbs = this.breadcrumbs.slice(0, index + 1);
 
-    // Clear the main content area
     this.mainContent.nativeElement.innerHTML = '';
 
-    // Render the selected breadcrumb's content
     const selectedItem = this.navigationStack[this.navigationStack.length - 1];
-    this.renderItem(selectedItem, this.mainContent.nativeElement);
+    this.renderItem(selectedItem);
 
-    // Update navigation buttons visibility
+    
     this.showBackButton = true;
-    this.showForwardButton = false; // Clear the forward stack
+    this.showForwardButton = false; 
     this.forwardStack = [];
   }
 
