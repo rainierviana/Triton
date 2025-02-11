@@ -2432,12 +2432,7 @@
     "icon": "../../assets/Images/Menu_Icons/Documentacao.svg",
     "url": "",
     "childrens": [
-      {
-        "title": "Manuais e treinamentos",
-        "description": "Apresenta toda a documentação de dashboards, manuais e treinamentos.",
-        "icon": "",
-        "url": "https://caixa.sharepoint.com/sites/CETAD10/Manuais%20e%20Treinamentos/Forms/AllItems.aspx?viewid=96fb4b1b%2D108a%2D41ca%2Dbf92%2Dd00491273460"
-      },
+      
       {
         "title": "Boletins",
         "description": "Lista de documentação de Boletins",
@@ -2483,6 +2478,12 @@
             "url": "https://caixa.sharepoint.com/sites/CETAD10/Relatrio%20mensal/Forms/AllItems.aspx"
           }
         ]
+      },
+      {
+        "title": "Manuais e treinamentos",
+        "description": "Apresenta toda a documentação de dashboards, manuais e treinamentos.",
+        "icon": "",
+        "url": "https://caixa.sharepoint.com/sites/CETAD10/Manuais%20e%20Treinamentos/Forms/AllItems.aspx?viewid=96fb4b1b%2D108a%2D41ca%2Dbf92%2Dd00491273460"
       },
       {
         "title": "Eventos Relevantes",
