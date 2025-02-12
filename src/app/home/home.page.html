@@ -82,7 +82,6 @@
         </ion-card>
       </ng-container>
     </div>
-
     
     <ng-container *ngFor="let item of childContent"><!--No-URL content-->
       <h1 *ngIf="!item.url" class="selectionItem" (click)="navigateToItem(item)">{{ item.title }}</h1>

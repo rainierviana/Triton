@@ -122,7 +122,7 @@ export class HomePage {
   }
 
   handleItemClick(subItem: any) {
-    console.log(subItem);
+    console.log('BIBI:',subItem);
     let sItem = subItem.url.split(':');
 
     if (subItem.url) {
