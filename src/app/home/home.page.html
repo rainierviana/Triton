@@ -57,7 +57,7 @@
     <div class="gridContainer"><!--Content grid-->
       <ng-container *ngFor="let item of childContent">
         <ion-card *ngIf="item.url">
-          <ion-card-header (click)="navigateToItem(item)">
+          <ion-card-header (click)="navigation(item)">
             <ion-card-title>
               <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a>
             </ion-card-title>
@@ -83,10 +83,16 @@
       </ng-container>
     </div>
     
-    <ng-container *ngFor="let item of childContent"><!--No-URL content-->
-      <h1 *ngIf="!item.url" class="selectionItem" (click)="navigateToItem(item)">{{ item.title }}</h1>
-    </ng-container>
-    
+    <!-- No-URL content -->
+    <ng-container *ngFor="let item of childContent">
+      <ion-list *ngIf="!item.url">
+        <ion-item (click)="navigation(item)">
+          <ion-label class="selectionItem">
+            <h1>{{ item.title }}</h1>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-container>    
   </div>
 
 </ion-content>

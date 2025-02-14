@@ -17,7 +17,7 @@ export class HomePage {
   public filteredSisenseDashboards: any[] = [];
   public date: string = '';
 
-  public appConfig : any = {
+  public appConfig: any = {
     "appTitle": "",
     "headerImage": "",
     "defaultLanguage": "",
@@ -28,7 +28,7 @@ export class HomePage {
   errormessage: boolean = false;
   showBackButton: boolean = false;
   showForwardButton: boolean = false;
-  popoverOpen: any = null; 
+  popoverOpen: any = null;
   popoverEvent: any = null;
 
   // Data Management
@@ -86,7 +86,6 @@ export class HomePage {
   applyAppConfig() {
     document.title = this.appConfig.appTitle || 'Default App Title';
 
-    // Set the header image
     const headerImageElement = document.querySelector('ion-toolbar img.headerLogo');
     if (headerImageElement && this.appConfig.headerImage) {
       headerImageElement.setAttribute('src', this.appConfig.headerImage);
@@ -107,7 +106,7 @@ export class HomePage {
       this.breadcrumbs = JSON.parse(savedBreadcrumbs);
       this.navigationStack = JSON.parse(savedNavigationStack);
 
-      this.FillContent(item); 
+      this.FillContent(item);
     }
 
     setTimeout(() => {
@@ -121,24 +120,36 @@ export class HomePage {
     this.translate.use(savedLanguage);
   }
 
-  handleItemClick(subItem: any) {
-    console.log('BIBI:',subItem);
-    let sItem = subItem.url.split(':');
+  navigation(item: any) {
+    if (item.isHome) {
+      this.resetToHome();
+      return;
+    }
 
-    if (subItem.url) {
-      if (sItem[0] == 'sisense') {
-        let conf = this.appConfig.sisenseBasePath.find((config: any) => config.base == sItem[1]);
+    if (item.url) {
+      let sItem = item.url.split(':');
+
+      if (sItem[0] === 'sisense') {
+        let conf = this.appConfig.sisenseBasePath.find((config: any) => config.base === sItem[1]);
         let base = conf.base;
         let path = conf.path;
-        let dash = this.sisenseDashboards.find(db => db.title == sItem[2]);
-        
-        subItem.url = `${base}/${path}/${dash.base._id}`;
-        console.log(subItem.url);
-      }
+        let dash = this.sisenseDashboards.find(db => db.title === sItem[2]);
 
-      window.open(subItem.url, '_blank');
-    } else if (subItem.childrens && subItem.childrens.length > 0) {
-      this.FillContent(subItem);
+        console.log('Title:', item.title);
+        console.log('Base:', base);
+        console.log('Path:', path);
+
+        let sisenseUrl = `${path}/${dash._id}`;
+        console.log('Sisense URL:', sisenseUrl);
+        window.open(sisenseUrl, '_blank');
+      } else {
+        console.log('URL:', item.url);
+        window.open(item.url, '_blank');
+      }
+    } else if (item.childrens && item.childrens.length > 0) {
+      this.FillContent(item);
+    } else {
+      this.renderItem(item);
     }
   }
 
@@ -146,11 +157,18 @@ export class HomePage {
   openEndMenu() {
     this.menuCtrl.open('end');
   }
+  
+  //Popover Controls
+  openPopover(event: Event, item: any) {
+    event.stopPropagation();
+    this.popoverEvent = event;
+    this.popoverOpen = item;
+  }
 
   // Language Management
   toggleLanguage(language: string) {
     this.translate.use(language);
-    localStorage.setItem('selectedLanguage', language); 
+    localStorage.setItem('selectedLanguage', language);
   }
 
   // Save language preference
@@ -182,37 +200,18 @@ export class HomePage {
   }
 
   renderItem(item: any) {
-  this.childContent = item.childrens || [];
+    this.childContent = item.childrens || [];
 
-  // Add the item to the navigation stack and breadcrumbs only if it's not already the current item
-  if (this.navigationStack[this.navigationStack.length - 1]?.title !== item.title) {
-    this.navigationStack.push(item);
-    this.breadcrumbs.push(item.title);
-  }
-
-  this.showBackButton = this.navigationStack.length > 1;
-  this.showForwardButton = this.forwardStack.length > 0;
-}
-  
-  navigateToItem(item: any) {
-    if (item.isHome) {
-      this.resetToHome();
-      return;
+    // Add the item to the navigation stack and breadcrumbs only if it's not already the current item
+    if (this.navigationStack[this.navigationStack.length - 1]?.title !== item.title) {
+      this.navigationStack.push(item);
+      this.breadcrumbs.push(item.title);
     }
 
-    if (item.url) {
-      window.open(item.url, '_blank');
-    } else {
-      this.renderItem(item);
-    }
+    this.showBackButton = this.navigationStack.length > 1;
+    this.showForwardButton = this.forwardStack.length > 0;
   }
 
-  openPopover(event: Event, item: any) {
-    event.stopPropagation(); 
-    this.popoverEvent = event;
-    this.popoverOpen = item;
-  }
-  
   resetToHome() {
     this.childContent = [];
     this.navigationStack = [];
@@ -222,177 +221,128 @@ export class HomePage {
     this.showForwardButton = false;
     this.description.nativeElement.innerHTML = '';
   }
-  
+
   search() {
-    // const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
-
-    // const searchValue = searchInputElement.value.toLowerCase();
-
-    // if (this.navigationStack.length > 0) {
-    //   // const contentWrappers = document.querySelectorAll('.contentWrapper');
-
-    //   // let anyVisible = false;
-    //   // let secondLevelTriggered = false;
-
-    //   // contentWrappers.forEach((wrapper) => {
-    //   //   let wrapperVisible = false;
-
-    //   //   const childElements = wrapper.querySelectorAll('.cardTitle, .listTitle');
-    //   //   childElements.forEach((element) => {
-    //   //     secondLevelTriggered = true;
-
-    //   //     const txtValue = (element as HTMLElement).textContent || '';
-    //   //     if (txtValue.toLowerCase().includes(searchValue)) {
-    //   //       (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = '';
-    //   //       wrapperVisible = true;
-    //   //       anyVisible = true;
-    //   //     } else {
-    //   //       (element.closest('ion-card, ion-item') as HTMLElement)!.style.display = 'none';
-    //   //     }
-    //   //   });
-
-    //   //   (wrapper as HTMLElement).style.display = wrapperVisible ? '' : 'none';
-    //   // });
-
-    //   // this.errormessage = secondLevelTriggered && !anyVisible;
-    //   // return;
-    // }
-
-    // // Function to recursively search for items with URLs
-    // const searchRecursive = (items: any[], matchingItems: any[]) => {
-    //   items.forEach((item) => {
-    //     if (item.url && item.title.toLowerCase().includes(searchValue)) {
-    //       matchingItems.push(item);
-    //     }
-    //     if (item.childrens && item.childrens.length > 0) {
-    //       searchRecursive(item.childrens, matchingItems);
-    //     }
-    //   });
-    // };
-
-    // const matchingItems: any[] = [];
-    // this.menumodel.forEach((topLevelItem) => {
-    //   if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {
-    //     searchRecursive(topLevelItem.childrens, matchingItems);
-    //   }
-
-    // });
-
-    // this.description.nativeElement.innerHTML = '';
-    // const searchResultsContainer = document.createElement('div');
-    // searchResultsContainer.classList.add('generalGridContanier');
-
-    // if (searchValue.trim() === '') {
-    //   this.description.nativeElement.innerHTML = '';
-
-    //   this.initialdescriptionElements.forEach((element) => {
-    //     this.renderer.appendChild(this.description.nativeElement, element);
-    //   });
-    //   return;
-    // }
-
-    // if (matchingItems.length > 0) {
-    //   matchingItems.forEach((item) => {
-    //     const title = document.createElement('p');
-    //     title.classList.add('levelTitle');
-    //     title.textContent = item.title;
-
-    //     const childCard = document.createElement('ion-card');
-
-    //     // Check for icon existence
-    //     const imageUrl = item.icon;
-    //     if (imageUrl) {
-    //       const popoverButton = document.createElement('ion-button');
-    //       popoverButton.classList.add('popoverButton');
-    //       popoverButton.textContent = 'View Image';
-    //       popoverButton.fill = 'clear'; 
-    //       popoverButton.innerHTML = '<ion-icon name="image-outline"></ion-icon>'; 
-        
-    //       const popover = document.createElement('ion-popover');
-        
-    //       let popoverContent = document.createElement('div');
-    //       popoverContent.classList.add('popoverContent');
-        
-    //       const popoverImage = document.createElement('img');
-    //       popoverImage.src = imageUrl;
-    //       popoverImage.alt = item.title;
-        
-    //       const popoverTitle = document.createElement('p');
-    //       popoverTitle.textContent = item.title;
-
-    //       popoverButton.addEventListener('click', async (event) => {
-    //         event.stopPropagation(); 
-    //         await popover.present();
-    //       });
-        
-    //       popoverContent.appendChild(popoverImage);
-    //       popoverContent.appendChild(popoverTitle);
-    //       popover.appendChild(popoverContent);
-        
-    //       document.body.appendChild(popover);
-        
-    //       popoverButton.addEventListener('click', async () => {
-    //         await popover.present();
-    //       });
-        
-    //       childCard.appendChild(popoverButton);
-    //     }
-        
-
-    //     const childCardHeader = document.createElement('ion-card-header');
-    //     const childCardTitle = document.createElement('ion-card-title');
-    //     childCardTitle.classList.add('cardTitle');
-    //     childCardTitle.textContent = item.title;
-
-    //     const childCardSubtitle = document.createElement('ion-card-subtitle');
-    //     childCardSubtitle.classList.add('cardSubtitle');
-    //     childCardSubtitle.textContent = item.description || '';
-
-    //     childCardHeader.appendChild(childCardTitle);
-    //     childCardHeader.appendChild(childCardSubtitle);
-    //     childCard.appendChild(childCardHeader);
-
-    //     const childCardContent = document.createElement('ion-card-content');
-    //     childCardContent.classList.add('cardContent');
-
-    //     if (item.time) {
-    //       const updateFrequencyText = this.translate.instant('home.update');
-    //       const timePeriodText = this.translate.instant(`time.${item.time}`);
-    //       const updateText = `${updateFrequencyText} ${timePeriodText}`;
-
-    //       const updateTextElement = document.createElement('p');
-    //       updateTextElement.classList.add('updateText');
-    //       updateTextElement.textContent = updateText;
-    //       childCardContent.appendChild(updateTextElement);
-    //     }
-    //     childCard.appendChild(childCardContent);
-
-    //     childCard.addEventListener('click', () => {
-    //       window.open(item.url, '_blank');
-    //     });
-
-    //     searchResultsContainer.appendChild(childCard);
-    //   });
-    // } else {
-    //   searchResultsContainer.style.display = 'none';
-
-    //   const noResultsMessage = document.createElement('p');
-    //   noResultsMessage.classList.add('generalErrorMessage');
-    //   this.translate.get('home.noItemFound').subscribe((translatedText: string) => {
-    //     noResultsMessage.textContent = translatedText;
-    //   });
-
-    //   this.description.nativeElement.innerHTML = '';
-    //   this.description.nativeElement.appendChild(noResultsMessage);
-    // }
-    // this.description.nativeElement.appendChild(searchResultsContainer);
+    const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
+    const searchValue = searchInputElement.value.toLowerCase().trim();
+  
+    // If search is empty, reset content
+    if (searchValue === '') {
+      this.description.nativeElement.innerHTML = '';
+  
+      this.initialdescriptionElements.forEach((element) => {
+        this.renderer.appendChild(this.description.nativeElement, element);
+      });
+      return;
+    }
+  
+    const matchingItems: any[] = [];
+  
+    // Function to search items recursively
+    const searchRecursive = (items: any[], matchingItems: any[]) => {
+      items.forEach((item) => {
+        if (item.url && item.title.toLowerCase().includes(searchValue)) {
+          matchingItems.push(item);
+        }
+        if (item.childrens && item.childrens.length > 0) {
+          searchRecursive(item.childrens, matchingItems);
+        }
+      });
+    };
+  
+    // Determine the search scope
+    if (this.navigationStack.length > 0) {
+      // Search only within the current navigation context
+      const topItem = this.navigationStack[0]; // Get the first level of navigation
+      if (topItem.childrens && topItem.childrens.length > 0) {
+        searchRecursive(topItem.childrens, matchingItems);
+      }
+    } else {
+      // Search globally across all children
+      this.menumodel.forEach((topLevelItem) => {
+        if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {
+          searchRecursive(topLevelItem.childrens, matchingItems);
+        }
+      });
+    }
+  
+    // Clear current content and prepare to render search results
+    this.description.nativeElement.innerHTML = '';
+    const searchResultsContainer = document.createElement('div');
+    searchResultsContainer.classList.add('generalGridContanier');
+  
+    if (matchingItems.length > 0) {
+      matchingItems.forEach((item) => {
+        // Create an ion-card for each matching item
+        const childCard = document.createElement('ion-card');
+        childCard.addEventListener('click', () => window.open(item.url, '_blank'));
+  
+        const childCardHeader = document.createElement('ion-card-header');
+        const childCardTitle = document.createElement('ion-card-title');
+        childCardTitle.classList.add('cardTitle');
+        childCardTitle.textContent = item.title;
+  
+        const childCardSubtitle = document.createElement('ion-card-subtitle');
+        childCardSubtitle.classList.add('cardSubtitle');
+        childCardSubtitle.textContent = item.description || '';
+  
+        childCardHeader.appendChild(childCardTitle);
+        childCardHeader.appendChild(childCardSubtitle);
+        childCard.appendChild(childCardHeader);
+  
+        // Add popover if icon exists
+        if (item.icon) {
+          const popoverButton = document.createElement('ion-button');
+          popoverButton.classList.add('popoverButton');
+          popoverButton.innerHTML = '<ion-icon name="image-outline"></ion-icon>';
+          popoverButton.fill = 'clear';
+  
+          const popover = document.createElement('ion-popover');
+          const popoverContent = document.createElement('div');
+          popoverContent.classList.add('popoverContent');
+  
+          const popoverImage = document.createElement('img');
+          popoverImage.src = item.icon;
+          popoverImage.alt = item.title;
+  
+          const popoverTitle = document.createElement('p');
+          popoverTitle.textContent = item.title;
+  
+          popoverContent.appendChild(popoverImage);
+          popoverContent.appendChild(popoverTitle);
+          popover.appendChild(popoverContent);
+          document.body.appendChild(popover);
+  
+          popoverButton.addEventListener('click', async (event) => {
+            event.stopPropagation();
+            await popover.present();
+          });
+  
+          childCard.appendChild(popoverButton);
+        }
+  
+        searchResultsContainer.appendChild(childCard);
+      });
+    } else {
+      // No item found message
+      const noResultsMessage = document.createElement('p');
+      noResultsMessage.classList.add('generalErrorMessage');
+      this.translate.get('home.noItemFound').subscribe((translatedText: string) => {
+        noResultsMessage.textContent = translatedText;
+      });
+  
+      this.description.nativeElement.appendChild(noResultsMessage);
+    }
+  
+    this.description.nativeElement.appendChild(searchResultsContainer);
   }
+  
 
   // Navigation Controls
 
   homeButton() {
     this.menuCtrl.close();
-  
+
     this.initialdescriptionElements.forEach((element) => {
       this.renderer.appendChild(this.description.nativeElement, element);
     });
@@ -436,12 +386,12 @@ export class HomePage {
       const nextItem = this.forwardStack.pop()!;
       this.navigationStack.push(nextItem);
       this.renderItem(nextItem);
-  
+
 
       if (this.breadcrumbs[this.breadcrumbs.length - 1] !== nextItem.title) {
         this.breadcrumbs.push(nextItem.title);
       }
-  
+
       this.showBackButton = true;
       this.showForwardButton = this.forwardStack.length > 0;
     }
@@ -450,10 +400,10 @@ export class HomePage {
   navigateToBreadcrumb(index: number) {
     this.navigationStack = this.navigationStack.slice(0, index + 1);
     this.breadcrumbs = this.breadcrumbs.slice(0, index + 1);
-  
+
     const selectedItem = this.navigationStack[this.navigationStack.length - 1];
     this.renderItem(selectedItem);
-  
+
     this.showBackButton = true;
     this.showForwardButton = false;
     this.forwardStack = [];
