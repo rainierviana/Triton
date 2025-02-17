@@ -1,8 +1,8 @@
 <ion-header><!--Header-->
   <ion-toolbar>
     <ion-buttons slot="start"><!--Header Buttons (left side)-->
-      <ion-menu-button class="menuButton"></ion-menu-button>
-      <button class="homeButton" (click)="homeButton()"> <img src="../../assets/Images/Menu_Icons/Home.svg" height="20em" /></button>
+      <ion-menu-button class="menuButton"></ion-menu-button><!--Left menu button-->
+      <button class="homeButton" (click)="home()"> <img src="../../assets/Images/Menu_Icons/Home.svg" height="20em" /></button><!--Home button-->
       <img class="headerLogo" />
     </ion-buttons>
 
@@ -23,40 +23,48 @@
           <ion-button fill="clear" (click)="FillContent(menuItem)"><img src="{{menuItem.icon}}" class="itemIcon">{{menuItem.title }}</ion-button>
         </div>
       </ng-container>
+
       <ion-button fill="cleat" href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank"><img src="../../assets/Images/Menu_Icons/X_Caixa.svg" class="itemIcon" />CESTI35</ion-button>
       <br />
       <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/Images/Menu_Icons/Settings.svg" class="itemIcon" />{{ 'home.settings' | translate }}</ion-button>
     </ion-content>
   </ion-menu>
 
-  <div class="nav-container"><!--Navigation items container-->
+  <!--Navigation items container-->
+  <div class="nav-container">
     <div class="breadcrumb" *ngIf="breadcrumbs.length > 0"><!--Breadcrumb-->
       <ng-container *ngFor="let breadcrumb of breadcrumbs; let i = index">
-        <span (click)="navigateToBreadcrumb(i)" class="breadcrumb-item">{{ breadcrumb }}</span>
+        <span (click)="breadcrumbNavigation(i)" class="breadcrumb-item">{{ breadcrumb }}</span>
         <ng-container *ngIf="i < breadcrumbs.length - 1">
           <span class="breadcrumb-separator"> > </span>
         </ng-container>
       </ng-container>
     </div>
 
-    <div class="navButtons"> <!--Navigation Buttons-->
-      <ion-button class="backButton" *ngIf="showBackButton" fill="clear" shape="round" (click)="backButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
+    <!--Navigation Buttons-->
+    <div class="navButtons"> 
+      <ion-button *ngIf="showBackButton" fill="clear" shape="round" (click)="backButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>      
       <ion-button class="forwardButton" *ngIf="showForwardButton" fill="clear" shape="round" (click)="forwardButton()"><ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon></ion-button>
+
+      <!-- Secondary Back Button (Clear Search) -->
+    <ion-button *ngIf="filteredData.length > 0" fill="clear" shape="round" (click)="searchBackButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
     </div>
   </div>
 
-  <div #description id="main-content"><!--Page Description-->
+  <!--Page Description-->
+  <div #description id="main-content">
     <p class="description">{{ 'home.description' | translate }}</p>
   </div>
 
-  <div *ngIf="errormessage"><!--Error message-->
-    <p class="errorMessage">{{ 'home.noItemFound' | translate }}</p>
+  <!--Not Found message-->
+  <div *ngIf="notFoundMessage">
+    <p class="notFoundMessage">{{ 'home.noItemFound' | translate }}</p>
   </div>
 
   <div class="contentWrapper"><!--Content display-->
     <div class="gridContainer"><!--Content grid-->
       <ng-container *ngFor="let item of childContent">
-        <ion-card *ngIf="item.url">
+        <ion-card *ngIf="item.url && !item.hidden">
           <ion-card-header (click)="navigation(item)">
             <ion-card-title>
               <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a>
@@ -66,38 +74,76 @@
             </ion-card-subtitle>
           </ion-card-header>
 
+          <!--Preview image button-->
           <ion-button fill="clear" *ngIf="item.icon" class="popoverButton" (click)="openPopover($event, item)">
             <ion-icon name="image-outline"></ion-icon>
           </ion-button>
 
+          <!--Preview image popover-->
           <ion-popover [isOpen]="popoverOpen === item" [event]="popoverEvent" (ionPopoverDidDismiss)="popoverOpen = null">
             <ng-template>
               <div class="popoverContent">
                 <img [src]="item.icon" [alt]="item.title" />
                 <p>{{ item.title }}</p>
-                <ion-button class="exitButton">{{ 'home.exit' | translate }}</ion-button>
+                <ion-button class="exitButton" (click)="closePopover()">{{ 'home.close' | translate }}</ion-button>
               </div>
             </ng-template>
           </ion-popover>
+
         </ion-card>
       </ng-container>
     </div>
-    
+
     <!-- No-URL content -->
     <ng-container *ngFor="let item of childContent">
-      <ion-list *ngIf="!item.url">
+      <ion-list *ngIf="!item.url && !item.hidden">
         <ion-item (click)="navigation(item)">
           <ion-label class="selectionItem">
             <h1>{{ item.title }}</h1>
           </ion-label>
         </ion-item>
       </ion-list>
-    </ng-container>    
+    </ng-container>
+
+    <!--Main page search content-->
+    <ng-container *ngIf="filteredData.length > 0">
+      <div *ngFor="let group of filteredData">
+        <h2 class="parentTitle">{{ group[0] }}</h2><!-- Parent Name -->
+    
+        <div class="gridContainer">
+          <ng-container *ngFor="let item of group[1]">
+            <ion-card *ngIf="item.url">
+              <ion-card-header (click)="navigation(item)">
+                <ion-card-title>
+                  <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a>
+                </ion-card-title>
+                <ion-card-subtitle class="cardSubtitle">
+                  <p>{{ item.description }}</p>
+                </ion-card-subtitle>
+              </ion-card-header>
+    
+              <ion-button fill="clear" *ngIf="item.icon" class="popoverButton" (click)="openPopover($event, item)"><ion-icon name="image-outline"></ion-icon></ion-button>
+    
+              <ion-popover [isOpen]="popoverOpen === item" [event]="popoverEvent" (ionPopoverDidDismiss)="popoverOpen = null">
+                <ng-template>
+                  <div class="popoverContent">
+                    <img [src]="item.icon" [alt]="item.title" />
+                    <p>{{ item.title }}</p>
+                    <ion-button class="exitButton" (click)="closePopover()">{{ 'home.close' | translate }}</ion-button>
+                  </div>
+                </ng-template>
+              </ion-popover>
+            </ion-card>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
   </div>
 
 </ion-content>
 
-<ion-menu side="end" contentId="main-content"><!--Settings menu-->
+<!--Settings menu-->
+<ion-menu side="end" contentId="main-content">
   <ion-content class="ion-padding">
     <p>{{ 'home.settings' | translate }}</p>
     <p>{{ 'home.language' | translate }}</p>
@@ -106,7 +152,7 @@
   </ion-content>
 </ion-menu>
 
-<ion-footer><!--Footer-->
+<ion-footer>
   <ion-toolbar>
   </ion-toolbar>
 </ion-footer>
