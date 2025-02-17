@@ -9,7 +9,7 @@
     "language":"Language",
     "search": "Search",
     "update": "Update Frequency: ",
-    "exit": "Exit"
+    "close": "Close"
   },
   "time":{
     "years": "Yearly",
