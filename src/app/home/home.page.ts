@@ -205,13 +205,12 @@ export class HomePage {
   renderItem(item: any) {
     this.childContent = item.childrens || [];
 
-    // Add the item to the navigation stack and breadcrumbs only if it's not already the current item
     if (this.navigationStack[this.navigationStack.length - 1]?.title !== item.title) {
       this.navigationStack.push(item);
       this.breadcrumbs.push(item.title);
     }
 
-    this.showBackButton = this.navigationStack.length > 1;
+    this.showBackButton = this.navigationStack.length > 0;
     this.showForwardButton = this.forwardStack.length > 0;
   }
 
