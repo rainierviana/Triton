@@ -66,20 +66,21 @@
       <ng-container *ngFor="let item of childContent">
         <ion-card *ngIf="item.url && !item.hidden">
           <ion-card-header (click)="navigation(item)">
-            <ion-card-title>
-              <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a>
-            </ion-card-title>
-            <ion-card-subtitle class="cardSubtitle">
-              <p>{{ item.description }}</p>
-            </ion-card-subtitle>
+            <ion-card-title><a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a></ion-card-title>
+            <ion-card-subtitle class="cardSubtitle"><p>{{ item.description }}</p></ion-card-subtitle>
           </ion-card-header>
-
-          <!--Preview image button-->
+      
+          <!--Update frequency display (only if previously set)-->
+          <ion-card-content *ngIf="item.time">
+            <p>{{ 'home.update' | translate }} {{ ('time.' + item.time) | translate }}</p>
+          </ion-card-content>
+      
+          <!-- Preview image button -->
           <ion-button fill="clear" *ngIf="item.icon" class="popoverButton" (click)="openPopover($event, item)">
             <ion-icon name="image-outline"></ion-icon>
           </ion-button>
-
-          <!--Preview image popover-->
+      
+          <!-- Preview image popover -->
           <ion-popover [isOpen]="popoverOpen === item" [event]="popoverEvent" (ionPopoverDidDismiss)="popoverOpen = null">
             <ng-template>
               <div class="popoverContent">
@@ -89,9 +90,9 @@
               </div>
             </ng-template>
           </ion-popover>
-
         </ion-card>
       </ng-container>
+      
     </div>
 
     <!-- No-URL content -->
@@ -121,6 +122,10 @@
                   <p>{{ item.description }}</p>
                 </ion-card-subtitle>
               </ion-card-header>
+
+              <ion-card-content *ngIf="item.time">
+                <p>{{ 'home.update' | translate }} {{ ('time.' + item.time) | translate }}</p>
+              </ion-card-content>
     
               <ion-button fill="clear" *ngIf="item.icon" class="popoverButton" (click)="openPopover($event, item)"><ion-icon name="image-outline"></ion-icon></ion-button>
     
@@ -133,9 +138,11 @@
                   </div>
                 </ng-template>
               </ion-popover>
+
             </ion-card>
           </ng-container>
         </div>
+
       </div>
     </ng-container>
   </div>
