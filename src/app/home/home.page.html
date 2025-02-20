@@ -18,7 +18,7 @@
 <ion-content>
   <ion-menu contentId="main-content"><!--First level content mebu-->
     <ion-content>
-      <ng-container *ngFor="let menuItem of menumodel">
+      <ng-container *ngFor="let menuItem of menumodel"><!--First level selection buttons-->
         <div>
           <ion-button fill="clear" (click)="FillContent(menuItem)"><img src="{{menuItem.icon}}" class="itemIcon">{{menuItem.title }}</ion-button>
         </div>
@@ -26,7 +26,7 @@
 
       <ion-button fill="cleat" href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank"><img src="../../assets/Images/Menu_Icons/X_Caixa.svg" class="itemIcon" />CESTI35</ion-button>
       <br />
-      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/Images/Menu_Icons/Settings.svg" class="itemIcon" />{{ 'home.settings' | translate }}</ion-button>
+      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/Images/Menu_Icons/Settings.svg" class="itemIcon" />{{ 'home.settings' | translate }}</ion-button><!--Open settings menu-->
     </ion-content>
   </ion-menu>
 
@@ -99,8 +99,8 @@
     <ng-container *ngFor="let item of childContent">
       <ion-list *ngIf="!item.url && !item.hidden">
         <ion-item (click)="navigation(item)">
-          <ion-label class="selectionItem">
-            <h1>{{ item.title }}</h1>
+          <ion-label>
+            <h1 class="selectionItem">{{ item.title }}</h1>
           </ion-label>
         </ion-item>
       </ion-list>

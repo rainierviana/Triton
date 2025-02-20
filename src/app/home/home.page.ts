@@ -138,7 +138,7 @@ export class HomePage {
         console.log('Base:', base);
         console.log('Path:', path);
 
-        let sisenseUrl = `${path}/${dash._id}`;
+        let sisenseUrl = `${path}/${dash.oid}`;
         console.log('Sisense URL:', sisenseUrl);
         window.open(sisenseUrl, '_blank');
       } else {
@@ -219,7 +219,6 @@ export class HomePage {
     const searchValue = searchInputElement.value.toLowerCase().trim();
   
     if (searchValue === '') {
-      // Reset when search is empty
       this.childContent.forEach((item) => (item.hidden = false));
       this.filteredData = [];
       this.notFoundMessage = false;
@@ -233,7 +232,6 @@ export class HomePage {
     const matchingItems: any[] = [];
     const parentChildMap = new Map<string, any[]>();
   
-    // Recursive function to search all levels
     const searchRecursive = (items: any[], parentTitle: string | null) => {
       items.forEach((item) => {
         const matches =
@@ -251,7 +249,6 @@ export class HomePage {
           }
         }
   
-        // Continue searching deeper if there are children
         if (item.childrens && item.childrens.length > 0) {
           searchRecursive(item.childrens, item.title);
         }
@@ -266,7 +263,6 @@ export class HomePage {
         }
       });
     } else {
-      // If inside navigation, only search in current level
       const searchRecursiveSimple = (items: any[], matchingItems: any[]) => {
         items.forEach((item) => {
           if (
@@ -289,19 +285,16 @@ export class HomePage {
       }
     }
   
-    // Apply search results
     this.filteredData = Array.from(parentChildMap.entries());
   
     this.childContent.forEach((item) => {
       item.hidden = !matchingItems.includes(item);
     });
   
-    // Ensure `notFoundMessage` updates immediately
     setTimeout(() => {
       this.notFoundMessage = matchingItems.length === 0;
     }, 0);
   }
-  
 
   // Navigation Controls
 
