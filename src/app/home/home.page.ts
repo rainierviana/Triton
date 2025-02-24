@@ -35,6 +35,7 @@ export class HomePage {
   public filteredData: any[] = [];
   public filteredmenumodel: any[] = [];
   public childContent: any[] = [];
+  selectedFilters: string[] = ['title'];
 
   // Navigation Management
   private navigationStack: any[] = [];
@@ -164,6 +165,13 @@ export class HomePage {
     this.popoverOpen = item;
   }
 
+  openFilter() {
+    const filterSelect = document.querySelector('ion-select.hiddenSelect') as any;
+    if (filterSelect) {
+      filterSelect.open();
+    }
+  }
+
   closePopover() {
     this.popoverOpen = null;
   }
@@ -232,12 +240,23 @@ export class HomePage {
     const matchingItems: any[] = [];
     const parentChildMap = new Map<string, any[]>();
   
+    // Determine active filters (Default to all if none selected)
+    const activeFilters = this.selectedFilters.length ? this.selectedFilters : ['title', 'description', 'url'];
+  
     const searchRecursive = (items: any[], parentTitle: string | null) => {
       items.forEach((item) => {
-        const matches =
-          item.title.toLowerCase().includes(searchValue) ||
-          (item.description && item.description.toLowerCase().includes(searchValue)) ||
-          (item.url && item.url.toLowerCase().includes(searchValue));
+        let matches = false;
+  
+        // Check if item matches any of the selected filters
+        if (activeFilters.includes('title') && item.title.toLowerCase().includes(searchValue)) {
+          matches = true;
+        }
+        if (activeFilters.includes('description') && item.description && item.description.toLowerCase().includes(searchValue)) {
+          matches = true;
+        }
+        if (activeFilters.includes('url') && item.url && item.url.toLowerCase().includes(searchValue)) {
+          matches = true;
+        }
   
         if (matches) {
           matchingItems.push(item);
@@ -245,7 +264,11 @@ export class HomePage {
             if (!parentChildMap.has(parentTitle)) {
               parentChildMap.set(parentTitle, []);
             }
-            parentChildMap.get(parentTitle)?.push(item);
+  
+            const existingItems = parentChildMap.get(parentTitle) || [];
+            if (!existingItems.some(existingItem => existingItem.title === item.title)) {
+              parentChildMap.get(parentTitle)?.push(item);
+            }
           }
         }
   
@@ -265,11 +288,19 @@ export class HomePage {
     } else {
       const searchRecursiveSimple = (items: any[], matchingItems: any[]) => {
         items.forEach((item) => {
-          if (
-            item.title.toLowerCase().includes(searchValue) ||
-            (item.description && item.description.toLowerCase().includes(searchValue)) ||
-            (item.url && item.url.toLowerCase().includes(searchValue))
-          ) {
+          let matches = false;
+  
+          if (activeFilters.includes('title') && item.title.toLowerCase().includes(searchValue)) {
+            matches = true;
+          }
+          if (activeFilters.includes('description') && item.description && item.description.toLowerCase().includes(searchValue)) {
+            matches = true;
+          }
+          if (activeFilters.includes('url') && item.url && item.url.toLowerCase().includes(searchValue)) {
+            matches = true;
+          }
+  
+          if (matches) {
             matchingItems.push(item);
           }
   
@@ -294,7 +325,7 @@ export class HomePage {
     setTimeout(() => {
       this.notFoundMessage = matchingItems.length === 0;
     }, 0);
-  }
+  }  
 
   // Navigation Controls
 
