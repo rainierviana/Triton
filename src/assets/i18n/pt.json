@@ -9,7 +9,8 @@
     "language":"Idioma",
     "search": "Pesquisar",
     "update": "Frequência de atualização: ",
-    "close": "Fechar"
+    "close": "Fechar",
+    "filter": "Filtrar "
   },
   "time":{
     "years": "Anual",
@@ -17,5 +18,10 @@
     "weeks": "Semanal",
     "semester": "Semi-Annual",
     "days": "Diaária"
+  },
+  "filter": {
+    "title":"Título",
+    "description":"Descrição",
+    "url":"URL"
   }
 }

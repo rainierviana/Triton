@@ -47,7 +47,20 @@
       <ion-button class="forwardButton" *ngIf="showForwardButton" fill="clear" shape="round" (click)="forwardButton()"><ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon></ion-button>
 
       <!-- Secondary Back Button (Clear Search) -->
-    <ion-button *ngIf="filteredData.length > 0" fill="clear" shape="round" (click)="searchBackButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
+      <ion-button *ngIf="filteredData.length > 0" fill="clear" shape="round" (click)="searchBackButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
+
+      <!-- Filter Button (Opens Search Filter) -->
+      <ion-button *ngIf="filteredData.length > 0" class="filterButton" fill="clear" (click)="openFilter()">
+        <ion-icon slot="start" name="filter-outline"></ion-icon>
+      </ion-button>
+
+      <!-- Hidden `ion-select` (Triggered Manually) -->
+      <ion-select #filterSelect [(ngModel)]="selectedFilters" multiple="true" (ionChange)="search()"  interface="popover" class="hiddenSelect">
+        <ion-select-option value="title">{{ 'filter.title' | translate }}</ion-select-option>
+        <ion-select-option value="description">{{ 'filter.description' | translate }}</ion-select-option>
+        <ion-select-option value="url">{{ 'filter.url' | translate }}</ion-select-option>
+      </ion-select>
+
     </div>
   </div>
 

@@ -8,21 +8,21 @@
       {
         "title": "Arquitetura",
         "description": "Apresenta a documentação de arquitetura.",
-        "icon": "../../assets/Images/Item_Images/example2.png",
+        "icon": "",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Topologia%20ZETALY/Forms/AllItems.aspx?viewid=b8550003%2D4b4a%2D4ef7%2Db303%2De57b643eeaed",
         "childrens": []
       },
       {
         "title": "Topologia",
         "description": "Apresenta a documentação de topologia.",
-        "icon": "../../assets/Images/Item_Images/example2.png",
+        "icon": "",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Topologia%20ZETALY/Forms/AllItems.aspx?id=%2Fsites%2FCETAD10%2FTopologia%20ZETALY%2FTopologia%20CDUC&viewid=b8550003%2D4b4a%2D4ef7%2Db303%2De57b643eeaed",
         "childrens": []
       },
       {
         "title": "Infraestrutura dos servidores",
         "description": "Apresenta a documentação da infraestrutura dos servidores.",
-        "icon": "../../assets/Images/Item_Images/example2.png",
+        "icon": "",
         "url": "https://caixa.sharepoint.com/sites/CETAD10/Topologia%20ZETALY/Forms/AllItems.aspx?newTargetListUrl=%2Fsites%2FCETAD10%2FTopologia%20ZETALY&viewpath=%2Fsites%2FCETAD10%2FTopologia%20ZETALY%2FForms%2FAllItems%2Easpx&id=%2Fsites%2FCETAD10%2FTopologia%20ZETALY%2FInfraestrutura%20Servidores&viewid=b8550003%2D4b4a%2D4ef7%2Db303%2De57b643eeaed&OR=Teams%2DHL&CT=1693507365833&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIyNy8yMzA3MDMwNzM0NiIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ",
         "childrens": []
       }
@@ -44,50 +44,50 @@
           {
             "title": "Activity TDS",
             "description": "Apresenta o perfil de atividade de CPU dos servidores CICS do ambiente CAIXA.",
-            "time": "months",
-            "icon": "../../assets/Images/Item_Images/example.jpg",
-            "url": "sisense:005:4B_si.a.u_CICS_Activity_TDS_off",
+            "time": "",
+            "icon": "",
+            "url": "sisense:005:4B_USO_CICS_ATIVIDADE_BANCARIO",
             "childrens": []
           },
           {
             "title": "CPU Bancário Não Prod.",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Homologação e Desenvolvimento.",
-            "time": "weeks",
-            "icon": "../../assets/Images/Item_Images/example3.jpg",
+            "time": "",
+            "icon": "",
             "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_NAO_PROD",
             "childrens": []
           },
           {
             "title": "CPU Bancário Não Prod. Detalhado",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Homologação e Desenvolvimento.",
-            "icon": "../../assets/Images/Item_Images/zetaly.jpeg",
+            "icon": "",
             "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_NAO_PROD_DETALHADO",
             "childrens": []
           },
           {
             "title": "CPU Bancário Prod.",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Produção.",
-            "icon": "../../assets/Images/Item_Images/zetaly.jpeg",
+            "icon": "",
             "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_PROD",
             "childrens": []
           },
           {
             "title": "CPU Bancário Prod. (Detalhado)",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Produção.",
-            "icon": "../../assets/Images/Item_Images/zetaly.jpeg",
+            "icon": "",
             "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_PROD_DETALHADO",
             "childrens": []
           },
           {
             "title": "CPU Negocial Prod.",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Negocial - Produção.",
-            "icon": "../../assets/Images/Item_Images/example2.png",
+            "icon": "",
             "url": "sisense:005:4B_USO_CICS_CPU_NEGOCIAL_PROD"
           },
           {
             "title": "CPU Negocial Prod. (Detalhado)",
             "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Negocial - Produção.",
-            "icon": "../../assets/Images/Item_Images/example2.png",
+            "icon": "",
             "url": "sisense:005:4B_USO_CICS_CPU_NEGOCIAL_PROD_DETALHADO"
           },
           {
@@ -168,7 +168,7 @@
             "title": "Negócio",
             "description": "Apresenta a evolução de consumo de processamento por Negócio.",
             "icon": "",
-            "url": "sisense:005:6197ade73db4255714fb5dbd"
+            "url": "sisense:005:4B_USO_CPU_Negocio"
           }
         ]
       },
@@ -294,13 +294,13 @@
           },
           {
             "title": "Commits View",
-            "description": "Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam COMMITS com frequência.",
+            "description": "Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam Commits com frequência.",
             "icon": "",
             "url": "sisense:005:4B_DESEMPENHO_DB2_Commits_View"
           },
           {
             "title": "DB2 Commits View CEPTI240",
-            "description": "Este relatório traz programas/rotinas sem COMMIT por sistemas do ambiente negocial.",
+            "description": "Este relatório traz programas/rotinas sem Commit por sistemas do ambiente negocial.",
             "icon": "",
             "url": "sisense:005:4B_DESEMPENHO_DB2_Commits_View_CEPTI240"
           },
@@ -367,7 +367,7 @@
         "url": "",
         "childrens": [
           {
-            "title": "Desempenho Cockpit",
+            "title": "Cockpit",
             "description": "Este dashboard demonstra o Consumo em MIPS. Visualização pela SUART - Tendência de consumo das partições de Produção.",
             "icon": "",
             "url": "sisense:005:4B_DESEMPENHO_DESEMPENHO_Cockpit"
@@ -413,7 +413,7 @@
         "url": "",
         "childrens": [
           {
-            "title": "CESTI23 CP ZIIP Uso - 7 dias",
+            "title": "CP ZIIP Uso - 7 dias",
             "description": "Apresenta a distribuição de Processadores ZIIP e CP no ambiente nos últimos 7 dias.",
             "icon": "",
             "url": "sisense:005:4B_CAPACIDADE_CESTI23_CP_ZIIP_USO_7dias"
@@ -428,43 +428,43 @@
         "childrens": [
           {
             "title": "Array Capacity (Back-End)",
-            "description": "Apresenta o consumo dos indicadores do storage (visão Subsistema).",
+            "description": "Apresenta o consumo dos indicadores do storage (Visão Subsistema).",
             "icon": "",
             "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Back-End)"
           },
           {
-            "title": "Array_Capacity (Front-End)",
-            "description": "Apresenta o consumo dos indicadores do storage (visão Sistema operacional).",
+            "title": "Array Capacity (Front-End)",
+            "description": "Apresenta o consumo dos indicadores do storage (Visão Sistema operacional).",
             "icon": "",
             "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Front-End)"
           },
           {
-            "title": "Catalogo_Pelican",
-            "description": "Apresenta o consumo dos CATALOGOS DE ARQUIVOS transferidos pelo PELICAN.",
+            "title": "Catálogo Pelican",
+            "description": "Apresenta o consumo dos catálogos de arquivos transferidos pelo Pelican.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Storage_Catalogo_Pelican"
           },
           {
             "title": "His Dataset",
-            "description": "Este dashboard mostra a Visualização de Dataset alocaldo em Storage Groups.",
+            "description": "Este dashboard mostra a Visualização de Dataset alocado em Storage Groups.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Storage_HisDataset"
           },
           {
-            "title": " Storage - VT Unit Usage",
-            "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de BACKUP.",
+            "title": "Storage - VT Unit Usage",
+            "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de Backup.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Storage_VTUnitUsage"
           },
           {
             "title": "Storage - Mega da Virada",
-            "description": "Apresenta o consumo dos ARMAZENAMENTO no evento de mega da virada.",
+            "description": "Apresenta o consumo de armazenamento no evento de mega da virada.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Storage_MegadaVirada_SG"
           },
           {
             "title": "Storage - Black Friday",
-            "description": "Apresenta o consumo dos ARMAZENAMENTO no evento Black Friday.",
+            "description": "Apresenta o consumo de armazenamento no evento Black Friday.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Storage_Black_Friday_SG"
           },
@@ -481,8 +481,8 @@
             "url": "sisense:005:4B_Custos_Storage_Dsn_Não_Categorizados"
           },
           {
-            "title": "Desempenho Sistema",
-            "description": "Apresenta o CUSTO de armazenamento por sistema.",
+            "title": "Desempenho do Sistema",
+            "description": "Apresenta o custo de armazenamento por sistema.",
             "icon": "",
             "url": "sisense:005:4B_Custos_Storage_Dsn_Categorizados_Sistemas"
           },
@@ -502,21 +502,15 @@
         "childrens": [
           {
             "title": "MIPS Não Prod.",
-            "description": "Apresenta o tendência de consumo de MIPS das partições de não produção.",
+            "description": "Apresenta a tendência de consumo de MIPS das partições de não produção.",
             "icon": "",
             "url": "sisense:005:4B_CAPACIDADE_SUART_MIPS_NPRD_novo"
           },
           {
             "title": "MIPS Prod.",
-            "description": "Apresenta o tendência de consumo de MIPS das partições de produção.",
+            "description": "Apresenta a tendência de consumo de MIPS das partições de produção.",
             "icon": "",
             "url": "sisense:005:4B_CAPACIDADE_SUART_MIPS_PRD_novo"
-          },
-          {
-            "title": "PlanCap_Channel_novo",
-            "description": "Apresenta o utilização de canais para avaliação de capacidade.",
-            "icon": "",
-            "url": "sisense:005:4B_CAPACIDADE_SUART_PlanCap_Channel_novo"
           },
           {
             "title": "Planejamento Capacidade CF",
@@ -528,11 +522,11 @@
             "title": "Planejamento Capacidade Channel",
             "description": "Apresenta os indicadores de consumo mensal de Canais.",
             "icon": "",
-            "url": "sisense:005:4B_CAPACIDADE_SUART_PlanejamentoCapacidade_Channel"
+            "url": "sisense:005:4B_CAPACIDADE_SUART_PlanCap_Channel_novo"
           },
           {
-            "title": "Planejamento Capacidade Memoria",
-            "description": "Apresenta o tendência de consumo de MEMORIA real e virtual.",
+            "title": "Planejamento Capacidade Memória",
+            "description": "Apresenta a tendência de consumo de memória real e virtual.",
             "icon": "",
             "url": "sisense:005:4B_CAPACIDADE_SUART_PlanejamentoCapacidade_Memoria"
           }
@@ -715,8 +709,8 @@
             "url": "sisense:005:4B_USO_EventosComerciais_Black_Friday_View"
           },
           {
-            "title": "CP ZIIP Capacity Namorados",
-            "description": "Apresenta o uso de processadores CP e ZIIP para o Dia dos Namorados.",
+            "title": "CP ZIIP Capacity - Dia dos Namorados",
+            "description": "Apresenta o uso de processadores CP e ZIIP no Dia dos Namorados.",
             "icon": "",
             "url": "sisense:005:4B_USO_EventosComerciais_CP_Ziip_Capacity_Namorados"
           },
@@ -747,7 +741,7 @@
             "url": "sisense:005:4B_USO_indicadores_Disponibilidade_Mainframe_Jes2"
           },
           {
-            "title": "Eficiencia MF - Transacoes MSU",
+            "title": "Eficiência MF - Transações MSU",
             "description": "Este relatório tem por objetivo apresenta o Indicador de Eficiência Plataforma Mainframe (EP MF) a ser utilizado pela CESTI351 para acompanhar e avaliar o desempenho do ambiente através da relação entre o total de transações CICS executadas x o total de Unidades de Serviço (SU) por dia.",
             "icon": "",
             "url": "sisense:005:4B_USO_Indicadores_EficienciaMF_Transacoes_MSU"
@@ -960,7 +954,7 @@
                     "childrens": []
                   },
                   {
-                    "title": "CPU Social Não Prod",
+                    "title": "CPU Social Não Prod.",
                     "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
                     "icon": "",
                     "url": "sisense:005:4B_USO_MQ_CPU_SOCIAL_NAO_PROD",
@@ -1042,8 +1036,8 @@
         "url": "",
         "childrens": [
           {
-            "title": "Serviços Batch de Produção Sistemas",
-            "description": "Apresenta as informações de SERVIÇOS BATCH de produção por Sistema.",
+            "title": "Serviços BATCH de Produção Sistemas",
+            "description": "Apresenta as informações de serviços BATCH de produção por Sistema.",
             "icon": "",
             "url": "sisense:005:4B_USO_PRODUCAO_Batch_Producao_Sistemas"
           },
@@ -1114,8 +1108,8 @@
             "url": "sisense:005:4B_USO_Catalogos_Serviços_Online"
           },
           {
-            "title": "Catálogo Rotinas Batch",
-            "description": "Apresenta os critérios de classificação das Rotinas Batchs.",
+            "title": "Catálogo Rotinas BATCH",
+            "description": "Apresenta os critérios de classificação das Rotinas BATCH.",
             "icon": "",
             "url": "sisense:005:4B_USO_Catalogos_Rotinas_Batch"
           }
@@ -1128,7 +1122,7 @@
         "url": "",
         "childrens": [
           {
-            "title": "Consumo Geral RJP1eRJP2",
+            "title": "Consumo Geral RJP1 e RJP2",
             "description": "Apresenta a evolução do consumo de processador da RJP1 e RJP2.",
             "icon": "",
             "url": "sisense:005:4B_USO_CESTI351_Consumo_Geral_RJP1eRJP2"
@@ -1186,8 +1180,8 @@
             "url": "sisense:005:4B_Uso_Custos_AcompanhamentoContratoSoftware"
           },
           {
-            "title": "Consumo-Control-M",
-            "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o % de contribuição.",
+            "title": "Consumo - Control-M",
+            "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o percentual de contribuição.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Custos_Consumo-Control-M"
           },
@@ -1199,7 +1193,7 @@
           },
           {
             "title": "Consumos com média",
-            "description": "Apresenta para os fornecedores/produtos selecionados, por competência, no período selecionado, um comparativo do consumo com a base contratada, as médias semestrais de consumo e os % de variação das médias.",
+            "description": "Apresenta para os fornecedores/produtos selecionados, por competência, no período selecionado, um comparativo do consumo com a base contratada, as médias semestrais de consumo e os percentuais de variação das médias.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Custos_Consumos_com_Medias"
           },
@@ -1247,7 +1241,7 @@
           },
           {
             "title": "Inventário CBA",
-            "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
+            "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA (Cross Brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Custos_Inventários_CBA"
           },
@@ -1318,14 +1312,14 @@
             "url": "sisense:005:4B_Uso_Custos_Painel_Orcamentario"
           },
           {
-            "title": "IBM Consumo-Período",
+            "title": "IBM Consumo - Período",
             "description": "Apresenta o consumo detalhado de um produto, por SID , nas competências selecionadas.",
             "icon": "",
             "url": "sisense:005:4B_Uso_Custos_IBM_ConsumoPeriodo"
           },
           {
             "title": "Inventário TFP",
-            "description": "Apresenta os períodos já processados do TFP, demonstrando a baseline e o growth  acumulados e detalhados (por competência).",
+            "description": "Apresenta os períodos já processados do TFP, demonstrando a baseline e o growth acumulados e detalhados (por competência).",
             "icon": "",
             "url": "sisense:005:4B_Uso_Custos_Inventario_TFP"
           },
@@ -1358,38 +1352,32 @@
             "url": "",
             "childrens": [
               {
-                "title": "MIPS NPRD novo",
-                "description": "Apresenta o tendência de consumo de MIPS das partições de não produção. ",
+                "title": "MIPS Não Prod.",
+                "description": "Apresenta a tendência de consumo de MIPS das partições de não produção.",
                 "icon": "",
                 "url": "sisense:005:4B_CAPACIDADE_SUART_MIPS_NPRD_novo"
               },
               {
-                "title": "MIPS PRD novo ",
-                "description": "Apresenta o tendência de consumo de MIPS das partições de produção.",
+                "title": "MIPS Prod.",
+                "description": "Apresenta a tendência de consumo de MIPS das partições de produção.",
                 "icon": "",
                 "url": "sisense:005:4B_CAPACIDADE_SUART_MIPS_PRD_novo"
               },
               {
-                "title": "PlanCap Channel novo",
-                "description": "Apresenta o utilização de canais para avaliação de capacidade.",
-                "icon": "",
-                "url": "sisense:005:4B_CAPACIDADE_SUART_PlanCap_Channel_novo"
-              },
-              {
-                "title": "PlanejamentoCapacidade CF",
+                "title": "Planejamento Capacidade CF",
                 "description": "Apresenta utilização de processadores ICF para avaliação de capacidade.",
                 "icon": "",
                 "url": "sisense:005:4B_CAPACIDADE_SUART_PlanejamentoCapacidade_CF"
               },
               {
-                "title": "PlanejamentoCapacidade Channel",
+                "title": "Planejamento Capacidade Channel",
                 "description": "Apresenta os indicadores de consumo mensal de Canais.",
                 "icon": "",
-                "url": "sisense:005:4B_CAPACIDADE_SUART_PlanejamentoCapacidade_Channel"
+                "url": "sisense:005:4B_CAPACIDADE_SUART_PlanCap_Channel_novo"
               },
               {
-                "title": "PlanejamentoCapacidade Memoria",
-                "description": "Apresenta o tendência de consumo de MEMORIA real e virtual.",
+                "title": "Planejamento Capacidade Memória",
+                "description": "Apresenta a tendência de consumo de memória real e virtual.",
                 "icon": "",
                 "url": "sisense:005:4B_CAPACIDADE_SUART_PlanejamentoCapacidade_Memoria"
               }
@@ -1402,7 +1390,7 @@
             "url": "",
             "childrens": [
               {
-                "title": "CP ZIIP USO 7dias",
+                "title": "CP ZIIP Uso - 7 dias",
                 "description": "Apresenta a distribuição de Processadores ZIIP e CP no ambiente nos últimos 7 dias.",
                 "icon": "",
                 "url": "sisense:005:4B_CAPACIDADE_CESTI23_CP_ZIIP_USO_7dias"
@@ -1425,45 +1413,21 @@
             "childrens": [
               {
                 "title": "Baseline Custos Visão Governança VP",
-                "description": "Apresenta o BASELINE de custos",
+                "description": "Apresenta o Baseline de custos.",
                 "icon": "",
                 "url": "sisense:005:4B_CUSTOS_SHOWBACKGEGAT_Baseline_Custos_Visão_Governança_VP"
               },
               {
-                "title": "RateioShowbackINFRA visao ano mes [REVER]",
-                "description": "Apresenta o showback da GEGAT.",
+                "title": "Rateio Showback INFRA - visão ano/mês",
+                "description": "Apresenta o Showback da GEGAT",
                 "icon": "",
                 "url": "sisense:005:4B_CUSTOS_SHOWBACKGEGAT_RateioShowbackINFRA_visao_ano_mes"
               },
               {
-                "title": "RateioShowbackINFRA visao ref ",
-                "description": "Apresenta o SHOWBACK da GEGAT.",
+                "title": "Catálogo GEGAT - Categorizados/Não Categorizados",
+                "description": "Apresenta o catálogo do Showback da GEGAT.",
                 "icon": "",
-                "url": "sisense:005:64c0253f69cc0c5130732b09"
-              },
-              {
-                "title": "Showback Contrato ",
-                "description": "Apresenta o SHOWBACK da GESTI.",
-                "icon": "",
-                "url": "sisense:005:64c026c569cc0c5130732b60"
-              },
-              {
-                "title": "Showback ContratosRealizado",
-                "description": "Apresenta o SHOWBACK da GESTI.",
-                "icon": "",
-                "url": "sisense:005:64c026b869cc0c5130732b4f"
-              },
-              {
-                "title": "Showback VisaoGeralContratos ",
-                "description": "Apresenta o SHOWBACK da GESTI.",
-                "icon": "",
-                "url": "sisense:005:64c027f169cc0c5130732b88"
-              },
-              {
-                "title": "ShowbackCentroCustoParticao",
-                "description": "Apresenta o SHOWBACK da GESTI.",
-                "icon": "",
-                "url": "sisense:005:64c02cf369cc0c5130732ba8"
+                "url": "sisense:005:4B_si.a.u_Catalogo_Gegat_Categorizados_NãoCategorizados"
               }
             ]
           },
@@ -1474,28 +1438,22 @@
             "url": "",
             "childrens": [
               {
-                "title": "Showback Contrato",
-                "description": "Apresenta o SHOWBACK da GESTI.",
+                "title": "Baseline Custos Visão GESTI - Custeio",
+                "description": "Apresenta o Showback-Custeio da GESTI.",
                 "icon": "",
-                "url": "sisense:005:64c026c569cc0c5130732b60"
+                "url": "sisense:005:4B_si.a.u_Baseline_Custos_Visão_GESTI_Custeio"
               },
               {
-                "title": "Showback ContratosRealizado",
-                "description": "Apresenta o SHOWBACK da GESTI.",
+                "title": "Baseline Custos Visão GESTI - Investimento",
+                "description": "Apresenta o Showback de Investimento da GESTI.",
                 "icon": "",
-                "url": "sisense:005:64c026b869cc0c5130732b4f"
+                "url": "sisense:005:4B_si.a.u_Baseline_Custos_Visão_GESTI_Investimento"
               },
               {
-                "title": "Showback VisaoGeralContratos",
-                "description": "Apresenta o SHOWBACK da GESTI.",
+                "title": "Baseline Custos Visão GESTI - Total",
+                "description": "Apresenta o Showback de Total da GESTI.",
                 "icon": "",
-                "url": "sisense:005:64c027f169cc0c5130732b88"
-              },
-              {
-                "title": "Performance FE Vols",
-                "description": "Apresenta o dashboard de Storage Performance - Volumes",
-                "icon": "",
-                "url": "sisense:005:4B_Desempenho_Storage_Perf_Vols"
+                "url": "sisense:005:4B_si.a.u_Baseline_Custos_Visão_GESTI_Total"
               }
             ]
           },
@@ -1506,16 +1464,70 @@
             "url": "",
             "childrens": [
               {
-                "title": "DSNCAT",
-                "description": "Apresenta os arquivos não classificados.",
+                "title": "Array Capacity (Back-End)",
+                "description": "Apresenta o consumo dos indicadores do storage (Visão Subsistema).",
                 "icon": "",
-                "url": "sisense:005:64c02e1169cc0c5130732bf2"
+                "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Back-End)"
               },
               {
-                "title": "Sistemas",
+                "title": "Array Capacity (Front-End)",
+                "description": "Apresenta o consumo dos indicadores do storage (Visão Sistema operacional).",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Front-End)"
+              },
+              {
+                "title": "Catálogo Pelican",
+                "description": "Apresenta o consumo dos catálogos de arquivos transferidos pelo Pelican.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_Catalogo_Pelican"
+              },
+              {
+                "title": "His Dataset",
+                "description": "Este dashboard mostra a Visualização de Dataset alocado em Storage Groups.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_HisDataset"
+              },
+              {
+                "title": "Storage - VT Unit Usage",
+                "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de Backup.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_VTUnitUsage"
+              },
+              {
+                "title": "Storage - Mega da Virada",
+                "description": "Apresenta o consumo de armazenamento no evento de Mega da Virada.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_MegadaVirada_SG"
+              },
+              {
+                "title": "Storage - Black Friday",
+                "description": "Apresenta o consumo de armazenamento no evento Black Friday.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_Black_Friday_SG"
+              },
+              {
+                "title": "Desempenho Performance",
+                "description": "Apresenta o indicadores de desempenho dos recursos de armazenamento.",
+                "icon": "",
+                "url": "sisense:005:4B_Desempenho_Storage_Perf_SG"
+              },
+              {
+                "title": "Storage DSNCAT",
+                "description": "Apresenta os arquivos não classificados.",
+                "icon": "",
+                "url": "sisense:005:4B_Custos_Storage_Dsn_Não_Categorizados"
+              },
+              {
+                "title": "Desempenho do Sistema",
                 "description": "Apresenta o CUSTO de armazenamento por sistema.",
                 "icon": "",
                 "url": "sisense:005:4B_Custos_Storage_Dsn_Categorizados_Sistemas"
+              },
+              {
+                "title": "Performance FE Vols.",
+                "description": "Apresenta os indicadores de desempenho dos discos no ambiente Caixa.",
+                "icon": "",
+                "url": "sisense:005:4B_Desempenho_Storage_Perf_Vols"
               }
             ]
           },
@@ -1535,18 +1547,18 @@
                 "title": "Relatório Mensal",
                 "description": "Apresenta de uma forma sistêmica a saúde do ambiente de produção Alta Plataforma e os pontos de alertas e críticos que ocorreram durante o MÊS ANTERIOR dos quais necessitam de atenção. Utiliza o mês de Julho/2021 como baseline. Por fim, o relatório traz sempre os últimos 3 meses com o intuito de um pequeno histórico para comparações.",
                 "icon": "",
-                "url": "sisense:005:614b38446c783551bca318da"
+                "url": "sisense:005:4B_CUSTOS_PROCESSOS_Relatorio_Mensal"
               },
               {
                 "title": "Relatório Semanal",
                 "description": "Apresenta os pontos de alertas, saturações e críticos que ocorreram durante a semana ANTERIOR, dos quais necessitam de atenção.",
                 "icon": "",
-                "url": "sisense:005:6176edd009be97484cfd1617"
+                "url": "sisense:005:4B_CUSTOS_PROCESSOS_Relatorio_Semanal"
               }
             ]
           },
           {
-            "title": "Custos",
+            "title": "Dashboards de Custos",
             "description": "",
             "icon": "",
             "url": "",
@@ -1555,169 +1567,169 @@
                 "title": "IBM ModelMLC",
                 "description": "Apresenta o dashboard de custos no modelo MLC.",
                 "icon": "",
-                "url": "sisense:005:642332b3ca6751574c9d4a4b"
+                "url": "sisense:005:4B_Uso_Custos_IBM-ModelMLC"
               },
               {
                 "title": "IBM ModelTFP",
                 "description": "Apresenta o dashboard de custos no modelo TFP.",
                 "icon": "",
-                "url": "sisense:005:676429bf24567b1188afb2b5"
+                "url": "sisense:005:4B_Uso_Custos_IBM-ModelTFP"
               },
               {
                 "title": "Acompanhamento Contrato Software",
                 "description": "Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento orçamentário.",
                 "icon": "",
-                "url": "sisense:005:646d1caa8cb17c0700750afb"
+                "url": "sisense:005:4B_Uso_Custos_AcompanhamentoContratoSoftware"
               },
               {
-                "title": "Consumo-Control-M",
-                "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o % de contribuição.",
+                "title": "Consumo - Control-M",
+                "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o percentual de contribuição.",
                 "icon": "",
-                "url": "sisense:005:651d6e3c4e691405883e16e5"
+                "url": "sisense:005:4B_Uso_Custos_Consumo-Control-M"
               },
               {
                 "title": "Consumo Excessivo",
                 "description": "Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base licenciada no período selecionado.",
                 "icon": "",
-                "url": "sisense:005:64a979b13d458300ecf7a88b"
+                "url": "sisense:005:4B_Uso_Custos_Consumo_Excessivo"
               },
               {
                 "title": "Consumos com média",
-                "description": "Apresenta para os fornecedores/produtos selecionados, por competência, no período selecionado, um comparativo do consumo com a base contratada, as médias semestrais de consumo e os % de variação das médias.",
+                "description": "Apresenta para os fornecedores/produtos selecionados, por competência, no período selecionado, um comparativo do consumo com a base contratada, as médias semestrais de consumo e os percentuais de variação das médias.",
                 "icon": "",
-                "url": "sisense:005:6787f6ed0317443aac5da53e"
+                "url": "sisense:005:4B_Uso_Custos_Consumos_com_Medias"
               },
               {
                 "title": "Control M - TOP 10",
                 "description": "Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência final, e os 10 maiores consumos de cada período.",
                 "icon": "",
-                "url": "sisense:005:652027b94e691405883e185e"
+                "url": "sisense:005:4B_Uso_Custos_ControlM-TOP-10"
               },
               {
                 "title": "Extração SCRT",
                 "description": "Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por Serial/Produto e detalhado por partição.",
                 "icon": "",
-                "url": "sisense:005:641b380bfe23165750e50644"
+                "url": "sisense:005:4B_Uso_Custos_ExtracaoSCRT"
               },
               {
                 "title": "Gestão - Orçamento Contrato",
                 "description": "Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo em meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado e o saldo orçamentário detalhado.",
                 "icon": "",
-                "url": "sisense:005:646f6c0b8cb17c0700750b31"
+                "url": "sisense:005:4B_Uso_Custos_GestaoOrcamentoContrato"
               },
               {
                 "title": "IBM Detalhado",
                 "description": "Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site (CEPTI) e SID, além de um detalhamento por partição.",
                 "icon": "",
-                "url": "sisense:005:6423410cca6751574c9d4a81"
+                "url": "sisense:005:4B_Uso_Custos_IBM_Detalhado"
               },
               {
                 "title": "Inventário IBM",
                 "description": "Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período selecionado.",
                 "icon": "",
-                "url": "sisense:005:64c7f0faa7dd13609814b255"
+                "url": "sisense:005:4B_Uso_Custos_Inventario_IBM"
               },
               {
                 "title": "Inventário Uso",
                 "description": "Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um gráfico de tendências.",
                 "icon": "",
-                "url": "sisense:005:646b8ef0baa1290674a6ed81"
+                "url": "sisense:005:4B_Uso_Custos_InventarioUso"
               },
               {
                 "title": "Inventário Software Terceiros",
                 "description": "Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período selecionado.",
                 "icon": "",
-                "url": "sisense:005:662c2d02ffb6c327a0980b06"
+                "url": "sisense:005:4B_Uso_Custos_InventarioSoftwareTerceiros"
               },
               {
                 "title": "Inventário CBA",
-                "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
+                "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA (Cross Brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
                 "icon": "",
-                "url": "sisense:005:649442fe3d458300ecf7a6dc"
+                "url": "sisense:005:4B_Uso_Custos_Inventários_CBA"
               },
               {
                 "title": "Inventário CA-MLC",
                 "description": "Apresenta a baseline e as apurações dos períodos processados.",
                 "icon": "",
-                "url": "sisense:005:675c55475f2b490ef8f47bdb"
+                "url": "sisense:005:4B_Uso_Custos_Inventario_CA-MLC"
               },
               {
                 "title": "Rubricas",
                 "description": "Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o status de pagamento das faturas.",
                 "icon": "",
-                "url": "sisense:005:64b6fb240af1e6e964eae1fc"
+                "url": "sisense:005:4B_Uso_Custos_Rubricas"
               },
               {
                 "title": "Terceiros",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor.",
                 "icon": "",
-                "url": "sisense:005:6418829bca6751574c9d47ca"
+                "url": "sisense:005:4B_Uso_Custos_Terceiros"
               },
               {
                 "title": "Terceiros - CA",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e créditos contratuais, e a distribuição percentual dos produtos por consumo e por valor.",
                 "icon": "",
-                "url": "sisense:005:64307ee7fe23165750e5089a"
+                "url": "sisense:005:4B_Uso_Custos_Terceiros_CA"
               },
               {
                 "title": "Terceiros - Control M",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por produto.",
                 "icon": "",
-                "url": "sisense:005:651c616d023fb35ac49e6684"
+                "url": "sisense:005:4B_Uso_Custos_Terceiros_Control-M"
               },
               {
                 "title": "Terceiros - Detalhes",
                 "description": "Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição de consumo e de valor por site (CEPTI).",
                 "icon": "",
-                "url": "sisense:005:641b128eca6751574c9d48da"
+                "url": "sisense:005:4B_Uso_Custos_Terceiros_Detalhes"
               },
               {
                 "title": "Terceiros - Detalhes Control M",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).",
                 "icon": "",
-                "url": "sisense:005:651c6a7b023fb35ac49e6878"
+                "url": "sisense:005:4B_Uso_Custos_Terceiros_Detalhes_Control-M"
               },
               {
                 "title": "Terceiros - Faixas Acumuladas",
                 "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor e um quadro demonstrativo do cálculo do valor.",
                 "icon": "",
-                "url": "sisense:005:65006d8678d49728c48ea06f"
+                "url": "sisense:005:4B_Uso_Custos_Terceiros_FaixasAcumuladas"
               },
               {
                 "title": "Terceiros - Simulação e Aquisição",
                 "description": "Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média da diferença entre consumo e base licenciada (MsuBase).",
                 "icon": "",
-                "url": "sisense:005:66688608b704af5cb00eaa65"
+                "url": "sisense:005:4B_Uso_Custos_Terceiros_Simulacao_Aquisicao"
               },
               {
                 "title": "Valores de Partições",
                 "description": "Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site e Total por Serial, de forma analítica, detalhando cada um dos totais por partição.",
                 "icon": "",
-                "url": "sisense:005:64c81e65a7dd13609814b270"
+                "url": "sisense:005:4B_Uso_Custos_Valores_Particoes"
               },
               {
                 "title": "Painel Orçamentário",
                 "description": "Apresenta o resumo orçamentário dos contratos e um detalhamento por categoria.",
                 "icon": "",
-                "url": "sisense:005:673cf95d0ef914c05e957a77"
+                "url": "sisense:005:4B_Uso_Custos_Painel_Orcamentario"
               },
               {
-                "title": "IBM Consumo-Período",
+                "title": "IBM Consumo - Período",
                 "description": "Apresenta o consumo detalhado de um produto, por SID , nas competências selecionadas.",
                 "icon": "",
-                "url": "sisense:005:662285a8140e1e59a0f70ee3"
+                "url": "sisense:005:4B_Uso_Custos_IBM_ConsumoPeriodo"
               },
               {
                 "title": "Inventário TFP",
                 "description": "Apresenta os períodos já processados do TFP, demonstrando a baseline e o growth  acumulados e detalhados (por competência).",
                 "icon": "",
-                "url": "sisense:005:67473d0192eaff223c9c488a"
+                "url": "sisense:005:4B_Uso_Custos_Inventario_TFP"
               },
               {
                 "title": "Totais-Fornecedores",
                 "description": "Apresenta o valor total por fornecedor/contrato no período selecionado.",
                 "icon": "",
-                "url": "sisense:005:67619b4624567b1188afb24a"
+                "url": "sisense:005:4B_Uso_Custos_Totais_Fornecedores"
               }
             ]
           }
@@ -1736,40 +1748,184 @@
             "url": "",
             "childrens": [
               {
+                "title": "CPU",
+                "description": "Apresenta o perfil de consumo de CPU das instancias DB2 do ambiente Bancário.",
+                "icon": "",
+                "url": "",
+                "childrens": [
+                  {
+                    "title": "CPU Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "CPU Bancário Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_BANCARIO_PROD"
+                      },
+                      {
+                        "title": "CPU Negocial Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_NEGOCIAL_PROD"
+                      },
+                      {
+                        "title": "CPU Social Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_SOCIAL_PROD"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "CPU Não Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "CPU Bancário Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_BANCARIO_NAO_PROD"
+                      },
+                      {
+                        "title": "CPU Negocial Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_NEGOCIAL_NAO_PROD"
+                      },
+                      {
+                        "title": "CPU Social Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_SOCIAL_NAO_PROD"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "DDF",
+                "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                "icon": "",
+                "url": "",
+                "childrens": [
+                  {
+                    "title": "DDF Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "DDF Bancário Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_BANCARIO_PROD"
+                      },
+                      {
+                        "title": "DDF Negocial Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_NEGOCIAL_PROD"
+                      },
+                      {
+                        "title": "DDF Social Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_SOCIAL_PROD"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "DDF Não Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "DDF Bancário Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_BANCARIO_NAO_PROD"
+                      },
+                      {
+                        "title": "DDF Negocial Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_NEGOCIAL_NAO_PROD"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
                 "title": "Commits View",
-                "description": "Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam COMMITS com frequência.",
+                "description": "Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam Commits com frequência.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_DB2_Commits_View"
               },
               {
-                "title": "Commits View CEPTI240",
-                "description": "Este relatório traz  programas/rotinas sem COMMIT por sistemas do ambiente negocial",
+                "title": "DB2 Commits View CEPTI240",
+                "description": "Este relatório traz programas/rotinas sem Commit por sistemas do ambiente negocial.",
                 "icon": "",
-                "url": "sisense:005:64b6d9ad3a8acf511c7e9399"
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Commits_View_CEPTI240"
               },
               {
-                "title": "Connection Client",
+                "title": "DB2 Connection Client",
                 "description": "O objetivo deste relatório é trazer as versões instaladas dos produtos junto a mais algumas outras informações relevantes.",
                 "icon": "",
-                "url": "sisense:005:64b6d9e5e93cf25110a941ca"
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Connection_Client"
               },
               {
-                "title": "Lock Scalation",
-                "description": "Este dashboard ajuda a visualizar aplicativos que possam está impactando o ambiente, provocando timeouts de outros e deadlocks. Identifica também os recursos tipo tablespace que receberam a escalada de lock",
+                "title": "Tamanho LOG",
+                "description": "Apresenta os tempos de carga dos arquivos de LOG DB2. Tempos muito curtos podem prejudicar a performance do banco.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Tamanho_LOG"
+              },
+              {
+                "title": "DB2 Lock Scalation",
+                "description": "Este dashboard ajuda a visualizar aplicativos que possam está impactando o ambiente, provocando timeouts de outros e deadlocks. Identifica também os recursos tipo tablespace que receberam a escalada de lock.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_DB2_Lock_Scalation"
               },
               {
-                "title": "Tamanho LOG",
-                "description": "Apresenta os tempos de  carga dos arquivos de LOG DB2. Tempos muito curtos podem prejudicar a performance do banco.",
-                "icon": "",
-                "url": "sisense:005:64b6de803a8acf511c7e93cd"
-              },
-              {
-                "title": "DB2 Activity V4",
+                "title": "DB2 Activity Bancário (Não Produção)",
                 "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
                 "icon": "",
-                "url": "sisense:005:650d7d9078d49728c48ea2de"
+                "url": "sisense:005:4B_USO_DB2_Activity _BANCARIO_NAO_PROD"
+              },
+              {
+                "title": "DB2 Activity Bancário (Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _BANCARIO_PROD"
+              },
+              {
+                "title": "DB2 Activity Negocial (Não Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _NEGOCIAL_NAO_PROD"
+              },
+              {
+                "title": "DB2 Activity Negocial (Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _NEGOCIAL_PROD"
+              },
+              {
+                "title": "DB2 Activity Social (Não Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _SOCIAL_NAO_PROD"
+              },
+              {
+                "title": "DB2 Activity Social (Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _SOCIAL_PROD"
               }
             ]
           },
@@ -1783,7 +1939,7 @@
                 "title": "Cockpit",
                 "description": "Este dashboard demonstra o Consumo em MIPS.  Visualização pela SUART - Tendência de consumo das partições de Produção.",
                 "icon": "",
-                "url": "sisense:005:64f75ffd856646266c18b32c"
+                "url": "sisense:005:4B_DESEMPENHO_DESEMPENHO_Cockpit"
               }
             ]
           },
@@ -1809,7 +1965,7 @@
                 "title": "CICS Report Desempenho",
                 "description": "Apresenta  os indicadores de desempenho e saúde das transações e regiões CICS dos ambientes de Negócio.",
                 "icon": "",
-                "url": "sisense:005:6268293d23e8370414b736a0"
+                "url": "sisense:005:4B_DESEMPENHO_DesempenhoAplicação_CICS_Report_Desempenho"
               },
               {
                 "title": "DB2 Commits View Desempenho",
@@ -1833,7 +1989,7 @@
               },
               {
                 "title": "Health CPU ZIIP",
-                "description": "Apresenta a avaliação da saúde dos processadores CP e Ziiip.",
+                "description": "Apresenta a avaliação da saúde dos processadores CP e ZIIP.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_PERFORMANCE_Health_CPU_ZIIP"
               },
@@ -1857,37 +2013,43 @@
               },
               {
                 "title": "RMF Consolidado Mensal",
-                "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por MÊS.",
+                "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por Mês.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_PERFORMANCE_RMF_Consolidado_Mensal"
               },
               {
                 "title": "RMF Consolidado Semanal",
-                "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por SEMANA.",
+                "description": "Apresenta as informações de RMF de uso de CP e ZIIP consolidado por Semana.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_PERFORMANCE_RMF_Consolidado_Semanal"
               },
               {
-                "title": "Storage Performance",
-                "description": "Apresenta as informações de DESEMPENHO do armazenamento MAINFRAME.",
+                "title": "Storage Performance 5G",
+                "description": "Apresenta as informações de Desempenho dos recursos de armazenamento por Array e Storage Group.",
                 "icon": "",
-                "url": "sisense:005:64baec8fe93cf25110a94a75"
+                "url": "sisense:005:4B_Desempenho_Storage_Perf_SG"
+              },
+              {
+                "title": "Storage Performance Vols.",
+                "description": "Apresenta as informações de Desempenho dos discos do ambiente Caixa.",
+                "icon": "",
+                "url": "sisense:005:4B_Desempenho_Storage_Perf_Vols"
               },
               {
                 "title": "WLM CPU ZIIP",
-                "description": "Apresenta o consumo de MSU por WORKLOAD para CP e ZIIP.",
+                "description": "Apresenta o consumo de MSU por Workload para CP e ZIIP.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_PERFORMANCE_WLM_CPU_ZIIP"
               },
               {
                 "title": "Workload IOs",
-                "description": "Apresenta o consumo de IOs por WORKLOAD.    ",
+                "description": "Apresenta o consumo de IOs por Workload.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_PERFORMANCE_Workload_IOs"
               },
               {
                 "title": "Workload Memória",
-                "description": "Apresenta o consumo de MEMORIA por WORKLOAD.",
+                "description": "Apresenta o consumo de memória por Workload.",
                 "icon": "",
                 "url": "sisense:005:4B_DESEMPENHO_PERFORMANCE_Workload_Memória"
               }
@@ -1900,10 +2062,70 @@
             "url": "",
             "childrens": [
               {
-                "title": "Performance",
+                "title": "Array Capacity (Back-End)",
+                "description": "Apresenta o consumo dos indicadores do storage (Visão Subsistema).",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Back-End)"
+              },
+              {
+                "title": "Array Capacity (Front-End)",
+                "description": "Apresenta o consumo dos indicadores do storage (Visão Sistema operacional).",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Front-End)"
+              },
+              {
+                "title": "Catálogo Pelican",
+                "description": "Apresenta o consumo dos catálogos de arquivos transferidos pelo Pelican.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_Catalogo_Pelican"
+              },
+              {
+                "title": "His Dataset",
+                "description": "Este dashboard mostra a Visualização de Dataset alocado em Storage Groups.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_HisDataset"
+              },
+              {
+                "title": "Storage - VT Unit Usage",
+                "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de Backup.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_VTUnitUsage"
+              },
+              {
+                "title": "Storage - Mega da Virada",
+                "description": "Apresenta o consumo de armazenamento no evento de mega da virada.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_MegadaVirada_SG"
+              },
+              {
+                "title": "Storage - Black Friday",
+                "description": "Apresenta o consumo de armazenamento no evento Black Friday.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_Black_Friday_SG"
+              },
+              {
+                "title": "Desempenho Performance",
                 "description": "Apresenta o indicadores de desempenho dos recursos de armazenamento.",
                 "icon": "",
                 "url": "sisense:005:4B_Desempenho_Storage_Perf_SG"
+              },
+              {
+                "title": "Storage DSNCAT",
+                "description": "Apresenta os arquivos não classificados.",
+                "icon": "",
+                "url": "sisense:005:4B_Custos_Storage_Dsn_Não_Categorizados"
+              },
+              {
+                "title": "Desempenho do Sistema",
+                "description": "Apresenta o CUSTO de armazenamento por sistema.",
+                "icon": "",
+                "url": "sisense:005:4B_Custos_Storage_Dsn_Categorizados_Sistemas"
+              },
+              {
+                "title": "Performance FE Vols.",
+                "description": "Apresenta os indicadores de desempenho dos discos no ambiente Caixa.",
+                "icon": "",
+                "url": "sisense:005:4B_Desempenho_Storage_Perf_Vols"
               }
             ]
           }
@@ -1922,20 +2144,20 @@
             "url": "",
             "childrens": [
               {
-                "title": "Black Friday View.",
-                "description": "Apresenta a evolução de consumo de processamento para a semana do Black Friday",
+                "title": "Black Friday View",
+                "description": "Apresenta a evolução de consumo de processamento para a semana do Black Friday.",
                 "icon": "",
                 "url": "sisense:005:4B_USO_EventosComerciais_Black_Friday_View"
               },
               {
-                "title": "CP ZIIP Capacity Namorados",
-                "description": "Apresenta o uso de processadores CP e ZIIP para o dia dos Namorados.",
+                "title": "CP ZIIP Capacity - Dia dos Namorados",
+                "description": "Apresenta o uso de processadores CP e ZIIP no Dia dos Namorados.",
                 "icon": "",
                 "url": "sisense:005:4B_USO_EventosComerciais_CP_Ziip_Capacity_Namorados"
               },
               {
                 "title": "Black Friday Perf Track",
-                "description": "Apresenta a evolução de consumo de processamento CP e ZIIP de Black Friday",
+                "description": "Apresenta a evolução de consumo de processamento CP e ZIIP de Black Friday.",
                 "icon": "",
                 "url": "sisense:005:4B_USO_EventosComerciais_Black_Friday_Perf_Track"
               }
@@ -1960,36 +2182,10 @@
                 "url": "sisense:005:4B_USO_indicadores_Disponibilidade_Mainframe_Jes2"
               },
               {
-                "title": "EficienciaMF Transacoes MSU",
+                "title": "Eficiência MF - Transações MSU",
                 "description": "Este relatório tem por objetivo apresenta o Indicador de Eficiência Plataforma Mainframe (EP MF) a ser utilizado pela CESTI351 para acompanhar e avaliar o desempenho do ambiente através da relação entre o total de transações CICS executadas x o total de Unidades de Serviço (SU) por dia. ",
                 "icon": "",
                 "url": "sisense:005:4B_USO_Indicadores_EficienciaMF_Transacoes_MSU_old"
-              }
-            ]
-          },
-          {
-            "title": "Memória",
-            "description": "",
-            "icon": "",
-            "url": "",
-            "childrens": [
-              {
-                "title": "Memória Central (Produção Diário)",
-                "description": "Apresenta os indicadores de uso de memória central do dia anterior.",
-                "icon": "",
-                "url": "sisense:005:4B_USO_Memoria_Central_Producao_Diario_MB"
-              },
-              {
-                "title": "Memória Central (Semanal)",
-                "description": "Apresenta os indicadores de utilização de memória central na última semana.",
-                "icon": "",
-                "url": "sisense:005:4B_USO_Memoria_Central_Producao_Semanal_MB"
-              },
-              {
-                "title": "Memória Virtual",
-                "description": "Apresenta a evolução do uso de memória virtual no último trimestre.",
-                "icon": "",
-                "url": "sisense:005:4B_USO_Memoria_Virtual"
               }
             ]
           },
@@ -2000,7 +2196,7 @@
             "url": "",
             "childrens": [
               {
-                "title": "CPU PRODUÇÃO/NÃO PRODUÇÃO",
+                "title": "CPU Produção/Não Produção",
                 "description": "Apresenta os dashboards de produção/não produção.",
                 "icon": "",
                 "url": "",
@@ -2012,19 +2208,19 @@
                     "url": "",
                     "childrens": [
                       {
-                        "title": "BROKER BANCARIO PROD",
+                        "title": "Broker Bancário Prod.",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
                         "icon": "",
                         "url": "sisense:005:4B_USO_CPU_BROKER_BANCARIO_PROD"
                       },
                       {
-                        "title": "BROKER NEGOCIAL PROD",
+                        "title": "Broker Negocial Prod.",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes",
                         "icon": "",
                         "url": "sisense:005:4B_USO_CPU_BROKER_NEGOCIAL_PROD"
                       },
                       {
-                        "title": "BROKER SOCIAL PROD",
+                        "title": "Broker Social Prod.",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
                         "icon": "",
                         "url": "sisense:005:4B_USO_CPU_BROKER_SOCIAL_PROD"
@@ -2038,19 +2234,19 @@
                     "url": "",
                     "childrens": [
                       {
-                        "title": "BROKER BANCARIO NAO PROD",
+                        "title": "Broker Bancário Não Prod.",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
                         "icon": "",
                         "url": "sisense:005:4B_USO_CPU_BROKER_BANCARIO_NAO_PROD"
                       },
                       {
-                        "title": "BROKER NEGOCIAL NAO PROD",
+                        "title": "Broker Negocial Não Prod.",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes",
                         "icon": "",
                         "url": "sisense:005:4B_USO_CPU_BROKER_NEGOCIAL_NAO_PROD"
                       },
                       {
-                        "title": "BROKER SOCIAL NAO PROD",
+                        "title": "Broker Social Não Prod.",
                         "description": "Apresentar o consumo dos servidores Broker nos ambientes.",
                         "icon": "",
                         "url": "sisense:005:4B_USO_CPU_BROKER_SOCIAL_NAO_PROD"
@@ -2058,12 +2254,6 @@
                     ]
                   }
                 ]
-              },
-              {
-                "title": "CPU",
-                "description": "Apresenta o consumo dos servidores Broker nos ambientes.",
-                "icon": "",
-                "url": "sisense:005:64b82fcce93cf25110a9450f"
               }
             ]
           },
@@ -2076,44 +2266,105 @@
               {
                 "title": "Activity TDS",
                 "description": "Apresenta o perfil de atividade de CPU dos servidores CICS do ambiente CAIXA.",
-                "icon": "",
-                "url": "sisense:005:64b83cdce93cf25110a9460d"
+                "time": "",
+                "icon": "../../assets/Images/Item_Images/example.jpg",
+                "url": "sisense:005:4B_USO_CICS_ATIVIDADE_BANCARIO",
+                "childrens": []
               },
               {
-                "title": "CPU Bancario",
-                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário.",
+                "title": "CPU Bancário Não Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Homologação e Desenvolvimento.",
+                "time": "",
                 "icon": "",
-                "url": "sisense:005:64b8318de93cf25110a94528"
+                "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_NAO_PROD",
+                "childrens": []
               },
               {
-                "title": "CPU Negocial",
-                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente NEGOCIAL.",
+                "title": "CPU Bancário Não Prod. Detalhado",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Homologação e Desenvolvimento.",
                 "icon": "",
-                "url": "sisense:005:64b8326de93cf25110a94545"
+                "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_NAO_PROD_DETALHADO",
+                "childrens": []
               },
               {
-                "title": "CPU Social",
-                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Social.",
+                "title": "CPU Bancário Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Produção.",
                 "icon": "",
-                "url": "sisense:005:64b83affe93cf25110a945f2"
+                "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_PROD",
+                "childrens": []
+              },
+              {
+                "title": "CPU Bancário Prod. (Detalhado)",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Bancário - Produção.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_CICS_CPU_BANCARIO_PROD_DETALHADO",
+                "childrens": []
+              },
+              {
+                "title": "CPU Negocial Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Negocial - Produção.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_CICS_CPU_NEGOCIAL_PROD"
+              },
+              {
+                "title": "CPU Negocial Prod. (Detalhado)",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Negocial - Produção.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_CICS_CPU_NEGOCIAL_PROD_DETALHADO"
+              },
+              {
+                "title": "CPU Social Não Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Social - Desenvolvimento, TQS e Homologação.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_CICS_CPU_SOCIAL_NAO_PROD"
+              },
+              {
+                "title": "CPU Social Não Prod. (Detalhado)",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Social - Desenvolvimento, TQS e Homologação.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_CICS_CPU_SOCIAL_NAO_PROD_DETALHADO"
+              },
+              {
+                "title": "CPU Social Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Social - Produção.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_CICS_CPU_SOCIAL_PROD"
+              },
+              {
+                "title": "CPU Social Prod. Detalhado",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores CICS do ambiente Social - Produção.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_CICS_CPU_SOCIAL_PROD_DETALHADO"
               },
               {
                 "title": "Activity",
                 "description": "Apresenta as atividades das Regiões CICS na CAIXA.",
                 "icon": "",
-                "url": "sisense:005:64b6cf5de93cf25110a940f9"
+                "url": "sisense:005:4B_USO_CICS_Activity"
               },
               {
-                "title": "Report Eficiencia",
+                "title": "Report Eficiência",
                 "description": "Apresenta a atividade e os índices de eficiência das transações dos últimos 7 dias.",
                 "icon": "",
-                "url": "sisense:005:64b6ce6fe93cf25110a940ca"
+                "url": "sisense:005:4B_USO_CICS_Report_Eficiencia"
               },
               {
-                "title": "TRN Negocial CEPTI240",
-                "description": "Acompanhamento de transações Negocial para CEPTI240.",
+                "title": "TRX Bancário",
+                "description": "Esse Dashboard oferece uma visão detalhada do desempenho das transações bancárias processadas pelo CICS. Apresenta métricas de utilização de CPU, tempo de resposta e ocorrências de abend.",
                 "icon": "",
-                "url": "sisense:005:64b6c98ce93cf25110a940b3"
+                "url": "sisense:005:4B_DESEMPENHO_CICS_TRX_Bancario"
+              },
+              {
+                "title": "TRX Negocial",
+                "description": "Esse Dashboard oferece uma visão detalhada do desempenho das transações negociais processadas pelo CICS. Apresenta métricas de utilização de CPU, tempo de resposta e ocorrências de abend.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_CICS_TRX_Negocial"
+              },
+              {
+                "title": "TRX Social",
+                "description": "Esse Dashboard oferece uma visão detalhada do desempenho das transações sociais processadas pelo CICS. Apresenta métricas de utilização de CPU, tempo de resposta e ocorrências de abend.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_CICS_TRX_Social"
               }
             ]
           },
@@ -2127,13 +2378,181 @@
                 "title": "CPU",
                 "description": "Apresenta o perfil de consumo de CPU das instancias DB2 do ambiente Bancário.",
                 "icon": "",
-                "url": "sisense:005:64b83f47e93cf25110a94651"
+                "url": "",
+                "childrens": [
+                  {
+                    "title": "CPU Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "CPU Bancário Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_BANCARIO_PROD"
+                      },
+                      {
+                        "title": "CPU Negocial Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_NEGOCIAL_PROD"
+                      },
+                      {
+                        "title": "CPU Social Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_SOCIAL_PROD"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "CPU Não Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "CPU Bancário Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_BANCARIO_NAO_PROD"
+                      },
+                      {
+                        "title": "CPU Negocial Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_NEGOCIAL_NAO_PROD"
+                      },
+                      {
+                        "title": "CPU Social Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das instâncias DB2 do ambiente Bancário.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_CPU_SOCIAL_NAO_PROD"
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "title": "DDF",
                 "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
                 "icon": "",
-                "url": "sisense:005:64b840d1e93cf25110a9466d"
+                "url": "",
+                "childrens": [
+                  {
+                    "title": "DDF Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "DDF Bancário Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_BANCARIO_PROD"
+                      },
+                      {
+                        "title": "DDF Negocial Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_NEGOCIAL_PROD"
+                      },
+                      {
+                        "title": "DDF Social Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_SOCIAL_PROD"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "DDF Não Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "DDF Bancário Não Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_BANCARIO_NAO_PROD"
+                      },
+                      {
+                        "title": "DDF Negocial Prod.",
+                        "description": "Apresenta o perfil de consumo de CPU das transações DDF nas instâncias DB2.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_DB2_DDF_NEGOCIAL_NAO_PROD"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "title": "Commits View",
+                "description": "Esse dashboard ajuda a identificar os aplicativos com muitas atualizações e que não executam Commits com frequência.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Commits_View"
+              },
+              {
+                "title": "DB2 Commits View CEPTI240",
+                "description": "Este relatório traz programas/rotinas sem Commit por sistemas do ambiente negocial.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Commits_View_CEPTI240"
+              },
+              {
+                "title": "DB2 Connection Client",
+                "description": "O objetivo deste relatório é trazer as versões instaladas dos produtos junto a mais algumas outras informações relevantes.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Connection_Client"
+              },
+              {
+                "title": "Tamanho LOG",
+                "description": "Apresenta os tempos de carga dos arquivos de LOG DB2. Tempos muito curtos podem prejudicar a performance do banco.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Tamanho_LOG"
+              },
+              {
+                "title": "DB2 Lock Scalation",
+                "description": "Este dashboard ajuda a visualizar aplicativos que possam está impactando o ambiente, provocando timeouts de outros e deadlocks. Identifica também os recursos tipo tablespace que receberam a escalada de lock.",
+                "icon": "",
+                "url": "sisense:005:4B_DESEMPENHO_DB2_Lock_Scalation"
+              },
+              {
+                "title": "DB2 Activity Bancário (Não Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _BANCARIO_NAO_PROD"
+              },
+              {
+                "title": "DB2 Activity Bancário (Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _BANCARIO_PROD"
+              },
+              {
+                "title": "DB2 Activity Negocial (Não Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _NEGOCIAL_NAO_PROD"
+              },
+              {
+                "title": "DB2 Activity Negocial (Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _NEGOCIAL_PROD"
+              },
+              {
+                "title": "DB2 Activity Social (Não Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _SOCIAL_NAO_PROD"
+              },
+              {
+                "title": "DB2 Activity Social (Produção)",
+                "description": "Apresenta as atividades de DB2. Pretende fornecer subsídios aos administradores, DBAs, que apoiem análises sobre os sistemas em uso no banco de dados.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_DB2_Activity _SOCIAL_PROD"
               }
             ]
           },
@@ -2144,16 +2563,34 @@
             "url": "",
             "childrens": [
               {
-                "title": "CPU",
-                "description": "Apresenta o perfil de consumo de CPU dos servidores IDMS por Núcleo.",
+                "title": "IDMS BATCH",
+                "description": "Apresenta o perfil de consumo de CPU dos jobs BATCH IDMS, por dia, contendo 90 dia de dados.",
                 "icon": "",
-                "url": "sisense:005:64b848d3e93cf25110a946ab"
+                "url": "sisense:005:4B_USO_IDMS_Batch"
               },
               {
-                "title": "Serviços",
-                "description": "Apresenta o uso dos servidores IDMS.",
+                "title": "IDMS CPU Negocial Não Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores IDMS por Núcleo.",
                 "icon": "",
-                "url": "sisense:005:64b846cde93cf25110a9468b"
+                "url": "sisense:005:4B_USO_IDMS_CPU_NEGOCIAL_NAO_PROD"
+              },
+              {
+                "title": "IDMS CPU Negocial Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores IDMS por Núcleo.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_IDMS_CPU_NEGOCIAL_PROD"
+              },
+              {
+                "title": "IDMS CPU Social - Não Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores IDMS por Núcleo.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_IDMS_CPU_SOCIAL_NAO_PROD"
+              },
+              {
+                "title": "IDMS CPU Social - Prod.",
+                "description": "Apresenta o perfil de consumo de CPU dos servidores IDMS por Núcleo.",
+                "icon": "",
+                "url": "sisense:005:4B_USO_IDMS_CPU_SOCIAL_PROD"
               }
             ]
           },
@@ -2188,10 +2625,10 @@
                 "url": "sisense:005:4B_USO_Inventario_Software - off_OLD"
               },
               {
-                "title": "VTUnitUsage",
+                "title": "VT Unit Usage",
                 "description": "Apresenta o inventário da utilização de unidades de Virtual Tapes.",
                 "icon": "",
-                "url": "sisense:005:635bedfe5f5d03803154f0cc"
+                "url": "sisense:005:4B_Uso_Storage_VTUnitUsage"
               }
             ]
           },
@@ -2229,21 +2666,132 @@
             "childrens": [
               {
                 "title": "CPU",
-                "description": "Apresenta a utilização de processamento de servidores MQSeries nos ambientes memória CENTRAL no último dia.",
+                "description": "Apresenta os dashboards de produção/não produção.",
                 "icon": "",
-                "url": "sisense:005:64b85a5ae93cf25110a94785"
+                "url": "",
+                "childrens": [
+                  {
+                    "title": "MQ Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "CPU Bancário Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_CPU_BANCARIO_PROD",
+                        "childrens": []
+                      },
+                      {
+                        "title": "CPU Negocial Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_CPU_NEGOCIAL_PROD",
+                        "childrens": []
+                      },
+                      {
+                        "title": "CPU Social Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_CPU_SOCIAL_NAO_PROD",
+                        "childrens": []
+                      }
+                    ]
+                  },
+                  {
+                    "title": "MQ Não Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "CPU Bancário Não Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_CPU_BANCARIO_NAO_PROD",
+                        "childrens": []
+                      },
+                      {
+                        "title": "CPU Negocial Não Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_CPU_NEGOCIAL_NAO_PROD",
+                        "childrens": []
+                      },
+                      {
+                        "title": "CPU Social Não Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_CPU_SOCIAL_NAO_PROD",
+                        "childrens": []
+                      }
+                    ]
+                  }
+                ]
               },
               {
-                "title": "Mensagens",
-                "description": "Apresenta volume de utilização de mensagens MQSeries.",
+                "title": "MQ Mensagens",
+                "description": "Apresenta os dashboards de produção/não produção.",
                 "icon": "",
-                "url": "sisense:005:64b85bcce93cf25110a9479d"
-              },
-              {
-                "title": "Mensagens Hora",
-                "description": "Apresenta o volume horário de utilização de mensagens MQSeries no ambiente.",
-                "icon": "",
-                "url": "sisense:005:64b85d44e93cf25110a947bd"
+                "url": "",
+                "childrens": [
+                  {
+                    "title": "MQ Mensagens Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "Mensagens Bancário Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_MENSAGENS_BANCARIO_PROD"
+                      },
+                      {
+                        "title": "Mensagens Negocial Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_MENSAGENS_NEGOCIAL_PROD"
+                      },
+                      {
+                        "title": "Mensagens Social Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_MENSAGENS_SOCIAL_PROD"
+                      }
+                    ]
+                  },
+                  {
+                    "title": "MQ Mensagens Não Produção",
+                    "description": "",
+                    "icon": "",
+                    "url": "",
+                    "childrens": [
+                      {
+                        "title": "Mensagens Bancário Não Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_MENSAGENS_BANCARIO_NAO_PROD",
+                        "childrens": []
+                      },
+                      {
+                        "title": "Mensagens Negocial Não Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_MENSAGENS_NEGOCIAL_NAO_PROD",
+                        "childrens": []
+                      },
+                      {
+                        "title": "Mensagens Social Não Prod.",
+                        "description": "Apresenta o consumo dos servidores MQ nos ambientes.",
+                        "icon": "",
+                        "url": "sisense:005:4B_USO_MQ_MENSAGENS_SOCIAL_NAO_PROD",
+                        "childrens": []
+                      }
+                    ]
+                  }
+                ]
               }
             ]
           },
@@ -2254,16 +2802,16 @@
             "url": "",
             "childrens": [
               {
-                "title": "PRODUCAO Batch Producao Sistemas",
-                "description": "Apresenta as informações de SERVIÇOS BATCH de produção por Sistema.",
+                "title": "Serviços BATCH de Produção Sistemas",
+                "description": "Apresenta as informações de serviços BATCH de produção por Sistema.",
                 "icon": "",
                 "url": "sisense:005:4B_USO_PRODUCAO_Batch_Producao_Sistemas"
               },
               {
                 "title": "Maiores Consumidores",
-                "description": "Apresenta o USO dos maiores consumidores por CEC.",
+                "description": "Apresenta o uso dos maiores consumidores por CEC.",
                 "icon": "",
-                "url": "sisense:005:64c0163e3a8acf511c7e9de1"
+                "url": "sisense:005:4B_USO_PRODUCAO_Maiores_Consumidores"
               }
             ]
           },
@@ -2303,45 +2851,69 @@
             "childrens": [
               {
                 "title": "Array Capacity (Back-End)",
-                "description": "Apresenta o consumo dos indicadores do storage (visão Subsistema).",
+                "description": "Apresenta o consumo dos indicadores do storage (Visão Subsistema).",
                 "icon": "",
                 "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Back-End)"
               },
               {
                 "title": "Array Capacity (Front-End)",
-                "description": "Apresenta o consumo dos indicadores do storage (visão Sistema Operacional).",
+                "description": "Apresenta o consumo dos indicadores do storage (Visão Sistema operacional).",
                 "icon": "",
                 "url": "sisense:005:4B_Uso_Storage_Array_Capacity (Front-End)"
               },
               {
-                "title": "Catalogo Pelican",
-                "description": "Apresenta o consumo dos CATALOGOS DE ARQUIVOS transferidos pelo PELICAN.",
+                "title": "Catalogo_Pelican",
+                "description": "Apresenta o consumo dos catálogos de arquivos transferidos pelo Pelican.",
                 "icon": "",
-                "url": "sisense:005:64c0320869cc0c5130732cd7"
+                "url": "sisense:005:4B_Uso_Storage_Catalogo_Pelican"
               },
               {
-                "title": "HisDataset",
-                "description": "Apresenta a utilização de Arquivos e STORAGE GROUPS.",
+                "title": "His Dataset",
+                "description": "Este dashboard mostra a Visualização de Dataset alocado em Storage Groups.",
                 "icon": "",
                 "url": "sisense:005:4B_Uso_Storage_HisDataset"
               },
               {
-                "title": "VTUnitUsage",
-                "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de BACKUP.",
+                "title": "Storage - VT Unit Usage",
+                "description": "Este dashboard mostra as visões de consumo dos VTVs nos ambientes de Backup.",
                 "icon": "",
                 "url": "sisense:005:4B_Uso_Storage_VTUnitUsage"
               },
               {
-                "title": "Black Friday Storage",
-                "description": "Apresenta o consumo dos ARMAZENAMENTO no evento Black Friday.",
+                "title": "Storage - Mega da Virada",
+                "description": "Apresenta o consumo de armazenamento no evento de mega da virada.",
+                "icon": "",
+                "url": "sisense:005:4B_Uso_Storage_MegadaVirada_SG"
+              },
+              {
+                "title": "Storage - Black Friday",
+                "description": "Apresenta o consumo de armazenamento no evento Black Friday.",
                 "icon": "",
                 "url": "sisense:005:4B_Uso_Storage_Black_Friday_SG"
               },
               {
-                "title": "MegadaVirada Storage",
-                "description": "Apresenta o consumo dos ARMAZENAMENTO no evento de mega da virada.",
+                "title": "Desempenho Performance",
+                "description": "Apresenta o indicadores de desempenho dos recursos de armazenamento.",
                 "icon": "",
-                "url": "sisense:005:4B_Uso_Storage_MegadaVirada_SG"
+                "url": "sisense:005:4B_Desempenho_Storage_Perf_SG"
+              },
+              {
+                "title": "Storage DSNCAT",
+                "description": "Apresenta os arquivos não classificados.",
+                "icon": "",
+                "url": "sisense:005:4B_Custos_Storage_Dsn_Não_Categorizados"
+              },
+              {
+                "title": "Desempenho do Sistema",
+                "description": "Apresenta o CUSTO de armazenamento por sistema.",
+                "icon": "",
+                "url": "sisense:005:4B_Custos_Storage_Dsn_Categorizados_Sistemas"
+              },
+              {
+                "title": "Performance FE Vols.",
+                "description": "Apresenta os indicadores de desempenho dos discos no ambiente Caixa.",
+                "icon": "",
+                "url": "sisense:005:4B_Desempenho_Storage_Perf_Vols"
               }
             ]
           },
@@ -2352,32 +2924,32 @@
             "url": "",
             "childrens": [
               {
-                "title": "NaoCategGegat",
+                "title": "Não Categ. GEGAT",
                 "description": "Apresenta os serviços não categorizados para a GEGAT e seus valores.",
                 "icon": "",
-                "url": "sisense:005:4B_USO_Catalogos_NaoCategGegat "
+                "url": "sisense:005:4B_USO_Catalogos_NaoCategGegat"
               },
               {
-                "title": "RecursosPrincipal",
+                "title": "Recursos Principais",
                 "description": "Este catálogo é referente aos recursos físicos do mainframe: Processadores, Memória, Canais e Armazenamento.",
                 "icon": "",
                 "url": "sisense:005:4B_USO_PROCESSOS_Baseline_RecursosPrincipal"
               },
               {
-                "title": "RecursosProcessadores",
+                "title": "Recursos Processadores",
                 "description": "Apresenta a visão do consumo dos tempos de CPU dos últimos 6 meses.",
                 "icon": "",
-                "url": "sisense:005:64b694f2e93cf25110a93b97"
+                "url": "sisense:005:4B_USO_PROCESSOS_Baseline_Visão_Processadores"
               },
               {
                 "title": "Serviços Online",
                 "description": "Apresenta os critérios e classificação dos serviços ONLINE nos últimos 6 meses.",
                 "icon": "",
-                "url": "sisense:005:64b6935ce93cf25110a93b1e"
+                "url": "sisense:005:4B_USO_Catalogos_Serviços_Online"
               },
               {
-                "title": "Serviços Batch",
-                "description": "Apresenta os critérios de classificação das Rotinas Batch.",
+                "title": "Catálogo Rotinas BATCH",
+                "description": "Apresenta os critérios de classificação das Rotinas BATCH.",
                 "icon": "",
                 "url": "sisense:005:4B_USO_Catalogos_Rotinas_Batch"
               }
@@ -2390,7 +2962,7 @@
             "url": "",
             "childrens": [
               {
-                "title": "Consumo Geral RJP1eRJP2",
+                "title": "Consumo Geral RJP1 e RJP2",
                 "description": "Apresenta a evolução do consumo de processador da RJP1 e RJP2.",
                 "icon": "",
                 "url": "sisense:005:4B_USO_CESTI351_Consumo_Geral_RJP1eRJP2"
@@ -2407,19 +2979,19 @@
                 "title": "CP ZIIP Capacity",
                 "description": "Apresenta os indicadores de uso de processadores CP e ZIIP.",
                 "icon": "",
-                "url": "sisense:005:64b6d190e93cf25110a94160"
+                "url": "sisense:005:4B_USO_CPU_CP_Ziip_Capacity"
               },
               {
-                "title": "CP ZIIP Capacity 30dias",
+                "title": "CP ZIIP Capacity 30 dias",
                 "description": "Apresenta o consumo de processadores CP e ZIIP nos últimos 30 dias.",
                 "icon": "",
-                "url": "sisense:005:64b6d7173a8acf511c7e9350"
+                "url": "sisense:005:4B_USO_CPU_CP_Ziip_Capacity_30dias"
               },
               {
                 "title": "Negócio",
                 "description": "Apresenta a evolução de consumo de processamento por Negócio.",
                 "icon": "",
-                "url": "sisense:005:6197ade73db4255714fb5dbd"
+                "url": "sisense:005:4B_USO_CPU_Negocio"
               }
             ]
           }
@@ -2433,7 +3005,6 @@
     "icon": "../../assets/Images/Menu_Icons/Documentacao.svg",
     "url": "",
     "childrens": [
-      
       {
         "title": "Boletins",
         "description": "Lista de documentação de Boletins",
@@ -2507,7 +3078,7 @@
         "url": "http://zac1.zetaly.caixa/"
       },
       {
-        "title": "ZAC secundário (máquina RJP7)",
+        "title": "ZAC Secundário (máquina RJP7)",
         "description": "Apresenta o balanceamento dinâmico das partições na máquina secundária.",
         "icon": "",
         "url": "http://zac2.zetaly.caixa/"
@@ -2530,169 +3101,169 @@
             "title": "IBM ModelMLC",
             "description": "Apresenta o dashboard de custos no modelo MLC.",
             "icon": "",
-            "url": "sisense:005:642332b3ca6751574c9d4a4b"
+            "url": "sisense:005:4B_Uso_Custos_IBM-ModelMLC"
           },
           {
             "title": "IBM ModelTFP",
             "description": "Apresenta o dashboard de custos no modelo TFP.",
             "icon": "",
-            "url": "sisense:005:676429bf24567b1188afb2b5"
+            "url": "sisense:005:4B_Uso_Custos_IBM-ModelTFP"
           },
           {
             "title": "Acompanhamento Contrato Software",
             "description": "Apresenta, por fornecedor e contrato, a vigência e os produtos relacionados, bem como o detalhamento orçamentário.",
             "icon": "",
-            "url": "sisense:005:646d1caa8cb17c0700750afb"
+            "url": "sisense:005:4B_Uso_Custos_AcompanhamentoContratoSoftware"
           },
           {
-            "title": "Consumo-Control-M",
-            "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o % de contribuição.",
+            "title": "Consumo - Control-M",
+            "description": "Apresenta o dia de maior pico de tasks no período, a distribuição de tasks por dia, Site (CEPTI) e ambiente, e a distribuição do consumo por site com o percentual de contribuição.",
             "icon": "",
-            "url": "sisense:005:651d6e3c4e691405883e16e5"
+            "url": "sisense:005:4B_Uso_Custos_Consumo-Control-M"
           },
           {
             "title": "Consumo Excessivo",
             "description": "Apresenta, para os softwares de terceiros e softwares IBM-OTC, os consumos que ultrapassaram a base licenciada no período selecionado.",
             "icon": "",
-            "url": "sisense:005:64a979b13d458300ecf7a88b"
+            "url": "sisense:005:4B_Uso_Custos_Consumo_Excessivo"
           },
           {
             "title": "Consumos com média",
-            "description": "Apresenta para os fornecedores/produtos selecionados, por competência, no período selecionado, um comparativo do consumo com a base contratada, as médias semestrais de consumo e os % de variação das médias.",
+            "description": "Apresenta para os fornecedores/produtos selecionados, por competência, no período selecionado, um comparativo do consumo com a base contratada, as médias semestrais de consumo e os percentuais de variação das médias.",
             "icon": "",
-            "url": "sisense:005:6787f6ed0317443aac5da53e"
+            "url": "sisense:005:4B_Uso_Custos_Consumos_com_Medias"
           },
           {
             "title": "Control M - TOP 10",
             "description": "Apresenta, para os períodos anuais do contrato o Ano sequencial, a competência inicial e a competência final, e os 10 maiores consumos de cada período.",
             "icon": "",
-            "url": "sisense:005:652027b94e691405883e185e"
+            "url": "sisense:005:4B_Uso_Custos_ControlM-TOP-10"
           },
           {
             "title": "Extração SCRT",
             "description": "Apresenta o uso (quantidade de MSUs) extraído dos SCRTs no período selecionado, por produto, por Serial/Produto e detalhado por partição.",
             "icon": "",
-            "url": "sisense:005:641b380bfe23165750e50644"
+            "url": "sisense:005:4B_Uso_Custos_ExtracaoSCRT"
           },
           {
             "title": "Gestão - Orçamento Contrato",
             "description": "Apresenta por fornecedor e contrato, o Valor Global (por fornecedor, categoria e subcategoria), o prazo em meses do esgotamento orçamentário, o saldo orçamentário com e sem regressão, a baseline do custo orçado e o saldo orçamentário detalhado.",
             "icon": "",
-            "url": "sisense:005:646f6c0b8cb17c0700750b31"
+            "url": "sisense:005:4B_Uso_Custos_GestaoOrcamentoContrato"
           },
           {
             "title": "IBM Detalhado",
             "description": "Apresenta o uso e o custo dos softwares IBM no período selecionado, com totais por subset, serial, Site (CEPTI) e SID, além de um detalhamento por partição.",
             "icon": "",
-            "url": "sisense:005:6423410cca6751574c9d4a81"
+            "url": "sisense:005:4B_Uso_Custos_IBM_Detalhado"
           },
           {
             "title": "Inventário IBM",
             "description": "Apresenta um quadro e o detalhamento de produtos IBM instalados por site e partição no período selecionado.",
             "icon": "",
-            "url": "sisense:005:64c7f0faa7dd13609814b255"
+            "url": "sisense:005:4B_Uso_Custos_Inventario_IBM"
           },
           {
             "title": "Inventário Uso",
             "description": "Apresenta, para o período selecionado, diversas visões de totais de consumo de MSU, inclusive com um gráfico de tendências.",
             "icon": "",
-            "url": "sisense:005:646b8ef0baa1290674a6ed81"
+            "url": "sisense:005:4B_Uso_Custos_InventarioUso"
           },
           {
             "title": "Inventário Software Terceiros",
             "description": "Apresenta um quadro e o detalhamento de produtos de terceiros instalados por site e partição no período selecionado.",
             "icon": "",
-            "url": "sisense:005:662c2d02ffb6c327a0980b06"
+            "url": "sisense:005:4B_Uso_Custos_InventarioSoftwareTerceiros"
           },
           {
             "title": "Inventário CBA",
-            "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA(Cross brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
+            "description": "Apresenta o inventário financeiro do contrato IBM com um quadro anual acumulado e outro mensal acumulado por subset, ao longo da sua consecução. Apresenta ainda os CAPs do contrato e do CBA (Cross Brand Allotment ou Bolsão Flexível), acumulado e detalhados por subset/produto.",
             "icon": "",
-            "url": "sisense:005:649442fe3d458300ecf7a6dc"
+            "url": "sisense:005:4B_Uso_Custos_Inventários_CBA"
           },
           {
             "title": "Inventário CA-MLC",
             "description": "Apresenta a baseline e as apurações dos períodos processados.",
             "icon": "",
-            "url": "sisense:005:675c55475f2b490ef8f47bdb"
+            "url": "sisense:005:4B_Uso_Custos_Inventario_CA-MLC"
           },
           {
             "title": "Rubricas",
             "description": "Apresenta os totais e o detalhamento dos valores por rubrica, com visões selecionadas, inclusive sobre o status de pagamento das faturas.",
             "icon": "",
-            "url": "sisense:005:64b6fb240af1e6e964eae1fc"
+            "url": "sisense:005:4B_Uso_Custos_Rubricas"
           },
           {
             "title": "Terceiros",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor.",
             "icon": "",
-            "url": "sisense:005:6418829bca6751574c9d47ca"
+            "url": "sisense:005:4B_Uso_Custos_Terceiros"
           },
           {
             "title": "Terceiros - CA",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais, os débitos e créditos contratuais, e a distribuição percentual dos produtos por consumo e por valor.",
             "icon": "",
-            "url": "sisense:005:64307ee7fe23165750e5089a"
+            "url": "sisense:005:4B_Uso_Custos_Terceiros_CA"
           },
           {
             "title": "Terceiros - Control M",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks, com a quantidade, e o detalhamento dos cálculos por produto.",
             "icon": "",
-            "url": "sisense:005:651c616d023fb35ac49e6684"
+            "url": "sisense:005:4B_Uso_Custos_Terceiros_Control-M"
           },
           {
             "title": "Terceiros - Detalhes",
             "description": "Apresenta, no período selecionado, o custo total do fornecedor, os dados contratuais vigentes, a distribuição do consumo e do valor distribuídos por SID, o consumo e o custo por máquina, e a distribuição de consumo e de valor por site (CEPTI).",
             "icon": "",
-            "url": "sisense:005:641b128eca6751574c9d48da"
+            "url": "sisense:005:4B_Uso_Custos_Terceiros_Detalhes"
           },
           {
             "title": "Terceiros - Detalhes Control M",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por Site e Ambiente, a distribuição das tasks e do valor por Ambiente, a distribuição das tasks e do valor por Site (CEPTI).",
             "icon": "",
-            "url": "sisense:005:651c6a7b023fb35ac49e6878"
+            "url": "sisense:005:4B_Uso_Custos_Terceiros_Detalhes_Control-M"
           },
           {
             "title": "Terceiros - Faixas Acumuladas",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total, os dados contratuais vigentes, o detalhamento dos cálculos por produto, e a distribuição percentual dos produtos por consumo e por valor e um quadro demonstrativo do cálculo do valor.",
             "icon": "",
-            "url": "sisense:005:65006d8678d49728c48ea06f"
+            "url": "sisense:005:4B_Uso_Custos_Terceiros_FaixasAcumuladas"
           },
           {
             "title": "Terceiros - Simulação e Aquisição",
             "description": "Apresenta, a partir da seleção de um período e de um produto, a simulação da necessidade ou não de realizar nova aquisição de licenças (conforme contratos - modelo WLC), por média de consumo ou por média da diferença entre consumo e base licenciada (MsuBase).",
             "icon": "",
-            "url": "sisense:005:66688608b704af5cb00eaa65"
+            "url": "sisense:005:4B_Uso_Custos_Terceiros_Simulacao_Aquisicao"
           },
           {
             "title": "Valores de Partições",
             "description": "Apresenta o custo das partições no período selecionado, de forma sintética - Total Geral, total por Site e Total por Serial, de forma analítica, detalhando cada um dos totais por partição.",
             "icon": "",
-            "url": "sisense:005:64c81e65a7dd13609814b270"
+            "url": "sisense:005:4B_Uso_Custos_Valores_Particoes"
           },
           {
             "title": "Painel Orçamentário",
             "description": "Apresenta o resumo orçamentário dos contratos e um detalhamento por categoria.",
             "icon": "",
-            "url": "sisense:005:673cf95d0ef914c05e957a77"
+            "url": "sisense:005:4B_Uso_Custos_Painel_Orcamentario"
           },
           {
-            "title": "IBM Consumo-Período",
+            "title": "IBM Consumo - Período",
             "description": "Apresenta o consumo detalhado de um produto, por SID , nas competências selecionadas.",
             "icon": "",
-            "url": "sisense:005:662285a8140e1e59a0f70ee3"
+            "url": "sisense:005:4B_Uso_Custos_IBM_ConsumoPeriodo"
           },
           {
             "title": "Inventário TFP",
             "description": "Apresenta os períodos já processados do TFP, demonstrando a baseline e o growth  acumulados e detalhados (por competência).",
             "icon": "",
-            "url": "sisense:005:67473d0192eaff223c9c488a"
+            "url": "sisense:005:4B_Uso_Custos_Inventario_TFP"
           },
           {
             "title": "Totais-Fornecedores",
             "description": "Apresenta o valor total por fornecedor/contrato no período selecionado.",
             "icon": "",
-            "url": "sisense:005:67619b4624567b1188afb24a"
+            "url": "sisense:005:4B_Uso_Custos_Totais_Fornecedores"
           }
         ]
       },
@@ -2724,39 +3295,39 @@
           },
           {
             "title": "Consumo Mensal: Control-M - CEGTI",
-            "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por dia, site e ambiente, e a distribuição das tasks por site (CEPTI) com o % de participação. Aplica-se somente aos fornecedores",
+            "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo do fornecedor, os dados contratuais, o dia de maior pico, a distribuição das tasks e do valor por dia, site e ambiente, e a distribuição das tasks por site (CEPTI) com o percentual de participação. Aplica-se somente aos fornecedores",
             "icon": "",
-            "url": "sisense:005:655e4d8f16f60a0e50890962"
+            "url": "sisense:005:Consumo Mensal: Control-M - CEGTI"
           },
           {
             "title": "Consumo Mensal: Softwares Não-IBM - CEGTI",
             "description": "Apresenta, para o período e fornecedor selecionados, o consumo por produto, distribuído por serial, site (CEPTI) e SID. ",
             "icon": "",
-            "url": "sisense:005:655cbac30f29d94700af4cb3"
+            "url": "sisense:005:Consumo Mensal: Softwares Não-IBM - CEGTI"
           },
           {
             "title": "Consumo Mensal: Agrupamentos CA",
             "description": "Consumo mensal CA  - Modelo WLC",
             "icon": "",
-            "url": "sisense:005:660b0514407e790664e2f229"
+            "url": "sisense:005:Consumo Mensal Agrupamentos CA"
           },
           {
             "title": "Custo Mensal: Control-M - CEGTI",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o dia de maior pico de tasks e o detalhamento dos cálculos por produto. Aplica-se somente aos fornecedores do Control-M.",
             "icon": "",
-            "url": "sisense:005:65e9fbe459821900eca37bf3"
+            "url": "sisense:005:Custo Mensal: Control-M - CEGTI"
           },
           {
             "title": "Custo Mensal: Softwares CA/Broadcom - CEGTI",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto, os limites contratuais e a distribuição do consumo por site (CEPTI), com o percentual de participação. Aplica-se somente ao fornecedor Broadcom CA;",
             "icon": "",
-            "url": "sisense:005:65577876ca29b434303e519b"
+            "url": "sisense:005:Custo Mensal: Softwares CA/Broadcom - CEGTI"
           },
           {
             "title": "Custo Mensal: Softwares Não-IBM - CEGTI ",
             "description": "Apresenta, para o período, fornecedor e contrato selecionados, o custo total (valor da fatura), os dados contratuais vigentes, o detalhamento dos cálculos por produto e a distribuição do consumo por site (CEPTI), com o percentual de participação. Não se aplica a Broadcom CA e fornecedores Control-M.",
             "icon": "",
-            "url": "sisense:005:65ea017859821900eca37c69"
+            "url": "sisense:005:Custo Mensal: Softwares Não-IBM - CEGTI"
           }
         ]
       }
@@ -2797,7 +3368,7 @@
           },
           {
             "title": "Rateio Showback INFRA - visão ano/mês",
-            "description": "Apresenta o Showback da GEGAT.",
+            "description": "Apresenta o Showback da GEGAT",
             "icon": "",
             "url": "sisense:005:4B_CUSTOS_SHOWBACKGEGAT_RateioShowbackINFRA_visao_ano_mes"
           },
@@ -2817,7 +3388,7 @@
         "childrens": [
           {
             "title": "Baseline Custos Visão GESTI - Custeio",
-            "description": "Apresenta o Showback de Custeio da GESTI.",
+            "description": "Apresenta o Showback-Custeio da GESTI.",
             "icon": "",
             "url": "sisense:005:4B_si.a.u_Baseline_Custos_Visão_GESTI_Custeio"
           },
@@ -2844,7 +3415,7 @@
     "url": "",
     "childrens": [
       {
-        "title": "ZRP-Zetaly Resource Planning",
+        "title": "ZRP - Zetaly Resource Planning",
         "description": "Apresenta um software com a finalidade de efetuar o planejamento de capacidade das necessidades de processadores (CPU).",
         "icon": "",
         "url": "https://dadnpaplnt006.intra.caixa.gov.br/zetaly/"

@@ -9,7 +9,8 @@
     "language":"Language",
     "search": "Search",
     "update": "Update Frequency: ",
-    "close": "Close"
+    "close": "Close",
+    "filter": "Filter "
   },
   "time":{
     "years": "Yearly",
@@ -17,5 +18,10 @@
     "weeks": "Weekly",
     "semester": "Semestral",
     "days": "Daily"
+  },
+  "filter": {
+    "title":"Title",
+    "description":"Description",
+    "url":"URL"
   }
 }

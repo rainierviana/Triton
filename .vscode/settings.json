@@ -1,3 +1,19 @@
 {
-  "typescript.preferences.autoImportFileExcludePatterns": ["@ionic/angular/common", "@ionic/angular/standalone"]
+  "typescript.preferences.autoImportFileExcludePatterns": [
+    "@ionic/angular/common",
+    "@ionic/angular/standalone"
+  ],
+  "cSpell.words": [
+    "Back",
+    "Brand",
+    "childrens",
+    "ECCOM",
+    "icon",
+    "months",
+    "Pelican",
+    "sisense",
+    "subset",
+    "Track",
+    "weeks"
+  ]
 }
