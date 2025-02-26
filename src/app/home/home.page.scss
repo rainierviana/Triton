@@ -13,6 +13,7 @@
   box-sizing: border-box;
   padding-top: 3em;
   padding-bottom: 3em;
+  gap: 0.5em;
 }
 
 .breadcrumb-separator {
@@ -90,12 +91,17 @@
   color: rgb(255, 255, 255);
 }
 
-
 .filterButton {
   margin-left: auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
+
+  --border-color: rgb(0, 0, 0);
+  --border-style: solid;
+  --border-width: 1px;
+
+  ion-icon{
+    margin-right: 0.5em;
+  }
 }
 
 .gridContainer {
@@ -174,7 +180,6 @@
   margin: 0;
   max-width: 15%;
   width: 7em;
-  border-radius: 0em 5em 5em 0em;
   position: relative;
   overflow: hidden;
   display: flex;

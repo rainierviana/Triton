@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "www",
+            "outputPath": "triton",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,7 +31,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -91,6 +94,13 @@
             "buildTarget": "app:build"
           }
         },
+        "i18n": {
+          "sourceLocale": "en",
+          "locales": {
+            "pt": "src/assets/i18n/pt.json",
+            "en": "src/assets/i18n/en.json"
+          }
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -111,7 +121,10 @@
                 "output": "./svg"
               }
             ],
-            "styles": ["src/global.scss", "src/theme/variables.scss"],
+            "styles": [
+              "src/global.scss",
+              "src/theme/variables.scss"
+            ],
             "scripts": []
           },
           "configurations": {
