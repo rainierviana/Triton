@@ -229,103 +229,131 @@ export class HomePage {
     if (searchValue === '') {
       this.childContent.forEach((item) => (item.hidden = false));
       this.filteredData = [];
-      this.notFoundMessage = false;
-  
+      
       if (this.navigationStack.length === 0) {
         this.description.nativeElement.innerHTML = `<p class="description">${this.translate.instant('home.description')}</p>`;
+        this.notFoundMessage = false; 
       }
       return;
     }
   
     const matchingItems: any[] = [];
-    const parentChildMap = new Map<string, any[]>();
+    const parentChildMap = new Map<string, any[]>(); // Store parent-child relationships
   
-    // Determine active filters (Default to all if none selected)
-    const activeFilters = this.selectedFilters.length ? this.selectedFilters : ['title', 'description', 'url'];
+    // Determine active filters (default to title and description if none selected)
+    const activeFilters = this.selectedFilters.length ? this.selectedFilters : ['title', 'description'];
   
-    const searchRecursive = (items: any[], parentTitle: string | null) => {
+    // ** Home Screen Search: Structured Search **
+    const homeSearch = (items: any[], parentTitle: string | null) => {
       items.forEach((item) => {
         let matches = false;
   
-        // Check if item matches any of the selected filters
         if (activeFilters.includes('title') && item.title.toLowerCase().includes(searchValue)) {
           matches = true;
         }
         if (activeFilters.includes('description') && item.description && item.description.toLowerCase().includes(searchValue)) {
           matches = true;
         }
-        if (activeFilters.includes('url') && item.url && item.url.toLowerCase().includes(searchValue)) {
+  
+        // If item matches and has a URL, add it to results with its full path
+        if (matches && item.url) {
+          if (parentTitle) {
+            if (!parentChildMap.has(parentTitle)) {
+              parentChildMap.set(parentTitle, []);
+            }
+  
+            if (!parentChildMap.get(parentTitle)?.some((existing) => existing.title === item.title)) {
+              parentChildMap.get(parentTitle)?.push({
+                ...item,
+                displayTitle: `${parentTitle} > ${item.title}`,
+              });
+            }
+          } else {
+            if (!matchingItems.some((existing) => existing.title === item.title)) {
+              matchingItems.push({
+                ...item,
+                displayTitle: item.title,
+              });
+            }
+          }
+        }
+  
+        // If item matches but has children with URLs, include the children
+        if (matches && item.childrens) {
+          const childrenWithUrls = item.childrens.filter((child: { url: any; }) => child.url);
+          if (childrenWithUrls.length > 0) {
+            if (!parentChildMap.has(item.title)) {
+              parentChildMap.set(item.title, []);
+            }
+            childrenWithUrls.forEach((child: { title: any; }) => {
+              if (!parentChildMap.get(item.title)?.some((existing) => existing.title === child.title)) {
+                parentChildMap.get(item.title)?.push({
+                  ...child,
+                  displayTitle: `${item.title} > ${child.title}`,
+                });
+              }
+            });
+          }
+        }
+  
+        // Continue searching within children
+        if (item.childrens && item.childrens.length > 0) {
+          homeSearch(item.childrens, item.title);
+        }
+      });
+    };
+  
+    // ** Navigation Level Search: Only Searches within Current Level **
+    const navigationSearch = (items: any[], matchingItems: any[]) => {
+      items.forEach((item) => {
+        let matches = false;
+  
+        if (activeFilters.includes('title') && item.title.toLowerCase().includes(searchValue)) {
+          matches = true;
+        }
+        if (activeFilters.includes('description') && item.description && item.description.toLowerCase().includes(searchValue)) {
           matches = true;
         }
   
         if (matches) {
           matchingItems.push(item);
-          if (parentTitle && item.url) {
-            if (!parentChildMap.has(parentTitle)) {
-              parentChildMap.set(parentTitle, []);
-            }
-  
-            const existingItems = parentChildMap.get(parentTitle) || [];
-            if (!existingItems.some(existingItem => existingItem.title === item.title)) {
-              parentChildMap.get(parentTitle)?.push(item);
-            }
-          }
         }
   
         if (item.childrens && item.childrens.length > 0) {
-          searchRecursive(item.childrens, item.title);
+          navigationSearch(item.childrens, matchingItems);
         }
       });
     };
   
+    // ** Execute Search Based on Navigation State **
     if (this.navigationStack.length === 0) {
+      // Home screen search
       this.description.nativeElement.innerHTML = '';
       this.menumodel.forEach((topLevelItem) => {
         if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {
-          searchRecursive(topLevelItem.childrens, topLevelItem.title);
+          homeSearch(topLevelItem.childrens, topLevelItem.title);
         }
       });
+  
+      this.filteredData = Array.from(parentChildMap.entries());
     } else {
-      const searchRecursiveSimple = (items: any[], matchingItems: any[]) => {
-        items.forEach((item) => {
-          let matches = false;
-  
-          if (activeFilters.includes('title') && item.title.toLowerCase().includes(searchValue)) {
-            matches = true;
-          }
-          if (activeFilters.includes('description') && item.description && item.description.toLowerCase().includes(searchValue)) {
-            matches = true;
-          }
-          if (activeFilters.includes('url') && item.url && item.url.toLowerCase().includes(searchValue)) {
-            matches = true;
-          }
-  
-          if (matches) {
-            matchingItems.push(item);
-          }
-  
-          if (item.childrens && item.childrens.length > 0) {
-            searchRecursiveSimple(item.childrens, matchingItems);
-          }
-        });
-      };
-  
+      // Navigation level search (only within current level)
       const topItem = this.navigationStack[this.navigationStack.length - 1];
       if (topItem.childrens && topItem.childrens.length > 0) {
-        searchRecursiveSimple(topItem.childrens, matchingItems);
+        navigationSearch(topItem.childrens, matchingItems);
       }
+  
+      this.childContent.forEach((item) => {
+        item.hidden = !matchingItems.includes(item);
+      });
     }
   
-    this.filteredData = Array.from(parentChildMap.entries());
-  
-    this.childContent.forEach((item) => {
-      item.hidden = !matchingItems.includes(item);
-    });
-  
+    // ** Show "Not Found" Message Only if No Results Exist **
     setTimeout(() => {
-      this.notFoundMessage = matchingItems.length === 0;
+      this.notFoundMessage = this.filteredData.length === 0 && matchingItems.length === 0;
     }, 0);
-  }  
+  }
+  
 
   // Navigation Controls
 

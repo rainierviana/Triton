@@ -39,6 +39,9 @@
           <span class="breadcrumb-separator"> > </span>
         </ng-container>
       </ng-container>
+
+      <!--Filter button (on navigation)-->
+      <ion-button *ngIf="childContent.length > 0" class="filterButton" fill="clear" (click)="openFilter()"><ion-icon slot="start" name="filter-outline"></ion-icon>{{ 'home.filter' | translate }}</ion-button>
     </div>
 
     <!--Navigation Buttons-->
@@ -46,25 +49,23 @@
       <ion-button *ngIf="showBackButton" fill="clear" shape="round" (click)="backButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>      
       <ion-button class="forwardButton" *ngIf="showForwardButton" fill="clear" shape="round" (click)="forwardButton()"><ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon></ion-button>
 
-      <!-- Secondary Back Button (Clear Search) -->
+      <!-- Secondary back button(on general search)-->
       <ion-button *ngIf="filteredData.length > 0" fill="clear" shape="round" (click)="searchBackButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
-
-      <!-- Filter Button (Opens Search Filter) -->
-      <ion-button *ngIf="filteredData.length > 0" class="filterButton" fill="clear" (click)="openFilter()">
-        <ion-icon slot="start" name="filter-outline"></ion-icon>
-      </ion-button>
-
-      <!-- Hidden `ion-select` (Triggered Manually) -->
+      
+    </div>
+      
+      <!-- Filter button-->
+      <ion-button *ngIf="filteredData.length > 0" class="filterButton" fill="clear" (click)="openFilter()"><ion-icon name="filter-outline"></ion-icon>{{ 'home.filter' | translate }}</ion-button>
+      
+      <!--Filter options-->
       <ion-select #filterSelect [(ngModel)]="selectedFilters" multiple="true" (ionChange)="search()"  interface="popover" class="hiddenSelect">
         <ion-select-option value="title">{{ 'filter.title' | translate }}</ion-select-option>
         <ion-select-option value="description">{{ 'filter.description' | translate }}</ion-select-option>
-        <ion-select-option value="url">{{ 'filter.url' | translate }}</ion-select-option>
       </ion-select>
 
-    </div>
   </div>
 
-  <!--Page Description-->
+  <!--Page description-->
   <div #description id="main-content">
     <p class="description">{{ 'home.description' | translate }}</p>
   </div>
@@ -128,9 +129,7 @@
           <ng-container *ngFor="let item of group[1]">
             <ion-card *ngIf="item.url">
               <ion-card-header (click)="navigation(item)">
-                <ion-card-title>
-                  <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a>
-                </ion-card-title>
+                <ion-card-title><a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a></ion-card-title>
                 <ion-card-subtitle class="cardSubtitle">
                   <p>{{ item.description }}</p>
                 </ion-card-subtitle>
