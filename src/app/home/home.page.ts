@@ -120,7 +120,11 @@ export class HomePage {
     this.translate.use(savedLanguage);
   }
 
-  navigation(item: any) {
+  navigation(item: any, event?: Event) {
+    if (event) {
+      event.stopPropagation();
+    }
+
     if (item.isHome) {
       this.home();
       return;
@@ -140,10 +144,8 @@ export class HomePage {
         console.log('Path:', path);
 
         let sisenseUrl = `${path}/${dash.oid}`;
-        console.log('Sisense URL:', sisenseUrl);
-        window.open(sisenseUrl, '_blank');
+        window.open(sisenseUrl, '_blank','noopener,noreferrer');
       } else {
-        console.log('URL:', item.url);
         window.open(item.url, '_blank');
       }
     } else if (item.childrens && item.childrens.length > 0) {
@@ -353,7 +355,6 @@ export class HomePage {
       this.notFoundMessage = this.filteredData.length === 0 && matchingItems.length === 0;
     }, 0);
   }
-  
 
   // Navigation Controls
 

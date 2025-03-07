@@ -99,8 +99,9 @@
   --border-style: solid;
   --border-width: 1px;
 
-  ion-icon{
+  img{
     margin-right: 0.5em;
+    height: 24px;
   }
 }
 
@@ -179,11 +180,14 @@
 .navButtons {
   margin: 0;
   max-width: 15%;
-  width: 7em;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
+  img{
+    height: 25px;
+    width: 25px;
+  }
 }
 
 .notFoundMessage {
