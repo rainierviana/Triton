@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start"><!--Header Buttons (left side)-->
       <ion-menu-button class="menuButton"></ion-menu-button><!--Left menu button-->
-      <button class="homeButton" (click)="home()"> <img src="../../assets/Images/Menu_Icons/Home.svg" height="20em" /></button><!--Home button-->
+      <button class="homeButton" (click)="home()"> <img src="assets/Images/Menu_Icons/Home.svg" height="20em" /></button><!--Home button-->
       <img class="headerLogo" />
     </ion-buttons>
 
@@ -10,7 +10,7 @@
 
     <ion-buttons slot="end"><!--Header Buttons (right side)-->
       <ion-searchbar id="searchInput" class="custom" placeholder="{{ 'home.search' | translate }}" autocomplete="off" (ionInput)="search()"></ion-searchbar>
-      <img class="rightHeaderImg" src="../../assets/Images/Logo_4B.png" />
+      <img class="rightHeaderImg" src="assets/Images/Logo_4B.png" />
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -24,9 +24,9 @@
         </div>
       </ng-container>
 
-      <ion-button fill="cleat" href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank"><img src="../../assets/Images/Menu_Icons/X_Caixa.svg" class="itemIcon" />CESTI35</ion-button>
+      <ion-button fill="cleat" href="https://caixa.sharepoint.com/sites/CETAD10" target="_blank"><img src="assets/Images/Menu_Icons/X_Caixa.svg" class="itemIcon" />CESTI35</ion-button>
       <br />
-      <ion-button fill="clear" (click)="openEndMenu()"><img src="../../assets/Images/Menu_Icons/Settings.svg" class="itemIcon" />{{ 'home.settings' | translate }}</ion-button><!--Open settings menu-->
+      <ion-button fill="clear" (click)="openEndMenu()"><img src="assets/Images/Menu_Icons/Settings.svg" class="itemIcon" />{{ 'home.settings' | translate }}</ion-button><!--Open settings menu-->
     </ion-content>
   </ion-menu>
 
@@ -41,21 +41,21 @@
       </ng-container>
 
       <!--Filter button (on navigation)-->
-      <ion-button *ngIf="childContent.length > 0" class="filterButton" fill="clear" (click)="openFilter()"><ion-icon slot="start" name="filter-outline"></ion-icon>{{ 'home.filter' | translate }}</ion-button>
+      <ion-button *ngIf="childContent.length > 0" class="filterButton" fill="clear" (click)="openFilter()"><img src="assets/Images/Menu_Icons/Filter.svg" class="itemIcon" />{{ 'home.filter' | translate }}</ion-button>
     </div>
 
     <!--Navigation Buttons-->
     <div class="navButtons"> 
-      <ion-button *ngIf="showBackButton" fill="clear" shape="round" (click)="backButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>      
-      <ion-button class="forwardButton" *ngIf="showForwardButton" fill="clear" shape="round" (click)="forwardButton()"><ion-icon slot="icon-only" name="arrow-forward-circle-outline"></ion-icon></ion-button>
+      <ion-button *ngIf="showBackButton" shape="round" fill="clear" (click)="backButton()"><img src="assets/Images/Menu_Icons/Back.svg"/></ion-button>      
+      <ion-button *ngIf="showForwardButton" shape="round" fill="clear" (click)="forwardButton()"><img src="assets/Images/Menu_Icons/Forward.svg"/></ion-button>
 
       <!-- Secondary back button(on general search)-->
-      <ion-button *ngIf="filteredData.length > 0" fill="clear" shape="round" (click)="searchBackButton()"><ion-icon slot="icon-only" name="arrow-back-circle-outline"></ion-icon></ion-button>
+      <ion-button *ngIf="filteredData.length > 0" fill="clear" shape="round" (click)="searchBackButton()"><img src="assets/Images/Menu_Icons/Back.svg" class="itemIcon" /></ion-button>
       
     </div>
       
       <!-- Filter button-->
-      <ion-button *ngIf="filteredData.length > 0" class="filterButton" fill="clear" (click)="openFilter()"><ion-icon name="filter-outline"></ion-icon>{{ 'home.filter' | translate }}</ion-button>
+      <ion-button *ngIf="filteredData.length > 0" class="filterButton" fill="clear" (click)="openFilter()"><img src="assets/Images/Menu_Icons/Filter.svg" class="itemIcon" />{{ 'home.filter' | translate }}</ion-button>
       
       <!--Filter options-->
       <ion-select #filterSelect [(ngModel)]="selectedFilters" multiple="true" (ionChange)="search()"  interface="popover" class="hiddenSelect">
@@ -80,7 +80,7 @@
       <ng-container *ngFor="let item of childContent">
         <ion-card *ngIf="item.url && !item.hidden">
           <ion-card-header (click)="navigation(item)">
-            <ion-card-title><a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a></ion-card-title>
+            <ion-card-title><a (click)="navigation(item, $event)" class="cardTitle">{{ item.title }}</a></ion-card-title>
             <ion-card-subtitle class="cardSubtitle"><p>{{ item.description }}</p></ion-card-subtitle>
           </ion-card-header>
       

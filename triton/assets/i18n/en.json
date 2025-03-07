@@ -1,0 +1,27 @@
+{
+  "home": {
+    "title": "CDUC Portal",
+    "description": "Portal aiming to consolidate all views, dashboards, reports, and access to modules and information developed by CESTI65 along with CAIXA's Capacity teams.",
+    "about":"About",
+    "settings":"Settings",
+    "darkmode":"Dark Mode",
+    "noItemFound": "No Item Found",
+    "language":"Language",
+    "search": "Search",
+    "update": "Update Frequency: ",
+    "close": "Close",
+    "filter": "Filter"
+  },
+  "time":{
+    "years": "Yearly",
+    "months": "Monthly",
+    "weeks": "Weekly",
+    "semester": "Semestral",
+    "days": "Daily"
+  },
+  "filter": {
+    "title":"Title",
+    "description":"Description",
+    "url":"URL"
+  }
+}
