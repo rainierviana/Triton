@@ -61,6 +61,37 @@
   padding-right: 1.5em;
 }
 
+.dataBox {
+  background-color: rgb(255, 255, 255);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.dataCard {
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.dataContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.dataGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
 .description {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -68,7 +99,7 @@
   font-family: 'Futura', sans-serif;
   margin-left: 8%;
   margin-right: 8%;
-  margin-top: calc(30vh);
+  margin-top: 1%;
   border-radius: 1em;
   padding: 1em;
   text-align: center;
@@ -258,6 +289,14 @@
     font-size: 18px;
   }
 }
+
+
+
+
+
+
+
+
 
 /*Ionic component's styling*/
 

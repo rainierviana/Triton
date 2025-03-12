@@ -11,7 +11,16 @@
     "update": "Frequência de atualização: ",
     "close": "Fechar",
     "cancel": "Cancelar",
-    "filter": "Filtros"
+    "filter": "Filtros",
+    "production": "Produção",
+    "nonProduction": "Não-Produção",
+    "cecs": "Quantidade de CEC's",
+    "lpars": "Quantidade de Lpars",
+    "sisplex": "Quantidade de SISPLEX",
+    "totalMips": "Total Mips",
+    "totalMsu": "Total MSU",
+    "msuPerMonth": "Consumo de MSU por mês",
+    "consumption": "Consumo por Negócio"
   },
   "time":{
     "years": "Anual",

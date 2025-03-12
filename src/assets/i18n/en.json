@@ -2,18 +2,27 @@
   "home": {
     "title": "CDUC Portal",
     "description": "Portal aiming to consolidate all views, dashboards, reports, and access to modules and information developed by CESTI65 along with CAIXA's Capacity teams.",
-    "about":"About",
-    "settings":"Settings",
-    "darkmode":"Dark Mode",
+    "about": "About",
+    "settings": "Settings",
+    "darkmode": "Dark Mode",
     "noItemFound": "No Item Found",
-    "language":"Language",
+    "language": "Language",
     "search": "Search",
     "update": "Update Frequency: ",
     "close": "Close",
     "cancel": "Cancel",
-    "filter": "Filter"
+    "filter": "Filter",
+    "production": "Production",
+    "non_production": "Non-Production",
+    "cecs": "Quantity of CEC's",
+    "lpars": "Quantity of Lpars",
+    "sisplex": "Quantity of SISPLEX",
+    "total_mips": "Total Mips",
+    "total_msu": "Total MSU",
+    "msu_per_month": "MSU Consumption per Month",
+    "consumption_by_business": "Consumption by Business"
   },
-  "time":{
+  "time": {
     "years": "Yearly",
     "months": "Monthly",
     "weeks": "Weekly",
@@ -21,8 +30,8 @@
     "days": "Daily"
   },
   "filter": {
-    "title":"Title",
-    "description":"Description",
-    "url":"URL"
+    "title": "Title",
+    "description": "Description",
+    "url": "URL"
   }
 }

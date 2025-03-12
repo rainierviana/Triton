@@ -29,6 +29,7 @@ export class HomePage {
   showForwardButton: boolean = false;
   popoverOpen: any = null;
   popoverEvent: any = null;
+  isNavigating = false;
 
   // Data Management
   public menumodel: any[] = [];
@@ -153,6 +154,14 @@ export class HomePage {
     } else {
       this.renderItem(item);
     }
+  }
+
+  startNavigation() {
+    this.isNavigating = true;
+  }
+  
+  endNavigation() {
+    this.isNavigating = false;
   }
 
   // Right Menu Controls
