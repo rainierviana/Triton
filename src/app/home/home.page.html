@@ -58,11 +58,10 @@
       <ion-button *ngIf="filteredData.length > 0" class="filterButton" fill="clear" (click)="openFilter()"><img src="assets/Images/Menu_Icons/Filter.svg" class="itemIcon" />{{ 'home.filter' | translate }}</ion-button>
       
       <!--Filter options-->
-      <ion-select #filterSelect [(ngModel)]="selectedFilters" multiple="true" (ionChange)="search()"  interface="popover" class="hiddenSelect">
+      <ion-select #filterSelect [(ngModel)]="selectedFilters" multiple="true" (ionChange)="search()" interface="popover" class="hiddenSelect" [cancelText]="'home.cancel' | translate">
         <ion-select-option value="title">{{ 'filter.title' | translate }}</ion-select-option>
         <ion-select-option value="description">{{ 'filter.description' | translate }}</ion-select-option>
-      </ion-select>
-
+      </ion-select>  
   </div>
 
   <!--Page description-->
