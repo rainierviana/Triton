@@ -11,14 +11,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { HomePageModule } from './home/home.module'; // Import HomePageModule
+import { HomePageModule } from './home/home.module'; 
+
+import { SafeUrlPipe } from './safe-url.pipe';  
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SafeUrlPipe],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -31,7 +33,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         deps: [HttpClient]
       }
     }),
-    HomePageModule // Import HomePageModule here
+    HomePageModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

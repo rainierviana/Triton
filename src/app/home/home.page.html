@@ -91,14 +91,20 @@
       </div>
     </div>
 
-    <!-- Power BI Graphs -->
-    <div class="charts-container">
-      <h3>{{ 'home.msuPerMonth' | translate }}</h3>
-      <iframe [src]="" class="chart-frame" title="{{ 'home.msu_per_month' | translate }}"></iframe>
 
-      <h3>{{ 'home.consumption' | translate }}</h3>
-      <iframe [src]="" class="chart-frame" title="{{ 'home.consumption_by_business' | translate }}"></iframe>
+    <!-- Power BI Graphs -->
+    <div class="chartContainer">
+      <div class="chartItem">
+        <h3>{{ 'home.msuPerMonth' | translate }}</h3>
+        <iframe [src]="msuPerMonthUrl" class="chartFrame" title="{{ 'home.msu_per_month' | translate }}"></iframe>
+      </div>
+
+      <div class="chartItem">
+        <h3>{{ 'home.consumption' | translate }}</h3>
+        <iframe [src]="consumptionUrl" class="chartFrame" title="{{ 'home.consumption_by_business' | translate }}"></iframe>
+      </div>
     </div>
+
   </div>
 
   <!--Not Found message-->

@@ -1,7 +1,8 @@
-import { Component, ViewChild, ElementRef, ViewEncapsulation, Renderer2 } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation, Renderer2 } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MenuController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['home.page.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class HomePage {
+export class HomePage implements OnInit {
   @ViewChild('description') description!: ElementRef<HTMLDivElement>;
 
   private initialdescriptionElements: any[] = [];
@@ -39,7 +40,6 @@ export class HomePage {
   selectedFilters: string[] = ['title'];
 
   //Data card loading test
-
   prod = [
     { label: 'home.cecs', value: 7 },
     { label: 'home.lpars', value: 49 },
@@ -56,6 +56,10 @@ export class HomePage {
     { label: 'home.totalMsu', value: 2.678 }
   ];
 
+  //Data graphs display test 
+  msuPerMonthUrl: SafeResourceUrl | undefined;
+  consumptionUrl: SafeResourceUrl | undefined;
+
   // Navigation Management
   private navigationStack: any[] = [];
   private forwardStack: any[] = [];
@@ -66,7 +70,8 @@ export class HomePage {
     public http: HttpClient,
     private menuCtrl: MenuController,
     private translate: TranslateService,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private sanitizer: DomSanitizer
   ) {
     translate.setDefaultLang('pt');
   }
@@ -131,6 +136,12 @@ export class HomePage {
     setTimeout(() => {
       this.initialdescriptionElements = Array.from(this.description.nativeElement.children);
     }, 0);
+
+    const msuPerMonthEmbedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiZDAzYjY0YzQtYjM3NC00M2ZjLWI4MTQtZjI1NTgxZGNhNzcxIiwidCI6ImVkZWU3OThjLTRkNDQtNDA1Ni04ODc5LTljNDQyYTVlMGI3MSJ9';
+    const consumptionEmbedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiZDAzYjY0YzQtYjM3NC00M2ZjLWI4MTQtZjI1NTgxZGNhNzcxIiwidCI6ImVkZWU3OThjLTRkNDQtNDA1Ni04ODc5LTljNDQyYTVlMGI3MSJ9';
+
+    this.msuPerMonthUrl = this.sanitizer.bypassSecurityTrustResourceUrl(msuPerMonthEmbedUrl);
+    this.consumptionUrl = this.sanitizer.bypassSecurityTrustResourceUrl(consumptionEmbedUrl);
   }
 
   // Retrieve the saved language from localStorage
@@ -153,12 +164,8 @@ export class HomePage {
         let path = conf.path;
         let dash = this.sisenseDashboards.find(db => db.title === sItem[2]);
 
-        console.log('Title:', item.title);
-        console.log('Base:', base);
-        console.log('Path:', path);
-
         let sisenseUrl = `${path}/${dash.oid}`;
-        window.open(sisenseUrl, '_blank','noopener,noreferrer');
+        window.open(sisenseUrl, '_blank', 'noopener,noreferrer');
       } else {
         window.open(item.url, '_blank');
       }
@@ -172,7 +179,7 @@ export class HomePage {
   startNavigation() {
     this.isNavigating = true;
   }
-  
+
   endNavigation() {
     this.isNavigating = false;
   }
@@ -249,16 +256,16 @@ export class HomePage {
   search() {
     const searchInputElement = document.getElementById('searchInput') as HTMLInputElement;
     const searchValue = searchInputElement.value.toLowerCase().trim();
-  
+
     if (searchValue === '') {
       this.childContent.forEach((item) => (item.hidden = false));
       this.filteredData = [];
-      
+
       if (this.navigationStack.length === 0) {
         this.initialdescriptionElements.forEach((element) => {
           this.renderer.appendChild(this.description.nativeElement, element);
         });
-    
+
         this.navigationStack = [];
         this.forwardStack = [];
         this.showBackButton = false;
@@ -266,33 +273,33 @@ export class HomePage {
         this.childContent = [];
         this.breadcrumbs = [];
         this.notFoundMessage = false;
-        this.filteredData = []; 
+        this.filteredData = [];
       }
       return;
     }
-  
+
     const matchingItems: any[] = [];
-    const parentChildMap = new Map<string, any[]>(); 
-  
+    const parentChildMap = new Map<string, any[]>();
+
     const activeFilters = this.selectedFilters.length ? this.selectedFilters : ['title', 'description'];
-  
+
     const homeSearch = (items: any[], parentTitle: string | null) => {
       items.forEach((item) => {
         let matches = false;
-  
+
         if (activeFilters.includes('title') && item.title.toLowerCase().includes(searchValue)) {
           matches = true;
         }
         if (activeFilters.includes('description') && item.description && item.description.toLowerCase().includes(searchValue)) {
           matches = true;
         }
-  
+
         if (matches && item.url) {
           if (parentTitle) {
             if (!parentChildMap.has(parentTitle)) {
               parentChildMap.set(parentTitle, []);
             }
-  
+
             if (!parentChildMap.get(parentTitle)?.some((existing) => existing.title === item.title)) {
               parentChildMap.get(parentTitle)?.push({
                 ...item,
@@ -308,7 +315,7 @@ export class HomePage {
             }
           }
         }
-  
+
         if (matches && item.childrens) {
           const childrenWithUrls = item.childrens.filter((child: { url: any; }) => child.url);
           if (childrenWithUrls.length > 0) {
@@ -335,18 +342,18 @@ export class HomePage {
     const navigationSearch = (items: any[], matchingItems: any[]) => {
       items.forEach((item) => {
         let matches = false;
-  
+
         if (activeFilters.includes('title') && item.title.toLowerCase().includes(searchValue)) {
           matches = true;
         }
         if (activeFilters.includes('description') && item.description && item.description.toLowerCase().includes(searchValue)) {
           matches = true;
         }
-  
+
         if (matches) {
           matchingItems.push(item);
         }
-  
+
         if (item.childrens && item.childrens.length > 0) {
           navigationSearch(item.childrens, matchingItems);
         }
@@ -360,7 +367,7 @@ export class HomePage {
           homeSearch(topLevelItem.childrens, topLevelItem.title);
         }
       });
-  
+
       this.filteredData = Array.from(parentChildMap.entries());
     } else {
       // Navigation level search (only within current level)
@@ -368,12 +375,12 @@ export class HomePage {
       if (topItem.childrens && topItem.childrens.length > 0) {
         navigationSearch(topItem.childrens, matchingItems);
       }
-  
+
       this.childContent.forEach((item) => {
         item.hidden = !matchingItems.includes(item);
       });
     }
-  
+
     // ** Show "Not Found" Message Only if No Results Exist **
     setTimeout(() => {
       this.notFoundMessage = this.filteredData.length === 0 && matchingItems.length === 0;
