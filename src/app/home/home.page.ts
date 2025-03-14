@@ -38,6 +38,24 @@ export class HomePage {
   public childContent: any[] = [];
   selectedFilters: string[] = ['title'];
 
+  //Data card loading test
+
+  prod = [
+    { label: 'home.cecs', value: 7 },
+    { label: 'home.lpars', value: 49 },
+    { label: 'home.sisplex', value: 10 },
+    { label: 'home.totalMips', value: 634.881 },
+    { label: 'home.totalMsu', value: 74.432 }
+  ];
+
+  nprod = [
+    { label: 'home.cecs', value: 1 },
+    { label: 'home.lpars', value: 13 },
+    { label: 'home.sisplex', value: 6 },
+    { label: 'home.totalMips', value: 22.622 },
+    { label: 'home.totalMsu', value: 2.678 }
+  ];
+
   // Navigation Management
   private navigationStack: any[] = [];
   private forwardStack: any[] = [];
@@ -124,11 +142,6 @@ export class HomePage {
   navigation(item: any, event?: Event) {
     if (event) {
       event.stopPropagation();
-    }
-
-    if (item.isHome) {
-      this.home();
-      return;
     }
 
     if (item.url) {
@@ -242,19 +255,27 @@ export class HomePage {
       this.filteredData = [];
       
       if (this.navigationStack.length === 0) {
-        this.description.nativeElement.innerHTML = `<p class="description">${this.translate.instant('home.description')}</p>`;
-        this.notFoundMessage = false; 
+        this.initialdescriptionElements.forEach((element) => {
+          this.renderer.appendChild(this.description.nativeElement, element);
+        });
+    
+        this.navigationStack = [];
+        this.forwardStack = [];
+        this.showBackButton = false;
+        this.showForwardButton = false;
+        this.childContent = [];
+        this.breadcrumbs = [];
+        this.notFoundMessage = false;
+        this.filteredData = []; 
       }
       return;
     }
   
     const matchingItems: any[] = [];
-    const parentChildMap = new Map<string, any[]>(); // Store parent-child relationships
+    const parentChildMap = new Map<string, any[]>(); 
   
-    // Determine active filters (default to title and description if none selected)
     const activeFilters = this.selectedFilters.length ? this.selectedFilters : ['title', 'description'];
   
-    // ** Home Screen Search: Structured Search **
     const homeSearch = (items: any[], parentTitle: string | null) => {
       items.forEach((item) => {
         let matches = false;
@@ -266,7 +287,6 @@ export class HomePage {
           matches = true;
         }
   
-        // If item matches and has a URL, add it to results with its full path
         if (matches && item.url) {
           if (parentTitle) {
             if (!parentChildMap.has(parentTitle)) {
@@ -289,7 +309,6 @@ export class HomePage {
           }
         }
   
-        // If item matches but has children with URLs, include the children
         if (matches && item.childrens) {
           const childrenWithUrls = item.childrens.filter((child: { url: any; }) => child.url);
           if (childrenWithUrls.length > 0) {
@@ -306,15 +325,13 @@ export class HomePage {
             });
           }
         }
-  
-        // Continue searching within children
+
         if (item.childrens && item.childrens.length > 0) {
           homeSearch(item.childrens, item.title);
         }
       });
     };
-  
-    // ** Navigation Level Search: Only Searches within Current Level **
+
     const navigationSearch = (items: any[], matchingItems: any[]) => {
       items.forEach((item) => {
         let matches = false;
@@ -335,10 +352,8 @@ export class HomePage {
         }
       });
     };
-  
-    // ** Execute Search Based on Navigation State **
+
     if (this.navigationStack.length === 0) {
-      // Home screen search
       this.description.nativeElement.innerHTML = '';
       this.menumodel.forEach((topLevelItem) => {
         if (topLevelItem.childrens && topLevelItem.childrens.length > 0) {

@@ -68,61 +68,36 @@
     <p class="description">{{ 'home.description' | translate }}</p>
 
     <!-- Data Section -->
-    <div #dataSection id="data-section">
-      <div class="dataContainer"> 
-        <div class="dataBox">
-          <h2>{{ 'home.production' | translate }}</h2>
-          <div class="dataGrid">
-            <ion-card class="dataCard">
-              <p>{{ 'home.cecs' | translate }}</p>
-              <strong>7</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.lpars' | translate }}</p>
-              <strong>49</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.sisplex' | translate }}</p>
-              <strong>10</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.totalMips' | translate }}</p>
-              <strong>634.881</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.totalMsu' | translate }}</p>
-              <strong>74.432</strong>
-            </ion-card>
-          </div>
+    
+    <div class="dataContainer"> 
+      <div class="dataBox" *ngIf="prod && prod.length > 0">
+        <h2>{{ 'home.production' | translate }}</h2>
+        <div class="dataGrid">
+          <ion-card class="dataCard" *ngFor="let item of prod">
+            <p>{{ item.label | translate }}</p>
+            <strong>{{ item.value }}</strong>
+          </ion-card>
         </div>
-
-        <div class="dataBox">
-          <h2>{{ 'home.nonProduction' | translate }}</h2>
-          <div class="dataGrid">
-            <ion-card class="dataCard">
-              <p>{{ 'home.cecs' | translate }}</p>
-              <strong>1</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.lpars' | translate }}</p>
-              <strong>13</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.sisplex' | translate }}</p>
-              <strong>6</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.totalMips' | translate }}</p>
-              <strong>22.622</strong>
-            </ion-card>
-            <ion-card class="dataCard">
-              <p>{{ 'home.totalMsu' | translate }}</p>
-              <strong>2.678</strong>
-            </ion-card>
-          </div>
-        </div>
-
       </div>
+      
+      <div class="dataBox" *ngIf="nprod && nprod.length > 0">
+        <h2>{{ 'home.nonProduction' | translate }}</h2>
+        <div class="dataGrid">
+          <ion-card class="dataCard" *ngFor="let item of nprod">
+            <p>{{ item.label | translate }}</p>
+            <strong>{{ item.value }}</strong>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+
+    <!-- Power BI Graphs -->
+    <div class="charts-container">
+      <h3>{{ 'home.msuPerMonth' | translate }}</h3>
+      <iframe [src]="" class="chart-frame" title="{{ 'home.msu_per_month' | translate }}"></iframe>
+
+      <h3>{{ 'home.consumption' | translate }}</h3>
+      <iframe [src]="" class="chart-frame" title="{{ 'home.consumption_by_business' | translate }}"></iframe>
     </div>
   </div>
 
@@ -187,22 +162,17 @@
           <ng-container *ngFor="let item of group[1]">
             <ion-card *ngIf="item.url">
               <ion-card-header (click)="navigation(item)">
-                <ion-card-title><a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{
-                    item.title }}</a></ion-card-title>
-                <ion-card-subtitle class="cardSubtitle">
-                  <p>{{ item.description }}</p>
-                </ion-card-subtitle>
+                <ion-card-title><a [href]="item.url" target="_blank" rel="noopener noreferrer" class="cardTitle">{{ item.title }}</a></ion-card-title>
+                <ion-card-subtitle class="cardSubtitle"><p>{{ item.description }}</p></ion-card-subtitle>
               </ion-card-header>
 
               <ion-card-content *ngIf="item.time">
                 <p>{{ 'home.update' | translate }} {{ ('time.' + item.time) | translate }}</p>
               </ion-card-content>
 
-              <ion-button fill="clear" *ngIf="item.icon" class="popoverButton"
-                (click)="openPopover($event, item)"><ion-icon name="image-outline"></ion-icon></ion-button>
+              <ion-button fill="clear" *ngIf="item.icon" class="popoverButton" (click)="openPopover($event, item)"><ion-icon name="image-outline"></ion-icon></ion-button>
 
-              <ion-popover [isOpen]="popoverOpen === item" [event]="popoverEvent"
-                (ionPopoverDidDismiss)="popoverOpen = null">
+              <ion-popover [isOpen]="popoverOpen === item" [event]="popoverEvent" (ionPopoverDidDismiss)="popoverOpen = null">
                 <ng-template>
                   <div class="popoverContent">
                     <img [src]="item.icon" [alt]="item.title" />
