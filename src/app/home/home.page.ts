@@ -137,8 +137,8 @@ export class HomePage implements OnInit {
       this.initialdescriptionElements = Array.from(this.description.nativeElement.children);
     }, 0);
 
-    const msuPerMonthEmbedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiZDAzYjY0YzQtYjM3NC00M2ZjLWI4MTQtZjI1NTgxZGNhNzcxIiwidCI6ImVkZWU3OThjLTRkNDQtNDA1Ni04ODc5LTljNDQyYTVlMGI3MSJ9';
-    const consumptionEmbedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiZDAzYjY0YzQtYjM3NC00M2ZjLWI4MTQtZjI1NTgxZGNhNzcxIiwidCI6ImVkZWU3OThjLTRkNDQtNDA1Ni04ODc5LTljNDQyYTVlMGI3MSJ9';
+    const msuPerMonthEmbedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiNjYyZjRkMTgtNGZhOS00M2YwLTliYzgtMTVhYWM4ZjJkNTE3IiwidCI6ImVkZWU3OThjLTRkNDQtNDA1Ni04ODc5LTljNDQyYTVlMGI3MSJ9';
+    const consumptionEmbedUrl = 'https://app.powerbi.com/view?r=eyJrIjoiNjYyZjRkMTgtNGZhOS00M2YwLTliYzgtMTVhYWM4ZjJkNTE3IiwidCI6ImVkZWU3OThjLTRkNDQtNDA1Ni04ODc5LTljNDQyYTVlMGI3MSJ9';
 
     this.msuPerMonthUrl = this.sanitizer.bypassSecurityTrustResourceUrl(msuPerMonthEmbedUrl);
     this.consumptionUrl = this.sanitizer.bypassSecurityTrustResourceUrl(consumptionEmbedUrl);
