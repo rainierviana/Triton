@@ -17,10 +17,10 @@
     "cecs": "Quantity of CEC's",
     "lpars": "Quantity of Lpars",
     "sisplex": "Quantity of SISPLEX",
-    "total_mips": "Total Mips",
-    "total_msu": "Total MSU",
-    "msu_per_month": "MSU Consumption per Month",
-    "consumption_by_business": "Consumption by Business"
+    "total_mips": "Mips Total ",
+    "total_msu": "MSU Total",
+    "msuPerMonth": "MSU Consumption per Month",
+    "consumption": "Consumption by Business"
   },
   "time": {
     "years": "Yearly",
